@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "detective-conan-plugins",
+  "description": "名探偵コナンの調査・考察用プラグイン集",
+  "owner": {
+    "name": "L40S38"
+  },
+  "plugins": [
+    {
+      "name": "detective-conan",
+      "description": "名探偵コナンの伏線・考察項目・人物索引・「誰が何を知っているか」の知識表をもとに、出典つきで調査・考察する。新しい話が出たらデータを更新する。",
+      "source": "./plugins/detective-conan",
+      "category": "productivity"
+    }
+  ]
+}

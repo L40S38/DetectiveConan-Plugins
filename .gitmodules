@@ -1,0 +1,3 @@
+[submodule "plugins/detective-conan/database"]
+	path = plugins/detective-conan/database
+	url = https://github.com/L40S38/DetectiveConan-Database

@@ -1,0 +1,9 @@
+{
+  "name": "detective-conan",
+  "description": "名探偵コナンの伏線・考察項目・人物索引・「誰が何を知っているか」の知識表をもとに、出典つきで調査・考察する。新しい話が出たらデータを更新する。",
+  "version": "0.1.0",
+  "author": {
+    "name": "L40S38"
+  },
+  "keywords": ["detective-conan", "名探偵コナン", "考察", "伏線"]
+}
