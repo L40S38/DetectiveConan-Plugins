@@ -5,7 +5,7 @@
   1. ID の重複（伏線 F・考察 Q・人物 C・知識表の列 K）
   2. F・Q・K・C の参照が、実在する ID を指しているか
   3. 脚注の参照と定義が対応しているか
-  4. foreshadowing.md の一覧表と詳細で、タイトル・状態・重要度が一致しているか
+  4. foreshadowing/README.md の一覧表と foreshadowing/0*.md の詳細で、タイトル・状態・重要度が一致しているか
   5. F・Q のタイトルが問いの形で、答えの書き方（「＝」など）が入っていないか（警告のみ。最終確認は目で行う）
   6. Markdown の表で、どの行も列数がそろっているか
   7. 知識表のセルが決められた値だけか
@@ -84,8 +84,9 @@ def strip_code(text):
 
 def collect_definitions(data, rep):
     defs = {"F": [], "Q": [], "C": [], "K": []}
-    fs = (data / "foreshadowing.md").read_text(encoding="utf-8")
-    defs["F"] = re.findall(rf"^### ({F_ID}) ", strip_code(fs), flags=re.M)
+    for p in sorted((data / "foreshadowing").glob("0*.md")):
+        text = strip_code(p.read_text(encoding="utf-8"))
+        defs["F"] += re.findall(rf"^### ({F_ID}) ", text, flags=re.M)
     oq = (data / "open-questions.md").read_text(encoding="utf-8")
     defs["Q"] = re.findall(rf"^### ({Q_ID}) ", oq, flags=re.M)
     ch = (data / "characters.md").read_text(encoding="utf-8")
@@ -151,33 +152,49 @@ def check_tables(data, rep):
 
 
 def check_foreshadowing(data, rep):
-    rel = "foreshadowing.md"
-    text = (data / rel).read_text(encoding="utf-8")
+    """伏線データは data/foreshadowing/README.md（一覧表）と
+    data/foreshadowing/0*.md（分類ごとの詳細）に分かれている。両者の整合性を見る。"""
+    fs_dir = data / "foreshadowing"
+    index_rel = Path("foreshadowing") / "README.md"
+    text = (fs_dir / "README.md").read_text(encoding="utf-8")
     index = {}
     for _, rows in iter_tables(text):
         header = split_row(rows[0])
         if header[:4] == ["ID", "タイトル", "状態", "重要度"]:
             for row in rows[2:]:
                 cells = split_row(row)
-                index[cells[0]] = (cells[1], cells[2], cells[3])
+                # 1 セル目は "[F-ORG-001](01-org.md#F-ORG-001)" の形なので ID を取り出す
+                m = re.search(rf"({F_ID})", cells[0])
+                if m:
+                    index[m.group(1)] = (cells[1], cells[2], cells[3])
+
     details = {}
-    body = strip_code(text)
-    for m in re.finditer(rf"^### ({F_ID}) (.+)$", body, flags=re.M):
-        block = body[m.end():].split("\n### ", 1)[0]
-        status = re.search(r"^- 状態: (.+)$", block, flags=re.M)
-        weight = re.search(r"^- 重要度: (.+)$", block, flags=re.M)
-        details[m.group(1)] = (
-            m.group(2).strip(),
-            status.group(1).strip() if status else None,
-            weight.group(1).strip() if weight else None,
-        )
+    detail_file = {}
+    for p in sorted(fs_dir.glob("0*.md")):
+        rel = Path("foreshadowing") / p.name
+        body = strip_code(p.read_text(encoding="utf-8"))
+        for m in re.finditer(rf"^### ({F_ID}) (.+)$", body, flags=re.M):
+            block = body[m.end():].split("\n### ", 1)[0]
+            status = re.search(r"^- 状態: (.+)$", block, flags=re.M)
+            weight = re.search(r"^- 重要度: (.+)$", block, flags=re.M)
+            fid = m.group(1)
+            if fid in details:
+                rep.error(rel, f"{fid} が複数ファイルに定義されている（{detail_file[fid]} と重複）")
+            details[fid] = (
+                m.group(2).strip(),
+                status.group(1).strip() if status else None,
+                weight.group(1).strip() if weight else None,
+            )
+            detail_file[fid] = rel
+
     for fid in sorted(set(index) | set(details)):
         if fid not in index:
-            rep.error(rel, f"{fid} が一覧表に無い")
+            rep.error(index_rel, f"{fid} が一覧表に無い")
             continue
         if fid not in details:
-            rep.error(rel, f"{fid} の詳細が無い")
+            rep.error(index_rel, f"{fid} の詳細が無い")
             continue
+        rel = detail_file[fid]
         (it, ist, iw), (dt, dst, dw) = index[fid], details[fid]
         if it != dt:
             rep.error(rel, f"{fid} のタイトルが一覧表と詳細で違う（{it} / {dt}）")

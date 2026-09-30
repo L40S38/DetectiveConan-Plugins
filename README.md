@@ -41,7 +41,7 @@ plugins/detective-conan/
 │   ├── conventions.md                記法の約束事（情報時点・正史区分タグ・ID・記号）
 │   ├── sources.md                    参考サイト
 │   ├── characters.md                 人物索引（別名の逆引き・人物カード・劇場版への登場）
-│   ├── foreshadowing.md              伏線リスト
+│   ├── foreshadowing/                伏線リスト（README.md が一覧、F-分類ごとにファイル）
 │   ├── open-questions.md             考察項目リスト
 │   └── knowledge-matrix/             誰が何を知っているか（表1〜7）
 ├── database/                         submodule: L40S38/DetectiveConan-Database

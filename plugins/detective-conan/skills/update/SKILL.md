@@ -30,11 +30,15 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
    `anomalies` で新しい欠け・重複が出たら、報告に含める。submodule に差分が出たら、コミットと push が必要なことをユーザーに伝える（勝手に push しない）。
 3. `data/sources.md` の信頼度の順に情報を集める。単行本未収録の話は、D の速報系 2 サイト以上で一致したものだけを使う。WebFetch の要約は細部を取り違えることがあるので、話数と人物名は原文か database で確かめる。
 
-## Step 2: 伏線リスト（data/foreshadowing.md）
+## Step 2: 伏線リスト（data/foreshadowing/）
+
+`foreshadowing/README.md` が一覧表、分類ごとの詳細は `foreshadowing/01-org.md`〜`09-rel.md`（分類と番号の対応は README.md の「ファイル一覧」を見る）。
 
 - 新しい謎を見つけたら、分類ごとに次の番号で項目を立てる。ID は再利用しない。
 - **タイトルは謎の形**で書き、答えも、ほかの謎の答えになる名前も入れない（`conventions.md` の 5.）。
-- 冒頭の一覧表と詳細の両方に書く（ID・タイトル・状態・重要度・初出・回収）。
+- `README.md` の一覧表と、対応する分類ファイルの詳細の両方に書く（ID・タイトル・状態・重要度・初出・回収）。
+  - 詳細の項目には `<a id="F-XXX-NNN"></a>` を見出しの直前に付ける（既存項目にならう）。README.md の一覧表からはこのアンカーへリンクする（`ファイル名#F-XXX-NNN`）。
+  - 「関連」欄で人物・知識表に触れるときは、`characters.md#C-xxx`／`../knowledge-matrix/0N-〜.md` へのリンクにする（既存項目の書き方にならう）。
 - 回収されたら「状態」を変え、「回収」欄に話数と答えを書く。答えを書くのは「回収」欄だけ。
 - 途中の進展は「経過」欄に時系列で足す。
 
@@ -76,7 +80,7 @@ python scripts/lint_data.py
 
 | ファイル | ID・場所 | 変更 | 根拠 |
 |---|---|---|---|
-| foreshadowing.md | F-RUM-009 | 経過を追加 | 原作 File 1168 [原作] |
+| foreshadowing/02-rum.md | F-RUM-009 | 経過を追加 | 原作 File 1168 [原作] |
 | knowledge-matrix/03-akai-family.md | 世良真純 K3-2 | △ → ● | 原作 File 1168 |
 
 - lint：エラー 0 件、警告 0 件

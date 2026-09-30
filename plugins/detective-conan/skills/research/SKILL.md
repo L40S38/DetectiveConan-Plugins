@@ -14,7 +14,7 @@ description: 名探偵コナンについて調べる・考察するときに使�
 | 記法の約束事（最初に読む） | `${CLAUDE_PLUGIN_ROOT}/data/conventions.md` |
 | 参考サイトと信頼度 | `${CLAUDE_PLUGIN_ROOT}/data/sources.md` |
 | 人物索引（別名の逆引き・人物カード・劇場版への登場） | `${CLAUDE_PLUGIN_ROOT}/data/characters.md` |
-| 伏線リスト | `${CLAUDE_PLUGIN_ROOT}/data/foreshadowing.md` |
+| 伏線リスト（一覧＋分類別） | `${CLAUDE_PLUGIN_ROOT}/data/foreshadowing/` |
 | 考察項目リスト | `${CLAUDE_PLUGIN_ROOT}/data/open-questions.md` |
 | 知識表（誰が何を知っているか、テーマ別） | `${CLAUDE_PLUGIN_ROOT}/data/knowledge-matrix/` |
 | 編纂室データの検索ツール | `${CLAUDE_PLUGIN_ROOT}/scripts/conan_db.py` |
@@ -33,7 +33,7 @@ description: 名探偵コナンについて調べる・考察するときに使�
 | 種類 | 例 | まず読むもの |
 |---|---|---|
 | 事実確認 | 「ピスコの本名は？」 | `characters.md` |
-| 伏線を追う | 「ラムの伏線を時系列で」 | `foreshadowing.md`（ID で関連をたどる） |
+| 伏線を追う | 「ラムの伏線を時系列で」 | `foreshadowing/README.md` → 分類別ファイル（ID で関連をたどる） |
 | 考察 | 「ボスは生きていると思う？」 | `open-questions.md` → 関連する伏線 |
 | 知識状態 | 「赤井の生存を知っているのは誰？」 | `knowledge-matrix/` の該当する表 |
 | 話数・巻・初登場 | 「File 1103 は何巻？」「若狭先生の初登場は？」 | `conan_db.py` |

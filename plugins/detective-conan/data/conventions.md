@@ -56,19 +56,19 @@ research スキルはこの約束事を前提に読み、update スキルはこ�
 | 知識表の列 | `K<表番号>-<列番号>` | `K5-3` |
 | 人物 | `C-<ローマ字>` | `C-akai-shuichi` |
 
-伏線の分類：
+伏線の分類。詳細は `foreshadowing/` 以下、分類ごとのファイルに分かれている（一覧は `foreshadowing/README.md`）：
 
-| 分類 | 範囲 |
-|---|---|
-| `ORG` | 黒ずくめの組織 |
-| `RUM` | ラム・羽田浩司事件 |
-| `AKAI` | 赤井家 |
-| `KUDO` | 工藤家・コナン |
-| `APTX` | 薬・宮野家 |
-| `POL` | 警察・公安 |
-| `KID` | 怪盗キッド・黒羽盗一 |
-| `MOVIE` | 劇場版 |
-| `REL` | 人間関係（正体の秘密にかかわるもの） |
+| 分類 | 範囲 | ファイル |
+|---|---|---|
+| `ORG` | 黒ずくめの組織 | `foreshadowing/01-org.md` |
+| `RUM` | ラム・羽田浩司事件 | `foreshadowing/02-rum.md` |
+| `AKAI` | 赤井家 | `foreshadowing/03-akai.md` |
+| `KUDO` | 工藤家・コナン | `foreshadowing/04-kudo.md` |
+| `APTX` | 薬・宮野家 | `foreshadowing/05-aptx.md` |
+| `POL` | 警察・公安 | `foreshadowing/06-pol.md` |
+| `KID` | 怪盗キッド・黒羽盗一 | `foreshadowing/07-kid.md` |
+| `MOVIE` | 劇場版 | `foreshadowing/08-movie.md` |
+| `REL` | 人間関係（正体の秘密にかかわるもの） | `foreshadowing/09-rel.md` |
 
 - ID は一度振ったら変えない。項目を消すときも ID は再利用しない。
 - 人物 ID の振り方：
@@ -111,4 +111,4 @@ research スキルはこの約束事を前提に読み、update スキルはこ�
 ## 8. ネタバレの扱い
 
 - `characters.md` と `knowledge-matrix/` は答えを含む（正体・所属・生死）。ネタバレを避けたい人に見せるときは、research スキルが既読範囲に合わせて伏せる。
-- `foreshadowing.md` の一覧表と `open-questions.md` のタイトルはネタバレなしで読めるように書く（5. を参照）。
+- `foreshadowing/README.md` の一覧表と `open-questions.md` のタイトルはネタバレなしで読めるように書く（5. を参照）。
