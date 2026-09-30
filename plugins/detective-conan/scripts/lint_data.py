@@ -235,6 +235,8 @@ def check_knowledge_cells(data, rep):
                 cells = split_row(row)
                 if cells[0].startswith("**") and not any(cells[1:]):
                     continue  # グループ見出しの行
+                if cells[0].startswith("ほかの「"):
+                    continue  # カテゴリ内の残り全員をまとめた行（人物 ID を持たない）
                 if not re.search(C_ID, cells[0]):
                     rep.error(rel, f"{start + offset} 行目: 人物 ID が無い（{cells[0]}）")
                 for kind, h, cell in zip(kinds, header[1:-1], cells[1:-1]):

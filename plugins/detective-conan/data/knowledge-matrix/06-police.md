@@ -14,18 +14,23 @@
 
 | 人物 | K6-1 同期 | K6-2 安室＝降谷 | K6-3 降谷＝公安 | K6-4 スコッチ＝景光 | K6-5 景光＝公安 | K6-6 伊織＝元公安 | K6-7 伊織と風見が同期 | 根拠 |
 |---|---|---|---|---|---|---|---|---|
-| **警察学校組** | | | | | | | | |
+| **コナン陣営** |  |  |  |  |  |  |  |  |
+| 工藤新一 `C-kudo-shinichi` | ● | ● | ● | ◐ | ◐ | ? | ✕ | [^K6-kudo-shinichi] |
+| ほかの「コナン陣営」（全員 ✕。characters.md 参照） | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ |  |
+| **毛利家・友人・帝丹小** |  |  |  |  |  |  |  |  |
+| 毛利蘭 `C-mori-ran` | ◐ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | [^K6-mori-ran] |
+| ほかの「毛利家・友人・帝丹小」（全員 ✕。characters.md 参照） | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ |  |
+| **大岡家（京都）** |  |  |  |  |  |  |  |  |
+| 伊織無我（元公安） `C-iori-muga` | ? | ● | ● | ? | ? | ー | ◐ | [^K6-iori-muga] |
+| ほかの「大岡家（京都）」（全員 ✕。characters.md 参照） | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ |  |
+| **FBI・CIA・赤井家** |  |  |  |  |  |  |  |  |
+| 赤井秀一 `C-akai-shuichi` | ? | ● | ● | ● | ● | ? | ✕ | [^K6-akai-shuichi] |
+| ほかの「FBI・CIA・赤井家」（全員 ✕。characters.md 参照） | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ |  |
+| **警察・公安** |  |  |  |  |  |  |  |  |
 | 降谷零（安室透） `C-furuya-rei` | ー | ー | ー | ● | ● | ? | ? | [^K6-furuya-rei] |
-| 諸伏景光 `C-morofushi-hiromitsu` | ー | ● | ● | ー | ー | ー | ー | [^K6-doki] |
-| 松田陣平 `C-matsuda-jinpei` | ー | ? | ●† | ? | ●† | ー | ー | [^K6-doki] [^K6-halloween] |
-| 萩原研二 `C-hagiwara-kenji` | ー | ? | ? | ? | ? | ー | ー | [^K6-doki] |
-| 伊達航 `C-date-wataru` | ー | ? | ●† | ? | ●† | ー | ー | [^K6-doki] [^K6-halloween] |
-| 鬼塚八蔵 `C-onizuka-hachizo` | ● | ✕ | ? | ✕ | ? | ✕ | ✕ | [^K6-onizuka-hachizo] |
-| **公安** | | | | | | | | |
 | 風見裕也 `C-kazami-yuya` | ? | ● | ● | ? | ? | ● | ● | [^K6-kazami-yuya] |
 | 黒田兵衛 `C-kuroda-hyoe` | ? | ● | ● | ? | ? | ● | ? | [^K6-kuroda-hyoe] |
-| 伊織無我（元公安） `C-iori-muga` | ? | ● | ● | ? | ? | ー | ◐ | [^K6-iori-muga] |
-| **警視庁** | | | | | | | | |
+| 諸伏景光 `C-morofushi-hiromitsu` | ー | ● | ● | ー | ー | ー | ー | [^K6-doki] |
 | 目暮十三 `C-megure-juzo` | ? | ✕ | ●† | ✕ | ◐ | ✕ | ✕ | [^K6-halloween-keishicho] [^K6-yosei-no-kuchibiru] |
 | 高木渉 `C-takagi-wataru` | ◐ | ✕ | ●† | ✕ | ◐ | ✕ | ✕ | [^K6-takagi-wataru] [^K6-halloween-keishicho] [^K6-yosei-no-kuchibiru] |
 | 佐藤美和子 `C-sato-miwako` | ◐ | ✕ | ●† | ✕ | ◐ | ✕ | ✕ | [^K6-sato-miwako] [^K6-halloween-keishicho] [^K6-yosei-no-kuchibiru] |
@@ -36,27 +41,36 @@
 | 宮本由美 `C-miyamoto-yumi` | ? | △ | ✕ | ✕ | ✕ | ✕ | ✕ | [^K6-miyamoto-yumi] |
 | 三池苗子 `C-miike-naeko` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | |
 | 中森銀三 `C-nakamori-ginzo` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | |
-| **長野県警** | | | | | | | | |
+| 松田陣平 `C-matsuda-jinpei` | ー | ? | ●† | ? | ●† | ー | ー | [^K6-doki] [^K6-halloween] |
+| 萩原研二 `C-hagiwara-kenji` | ー | ? | ? | ? | ? | ー | ー | [^K6-doki] |
+| 伊達航 `C-date-wataru` | ー | ? | ●† | ? | ●† | ー | ー | [^K6-doki] [^K6-halloween] |
+| 鬼塚八蔵 `C-onizuka-hachizo` | ● | ✕ | ? | ✕ | ? | ✕ | ✕ | [^K6-onizuka-hachizo] |
 | 諸伏高明 `C-morofushi-takaaki` | ◐ | ● | ◐ | ✕ | ● | ✕ | ✕ | [^K6-morofushi-takaaki] |
 | 大和敢助 `C-yamato-kansuke` | ? | ? | ? | ✕ | ✕ | ✕ | ✕ | |
 | 上原由衣 `C-uehara-yui` | ? | ? | ? | ✕ | ✕ | ✕ | ✕ | |
-| **神奈川・埼玉・群馬県警** | | | | | | | | |
 | 横溝重悟 `C-yokomizo-jugo` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | |
 | 萩原千速 `C-hagiwara-chihaya` | ◐ | ? | ? | ? | ? | ✕ | ✕ | [^K6-hagiwara-chihaya] |
 | 横溝参悟 `C-yokomizo-sango` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | |
 | 山村ミサオ `C-yamamura-misao` | ? | ✕ | ✕ | ✕ | ◐ | ✕ | ✕ | [^K6-yamamura-misao] |
-| **大阪府警・京都府警** | | | | | | | | |
 | 服部平蔵 `C-hattori-heizo` | ? | ? | ? | ? | ? | ? | ? | |
 | 遠山銀司郎 `C-toyama-ginshiro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | |
 | 大滝悟郎 `C-otaki-goro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | |
 | 綾小路文麿 `C-ayanokoji-fumimaro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | |
-| **警察以外** | | | | | | | | |
-| 工藤新一 `C-kudo-shinichi` | ● | ● | ● | ◐ | ◐ | ? | ✕ | [^K6-kudo-shinichi] |
-| 毛利蘭 `C-mori-ran` | ◐ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | [^K6-mori-ran] |
-| 赤井秀一 `C-akai-shuichi` | ? | ● | ● | ● | ● | ? | ✕ | [^K6-akai-shuichi] |
+| **キッド陣営** |  |  |  |  |  |  |  |  |
+| ほかの「キッド陣営」（全員 ✕。characters.md 参照） | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ |  |
+| **黒ずくめの組織** |  |  |  |  |  |  |  |  |
 | ラム `C-rum` | ? | ? | ? | ? | ? | ✕ | ✕ | |
 | ベルモット `C-vermouth` | ? | ? | ? | ? | ? | ✕ | ✕ | |
 | ジン `C-gin` | ? | ✕ | ✕ | ? | ● | ✕ | ✕ | [^K6-gin] |
+| ほかの「黒ずくめの組織」（全員 ✕。characters.md 参照） | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ |  |
+| **宮野家** |  |  |  |  |  |  |  |  |
+| ほかの「宮野家」（全員 ✕。characters.md 参照） | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ |  |
+| **羽田浩司事件の関係者** |  |  |  |  |  |  |  |  |
+| ほかの「羽田浩司事件の関係者」（全員 ✕。characters.md 参照） | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ |  |
+| **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |  |
+| ほかの「劇場版オリジナル（組織以外）」（全員 ✕。characters.md 参照） | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ |  |
+| **その他** |  |  |  |  |  |  |  |  |
+| ほかの「その他」（全員 ✕。characters.md 参照） | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ |  |
 
 [^K6-furuya-rei]: スコッチ＝諸伏景光は幼なじみで警察学校の同期。潜入中の同僚でもあった。
 
