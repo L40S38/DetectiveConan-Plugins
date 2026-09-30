@@ -67,8 +67,7 @@ research スキルはこの約束事を前提に読み、update スキルはこ�
 | `APTX` | 薬・宮野家 | `foreshadowing/05-aptx.md` |
 | `POL` | 警察・公安 | `foreshadowing/06-pol.md` |
 | `KID` | 怪盗キッド・黒羽盗一 | `foreshadowing/07-kid.md` |
-| `MOVIE` | 劇場版 | `foreshadowing/08-movie.md` |
-| `REL` | 人間関係（正体の秘密にかかわるもの） | `foreshadowing/09-rel.md` |
+| `REL` | 人間関係（正体の秘密にかかわるもの） | `foreshadowing/08-rel.md` |
 
 - ID は一度振ったら変えない。項目を消すときも ID は再利用しない。
 - 人物 ID の振り方：

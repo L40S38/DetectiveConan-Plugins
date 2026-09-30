@@ -118,4 +118,15 @@
 - 回収: 原作 File 605–609（58・59巻）— キールは CIA の NOC と明かされる。バーボンは公安（F-POL-001、F-POL-002）
 - 内容: 組織の中にいる他機関の潜入者は誰で、何人いるのか
 - 関連: 人物 [本堂瑛海](../characters.md#C-hondo-hidemi)、[イーサン・本堂](../characters.md#C-ethan-hondo)、[降谷零](../characters.md#C-furuya-rei)、[諸伏景光](../characters.md#C-morofushi-hiromitsu)、[赤井秀一](../characters.md#C-akai-shuichi)／考察 Q-025／知識表 [K5](../knowledge-matrix/05-black-org.md)、[K6](../knowledge-matrix/06-police.md)
-- 備考: 劇場版『純黒の悪夢』では NOC リストが狙われる（F-MOVIE-003）
+- 備考: 劇場版『純黒の悪夢』では NOC リストが狙われる（F-ORG-011）
+
+<a id="F-ORG-011"></a>
+### F-ORG-011 第20作でNOCリストの情報はどこまで組織に渡ったのか
+- 状態: 回収済
+- 重要度: ★★
+- 区分: [劇場版]
+- 初出: 劇場版第20作『純黒の悪夢』（2016）
+- 経過: —
+- 回収: 劇場版第20作 — 一部だけが組織に伝わった。キュラソーが逃走中に送ったメールでスタウト（MI6）・アクアビット（CSIS）・リースリング（BND）の3人が伝わり、3人とも処刑された。コナンがキュラソーを装って「バーボンとキールは関係なかった」という偽メールを送り、2人の処刑は中止。キュラソーは観覧車を止める際に死亡し、記憶していた残りの情報は失われた
+- 内容: 各国の潜入捜査官の名簿をめぐる劇場版事件での情報漏洩の範囲
+- 関連: 人物 [キュラソー](../characters.md#C-curacao)、[ラム](../characters.md#C-rum)、[降谷零](../characters.md#C-furuya-rei)、[本堂瑛海](../characters.md#C-hondo-hidemi)／伏線 [F-ORG-010](#F-ORG-010)／考察 Q-025
