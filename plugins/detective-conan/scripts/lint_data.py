@@ -9,6 +9,7 @@
   5. F・Q のタイトルが問いの形で、答えの書き方（「＝」など）が入っていないか（警告のみ。最終確認は目で行う）
   6. Markdown の表で、どの行も列数がそろっているか
   7. 知識表のセルが決められた値だけか
+  8. File 表記が conventions.md の 3.1 の形か（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。警告のみ）
 
 使い方:
     python lint_data.py [--data PATH]
@@ -246,6 +247,27 @@ def check_knowledge_cells(data, rep):
                         rep.error(rel, f"{start + offset} 行目 {h}: 値「{cell}」は決められた値ではない")
 
 
+FILE_REF = re.compile(r"File (\d+)(–\d+)?")
+FILE_WHERE = r"（(?:\d+(?:・\d+)*巻「[^「」\n]+」|単行本未収録／サンデー[^）\n]+)）"
+# 単行本未収録の範囲は「File 1163「題」〜File 1166「題」（単行本未収録／…）」と書くので、題の後に「〜File」が続く形も認める
+FILE_SINGLE_OK = re.compile(r"「[^「」\n]+」(?:" + FILE_WHERE + r"|〜File )")
+FILE_RANGE_OK = re.compile(FILE_WHERE)
+
+
+def check_file_refs(data, rep):
+    # conventions.md は書式の説明、sources.md は検索語の例なので対象外
+    for p in sorted(data.rglob("*.md")):
+        if p.name in ("conventions.md", "sources.md"):
+            continue
+        text = strip_code(p.read_text(encoding="utf-8"))
+        rel = p.relative_to(data)
+        for m in FILE_REF.finditer(text):
+            ok = FILE_RANGE_OK if m.group(2) else FILE_SINGLE_OK
+            if not ok.match(text, m.end()):
+                snippet = text[m.start():m.end() + 20].split("\n")[0]
+                rep.warn(rel, f"「{snippet}」が File の書き方になっていない（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。conventions.md の 3.1）")
+
+
 def main():
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -260,6 +282,7 @@ def main():
     fs_details = check_foreshadowing(args.data, rep)
     check_titles(args.data, fs_details, rep)
     check_knowledge_cells(args.data, rep)
+    check_file_refs(args.data, rep)
 
     for line in rep.errors + rep.warnings:
         print(line)

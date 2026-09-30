@@ -28,6 +28,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
    ```
 
    `anomalies` で新しい欠け・重複が出たら、報告に含める。submodule に差分が出たら、コミットと push が必要なことをユーザーに伝える（勝手に push しない）。
+   database を更新したら、`単行本未収録` の形で書いていた File（`grep -rn 単行本未収録 data/`）のうち、`conan_db.py file` で引けるようになったものを、`conventions.md` の 3.1「database に入っている話」の形に直す。
 3. `data/sources.md` の信頼度の順に情報を集める。単行本未収録の話は、D の速報系 2 サイト以上で一致したものだけを使う。WebFetch の要約は細部を取り違えることがあるので、話数と人物名は原文か database で確かめる。
 
 ## Step 2: 伏線リスト（data/foreshadowing/）
