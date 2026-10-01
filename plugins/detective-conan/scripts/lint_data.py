@@ -8,7 +8,8 @@
   4. foreshadowing/README.md の一覧表と foreshadowing/0*.md の詳細で、タイトル・状態・重要度が一致しているか
   5. F・Q のタイトルが問いの形で、答えの書き方（「＝」など）が入っていないか（警告のみ。最終確認は目で行う）
   6. Markdown の表で、どの行も列数がそろっているか
-  7. 知識表のセルが決められた値だけか
+  7. 知識表のセルが決められた値だけか。右端が「コナンの把握」の列か。characters.md の全員が、
+     そのグループの個別の行かまとめ行に 1 回ずつ出てくるか
   8. File 表記が conventions.md の 3.1 の形か（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。警告のみ）
 
 使い方:
@@ -30,8 +31,7 @@ Q_ID = r"Q-\d{3}"
 K_ID = r"K\d-\d+"
 C_ID = r"C-[a-z]+(?:-[a-z]+)*"
 
-BINARY_VALUES = {"●", "◐", "△", "✕", "ー", "?"}
-LEVEL_VALUES = {"1", "2", "3", "4", "ー", "?"}
+CELL_VALUES = {"◎", "〇", "△", "✕", "ー", "?"}
 STATUS_VALUES = {"回収済", "部分回収", "未回収", "ミスリード判明"}
 
 # 物語の前提そのものなので、タイトルに含まれていても答えではない表現
@@ -223,7 +223,21 @@ def check_titles(data, fs_details, rep):
             rep.warn("titles", f"{tid}「{title}」が問いの形で終わっていない。答えを書いていないか確認する")
 
 
+def load_character_groups(data):
+    """characters.md の (b) 人物カードから {人物 ID: グループ名} を作る。"""
+    text = strip_code((data / "characters.md").read_text(encoding="utf-8"))
+    body = text.split("## (b) 人物カード", 1)[1].split("\n## ", 1)[0]
+    groups, group = {}, None
+    for line in body.splitlines():
+        if m := re.match(r"^### (.+)$", line):
+            group = m.group(1).strip()
+        elif m := re.match(rf"^#### ({C_ID}) ", line):
+            groups[m.group(1)] = group
+    return groups
+
+
 def check_knowledge_cells(data, rep):
+    groups = load_character_groups(data)
     for p in sorted((data / "knowledge-matrix").glob("0*.md")):
         rel = p.relative_to(data)
         text = p.read_text(encoding="utf-8")
@@ -231,20 +245,42 @@ def check_knowledge_cells(data, rep):
             header = split_row(rows[0])
             if header[-1] != "根拠":
                 continue
-            kinds = ["level" if "接近度" in h else "binary" for h in header[1:-1]]
+            if "コナンの把握" not in header[-2]:
+                rep.error(rel, f"{start} 行目: 根拠の左の列が「コナンの把握」になっていない")
+            seen, group = Counter(), None
             for offset, row in enumerate(rows[2:], 2):
+                line = start + offset
                 cells = split_row(row)
-                if cells[0].startswith("**") and not any(cells[1:]):
-                    continue  # グループ見出しの行
+                values = cells[1:-1]
+                m = re.fullmatch(r"\*\*(.+)\*\*", cells[0])
+                if m and not any(cells[1:]):
+                    group = m.group(1)  # グループ見出しの行
+                    continue
+                ids = re.findall(C_ID, cells[0])
+                if not ids:
+                    rep.error(rel, f"{line} 行目: 人物 ID が無い（{cells[0]}）")
+                seen.update(ids)
+                for cid in ids:
+                    if cid in groups and groups[cid] != group:
+                        rep.error(rel, f"{line} 行目: {cid} は characters.md では「{groups[cid]}」のグループ")
                 if cells[0].startswith("ほかの「"):
-                    continue  # カテゴリ内の残り全員をまとめた行（人物 ID を持たない）
-                if not re.search(C_ID, cells[0]):
-                    rep.error(rel, f"{start + offset} 行目: 人物 ID が無い（{cells[0]}）")
-                for kind, h, cell in zip(kinds, header[1:-1], cells[1:-1]):
-                    value = cell.rstrip("†")
-                    allowed = LEVEL_VALUES if kind == "level" else BINARY_VALUES
-                    if value not in allowed:
-                        rep.error(rel, f"{start + offset} 行目 {h}: 値「{cell}」は決められた値ではない")
+                    # グループ内の残り全員をまとめた行
+                    if not cells[0].startswith(f"ほかの「{group}」："):
+                        rep.error(rel, f"{line} 行目: まとめ行は「ほかの「{group}」：」で始める")
+                    if any(v != "✕" for v in values[:-1]) or values[-1] != "ー":
+                        rep.error(rel, f"{line} 行目: まとめ行は「コナンの把握」を `ー`、ほかの列をすべて `✕` にする")
+                    continue
+                for h, cell in zip(header[1:-1], values):
+                    if cell.rstrip("†") not in CELL_VALUES:
+                        rep.error(rel, f"{line} 行目 {h}: 値「{cell}」は決められた値ではない")
+                if all(v.rstrip("†") == "✕" for v in values[:-1]):
+                    rep.error(rel, f"{line} 行目: 「コナンの把握」以外がすべて `✕` の人物は、まとめ行に入れる")
+            for cid in groups:
+                if not seen[cid]:
+                    rep.error(rel, f"{cid} がどの行にも無い（個別の行かまとめ行に入れる）")
+            for cid, n in seen.items():
+                if n > 1:
+                    rep.error(rel, f"{cid} が {n} 行に出てくる")
 
 
 FILE_REF = re.compile(r"File (\d+)(–\d+)?")
