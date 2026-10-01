@@ -1,58 +1,59 @@
 # 表3 赤井ファミリー
 
-凡例と接近度の定義は [README.md](README.md) を参照。
+凡例は [README.md](README.md) を参照。
 
 | 列 ID | 列 |
 |---|---|
-| K3-1 | 領域外の妹（メアリー）が縮んでいることへの接近度（4〜1） |
+| K3-1 | 領域外の妹（メアリー）が縮んでいると知っている |
 | K3-2 | 赤井秀一が生きていることを知っている |
 | K3-3 | 沖矢昴＝赤井秀一だと知っている |
 | K3-4 | 秀一・秀吉・真純が兄弟だと知っている |
 | K3-5 | 羽田秀吉が将棋の名人（タイトル保持者）だと知っている |
 | K3-6 | メアリーと宮野エレーナが姉妹だと知っている |
+| K3-7 | この人物が K3-1〜K3-6 の情報を知っていることを、コナンが把握している |
 
-| 人物 | K3-1 接近度 | K3-2 赤井の生存 | K3-3 沖矢＝赤井 | K3-4 三兄弟 | K3-5 秀吉＝名人 | K3-6 メアリーとエレーナ | 根拠 |
-|---|---|---|---|---|---|---|---|
-| **コナン陣営** |  |  |  |  |  |  |  |
-| 工藤新一 `C-kudo-shinichi` | 4 | ● | ● | ● | ● | ? | [^K3-kudo-shinichi] |
-| 宮野志保（灰原哀） `C-miyano-shiho` | ? | ✕ | △ | ? | ? | ✕ | [^K3-miyano-shiho] |
-| 阿笠博士 `C-agasa-hiroshi` | ? | ? | ? | ? | ? | ? | |
-| 工藤優作 `C-kudo-yusaku` | ? | ● | ● | ? | ? | ? | [^K3-kudo-yusaku] |
-| 工藤有希子 `C-kudo-yukiko` | ? | ● | ● | ? | ? | ? | [^K3-kudo-yusaku] |
-| ほかの「コナン陣営」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
-| **毛利家・友人・帝丹小** |  |  |  |  |  |  |  |
-| ほかの「毛利家・友人・帝丹小」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
-| **大岡家（京都）** |  |  |  |  |  |  |  |
-| ほかの「大岡家（京都）」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
-| **FBI・CIA・赤井家** |  |  |  |  |  |  |  |
-| 赤井秀一 `C-akai-shuichi` | 3† | ー | ー | ● | ● | ? | [^K3-akai-shuichi] |
-| 羽田秀吉 `C-haneda-shukichi` | ? | ● | ? | ● | ー | ? | [^K3-haneda-shukichi] |
-| 世良真純 `C-sera-masumi` | 4 | △ | ? | ● | ● | ? | [^K3-sera-masumi] |
-| 赤井メアリー `C-akai-mary` | ー | ◐† | ? | ● | ● | ● | [^K3-akai-mary] |
-| ジョディ・スターリング `C-jodie-starling` | ? | ● | ● | ? | ? | ? | [^K3-fbi] |
-| アンドレ・キャメル `C-andre-camel` | ? | ● | ● | ? | ? | ? | [^K3-fbi] |
-| ジェイムズ・ブラック `C-james-black` | ? | ● | ● | ? | ? | ? | [^K3-fbi] |
-| 本堂瑛海（キール） `C-hondo-hidemi` | ? | ● | ? | ? | ? | ? | [^K3-hondo-hidemi] |
-| ほかの「FBI・CIA・赤井家」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
-| **警察・公安** |  |  |  |  |  |  |  |
-| 降谷零（安室透） `C-furuya-rei` | ? | ● | ● | ? | ? | ? | [^K3-furuya-rei] |
-| 宮本由美 `C-miyamoto-yumi` | 1 | ✕ | ✕ | ◐ | ● | ✕ | [^K3-miyamoto-yumi] |
-| ほかの「警察・公安」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
-| **キッド陣営** |  |  |  |  |  |  |  |
-| ほかの「キッド陣営」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
-| **黒ずくめの組織** |  |  |  |  |  |  |  |
-| ラム `C-rum` | ? | ? | ? | ? | ? | ? | |
-| ベルモット `C-vermouth` | ? | ? | ? | ? | ? | ? | |
-| ジン `C-gin` | ? | ✕ | ✕ | ? | ? | ? | [^K3-gin] |
-| ほかの「黒ずくめの組織」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
-| **宮野家** |  |  |  |  |  |  |  |
-| ほかの「宮野家」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
-| **羽田浩司事件の関係者** |  |  |  |  |  |  |  |
-| ほかの「羽田浩司事件の関係者」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
-| **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |
-| ほかの「劇場版オリジナル（組織以外）」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
-| **その他** |  |  |  |  |  |  |  |
-| ほかの「その他」（全員 ✕。characters.md 参照） | 1 | ✕ | ✕ | ✕ | ✕ | ✕ |  |
+| 人物 | K3-1 メアリーが縮んだ | K3-2 赤井の生存 | K3-3 沖矢＝赤井 | K3-4 三兄弟 | K3-5 秀吉＝名人 | K3-6 メアリーとエレーナ | K3-7 コナンの把握 | 根拠 |
+|---|---|---|---|---|---|---|---|---|
+| **コナン陣営** |  |  |  |  |  |  |  |  |
+| 工藤新一 `C-kudo-shinichi` | ◎ | ◎ | ◎ | ◎ | ◎ | ? | ー | [^K3-kudo-shinichi] |
+| 宮野志保（灰原哀） `C-miyano-shiho` | ? | ✕ | △ | ? | ? | ✕ | ? | [^K3-miyano-shiho] |
+| 阿笠博士 `C-agasa-hiroshi` | ? | ? | ? | ? | ? | ? | ? | |
+| 工藤優作 `C-kudo-yusaku` | ? | ◎ | ◎ | ? | ? | ? | ? | [^K3-kudo-yusaku] |
+| 工藤有希子 `C-kudo-yukiko` | ? | ◎ | ◎ | ? | ? | ? | ? | [^K3-kudo-yusaku] |
+| ほかの「コナン陣営」：服部平次 `C-hattori-heiji` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **毛利家・友人・帝丹小** |  |  |  |  |  |  |  |  |
+| ほかの「毛利家・友人・帝丹小」：毛利蘭 `C-mori-ran`、毛利小五郎 `C-mori-kogoro`、妃英理 `C-kisaki-eri`、鈴木園子 `C-suzuki-sonoko`、京極真 `C-kyogoku-makoto`、遠山和葉 `C-toyama-kazuha`、少年探偵団 `C-shonen-tanteidan`、榎本梓 `C-enomoto-azusa`、小林澄子 `C-kobayashi-sumiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **大岡家（京都）** |  |  |  |  |  |  |  |  |
+| ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji`、伊織無我 `C-iori-muga`、大岡家のご隠居 `C-ooka-goinkyo` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **FBI・CIA・赤井家** |  |  |  |  |  |  |  |  |
+| 赤井秀一 `C-akai-shuichi` | 〇† | ー | ー | ◎ | ◎ | ? | ? | [^K3-akai-shuichi] |
+| 羽田秀吉 `C-haneda-shukichi` | ? | ◎ | ? | ◎ | ー | ? | ? | [^K3-haneda-shukichi] |
+| 世良真純 `C-sera-masumi` | ◎ | △ | ? | ◎ | ◎ | ? | ? | [^K3-sera-masumi] |
+| 赤井メアリー `C-akai-mary` | ー | 〇† | ? | ◎ | ◎ | ◎ | ? | [^K3-akai-mary] |
+| ジョディ・スターリング `C-jodie-starling` | ? | ◎ | ◎ | ? | ? | ? | ? | [^K3-fbi] |
+| アンドレ・キャメル `C-andre-camel` | ? | ◎ | ◎ | ? | ? | ? | ? | [^K3-fbi] |
+| ジェイムズ・ブラック `C-james-black` | ? | ◎ | ◎ | ? | ? | ? | ? | [^K3-fbi] |
+| 本堂瑛海（キール） `C-hondo-hidemi` | ? | ◎ | ? | ? | ? | ? | ? | [^K3-hondo-hidemi] |
+| ほかの「FBI・CIA・赤井家」：赤井務武 `C-akai-tsutomu`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **警察・公安** |  |  |  |  |  |  |  |  |
+| 降谷零（安室透） `C-furuya-rei` | ? | ◎ | ◎ | ? | ? | ? | ? | [^K3-furuya-rei] |
+| 宮本由美 `C-miyamoto-yumi` | ✕ | ✕ | ✕ | 〇 | ◎ | ✕ | ? | [^K3-miyamoto-yumi] |
+| ほかの「警察・公安」：風見裕也 `C-kazami-yuya`、黒田兵衛 `C-kuroda-hyoe`、諸伏景光 `C-morofushi-hiromitsu`、目暮十三 `C-megure-juzo`、高木渉 `C-takagi-wataru`、佐藤美和子 `C-sato-miwako`、白鳥任三郎 `C-shiratori-ninzaburo`、千葉和伸 `C-chiba-kazunobu`、松本清長 `C-matsumoto-kiyonaga`、小田切敏郎 `C-odagiri-toshiro`、三池苗子 `C-miike-naeko`、中森銀三 `C-nakamori-ginzo`、松田陣平 `C-matsuda-jinpei`、萩原研二 `C-hagiwara-kenji`、伊達航 `C-date-wataru`、鬼塚八蔵 `C-onizuka-hachizo`、諸伏高明 `C-morofushi-takaaki`、大和敢助 `C-yamato-kansuke`、上原由衣 `C-uehara-yui`、横溝重悟 `C-yokomizo-jugo`、萩原千速 `C-hagiwara-chihaya`、横溝参悟 `C-yokomizo-sango`、山村ミサオ `C-yamamura-misao`、服部平蔵 `C-hattori-heizo`、遠山銀司郎 `C-toyama-ginshiro`、大滝悟郎 `C-otaki-goro`、綾小路文麿 `C-ayanokoji-fumimaro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **キッド陣営** |  |  |  |  |  |  |  |  |
+| ほかの「キッド陣営」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-terai-konosuke`、中森青子 `C-nakamori-aoko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **黒ずくめの組織** |  |  |  |  |  |  |  |  |
+| ラム `C-rum` | ? | ? | ? | ? | ? | ? | ? | |
+| ベルモット `C-vermouth` | ? | ? | ? | ? | ? | ? | ? | |
+| ジン `C-gin` | ? | ✕ | ✕ | ? | ? | ? | ? | [^K3-gin] |
+| ほかの「黒ずくめの組織」：烏丸蓮耶 `C-karasuma-renya`、ウォッカ `C-vodka`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、ピンガ `C-pinga`、アイリッシュ `C-irish`、故人の構成員 `C-org-deceased` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **宮野家** |  |  |  |  |  |  |  |  |
+| ほかの「宮野家」：宮野明美 `C-miyano-akemi`、宮野厚司 `C-miyano-atsushi`、宮野エレーナ `C-miyano-elena` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **羽田浩司事件の関係者** |  |  |  |  |  |  |  |  |
+| ほかの「羽田浩司事件の関係者」：羽田康晴 `C-haneda-yasuharu`、羽田市代 `C-haneda-ichiyo`、羽田浩司 `C-haneda-koji`、アマンダ・ヒューズ `C-amanda-hughes`、若狭留美 `C-wakasa-rumi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |  |
+| ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **その他** |  |  |  |  |  |  |  |  |
+| ほかの「その他」：楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro`、板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、勝又力 `C-katsumata-chikara` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K3-akai-shuichi]: [劇場版] 第24作『緋色の弾丸』のラストで、変装した沖矢を「小僧」と呼んだメアリーに対し、沖矢（秀一）が微笑む場面が「気づいている」根拠としてファンの間で広く語られているが、セリフでの明言はなく解釈の域（映画自体が意図的に曖昧にしている）。原作に該当描写はない。母とエレーナが姉妹だと知っているかは要確認。
 
@@ -74,6 +75,6 @@
 
 [^K3-furuya-rei]: File 894–898（85巻「緋色シリーズ［交錯／帰還／真相］」）で赤井の生存を確信する。沖矢昴＝赤井については、File 896–897（85巻「緋色シリーズ［交錯／帰還／真相］」）で工藤邸に忍び込み沖矢の襟元を確かめるが変装した優作で失敗、File 957「裏切りの真相」（90巻「裏切りのステージ」）で沖矢が左利きだと気づき疑いが再燃、File 1012「ぬかったな」（95巻「迷宮カクテル」）で素顔の赤井と銃を向け合い「ぬかったな、赤井秀一」と告げる（事実上知っている扱い。「沖矢＝赤井」と言葉で明言する場面は確認できていない）。
 
-[^K3-miyamoto-yumi]: 秀吉の恋人。File 1043–1046（98巻「太閤名人の将棋盤［初手編／妙手編／王手編］」）冒頭で秀吉を尾行する場面で、コナンに「秀吉は亡くなった羽田浩司の後を継ぐ形で羽田家の養子になった」「兄と妹がいる。会ったことはないが、秀吉と似たような性格だろうと想像する」と話す。会ったことはなく、想像の域を出ない（K3-4 は ◐）。秀吉が名人であることは知っている。
+[^K3-miyamoto-yumi]: 秀吉の恋人。File 1043–1046（98巻「太閤名人の将棋盤［初手編／妙手編／王手編］」）冒頭で秀吉を尾行する場面で、コナンに「秀吉は亡くなった羽田浩司の後を継ぐ形で羽田家の養子になった」「兄と妹がいる。会ったことはないが、秀吉と似たような性格だろうと想像する」と話す。会ったことはなく、想像の域を出ない（K3-4 は 〇）。秀吉が名人であることは知っている。
 
 [^K3-gin]: 赤井は来葉峠で死んだと思っている（要確認：現在も疑っていないか）。
