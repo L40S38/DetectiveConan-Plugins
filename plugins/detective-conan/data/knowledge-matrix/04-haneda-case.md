@@ -67,7 +67,7 @@ K4-3 は、アマンダは自ら毒を飲んだと描かれている（File 1106
 | **剣道界** |  |  |  |  |  |  |  |
 | ほかの「剣道界」：沖田総司 `C-okita-soshi`、鬼丸猛 `C-onimaru-takeshi`、鉄刃 `C-kurogane-yaiba`、鉄諸羽 `C-kurogane-moroha`、鉄美智子 `C-kurogane-michiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |
-| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K4-kudo-shinichi]: File 948–950（89・90巻「17年前と同じ現場」）で事件にたどり着く。浅香＝若狭は File 1109「女王の謀」（104巻「17年前の真相［遠見の角行／女王の謀（クイーンズ・ギャンビット）］」）で赤井とともに「間違いなさそう」と結論する。APTX の使用は推理の段階（要確認）。
 

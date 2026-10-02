@@ -121,7 +121,7 @@
 | **剣道界** |  |  |  |  |  |  |  |  |
 | ほかの「剣道界」：沖田総司 `C-okita-soshi`、鬼丸猛 `C-onimaru-takeshi`、鉄刃 `C-kurogane-yaiba`、鉄諸羽 `C-kurogane-moroha`、鉄美智子 `C-kurogane-michiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |  |
-| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K1-miyano-shiho]: 灰原は File 179–181（18・19巻「黒の組織から来た女大学教授殺人事件［2］」）で、縮んだ新一を知っていたことをコナンに明かす。変声機・麻酔銃は日常的に知っている。
 

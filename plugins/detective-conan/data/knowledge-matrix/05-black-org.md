@@ -80,7 +80,7 @@
 | **剣道界** |  |  |  |  |  |  |  |  |  |  |
 | ほかの「剣道界」：沖田総司 `C-okita-soshi`、鬼丸猛 `C-onimaru-takeshi`、鉄刃 `C-kurogane-yaiba`、鉄諸羽 `C-kurogane-moroha`、鉄美智子 `C-kurogane-michiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |  |  |  |
-| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K5-kudo-shinichi]: 脇田＝ラムは File 1150「混沌の追跡者たち」（108巻「混沌の行先」）で推理によってたどり着き、沖矢昴（赤井）に伝える（決め手は複数：発音・義眼・「時は金なり」のアナグラム・灰原の反応）。キールの CIA は File 605–609（58・59巻「赤と黒のクラッシュ［嫌疑／潔白／決死／殉職］」）。ベルモット＝クリス＝シャロンは、File 242「白の世界」（24巻「黒の組織との再会」）でクリスと判明し、File 433「仮面の下の真実」（42巻「黒の組織と真っ向勝負満月の夜の二元ミステリー」）でクリス＝シャロンと判明する、という 2 段階。
 

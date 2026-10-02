@@ -71,7 +71,7 @@
 | **剣道界** |  |  |  |  |  |  |  |  |
 | ほかの「剣道界」：沖田総司 `C-okita-soshi`、鬼丸猛 `C-onimaru-takeshi`、鉄刃 `C-kurogane-yaiba`、鉄諸羽 `C-kurogane-moroha`、鉄美智子 `C-kurogane-michiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |  |
-| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K3-akai-shuichi]: [劇場版] 第24作『緋色の弾丸』のラストで、変装した沖矢を「小僧」と呼んだメアリーに対し、沖矢（秀一）が微笑む場面が「気づいている」根拠としてファンの間で広く語られているが、セリフでの明言はなく解釈の域（映画自体が意図的に曖昧にしている）。原作に該当描写はない。母とエレーナが姉妹だと知っているかは要確認。
 
