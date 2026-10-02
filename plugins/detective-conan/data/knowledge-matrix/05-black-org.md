@@ -62,7 +62,7 @@
 | **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |  |  |  |
 | ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |  |  |  |
-| ほかの「その他」：楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro`、板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、勝又力 `C-katsumata-chikara` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「その他」：楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro`、板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、勝又力 `C-katsumata-chikara`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K5-kudo-shinichi]: 脇田＝ラムは File 1150「混沌の追跡者たち」（108巻「混沌の行先」）で推理によってたどり着き、沖矢昴（赤井）に伝える（決め手は複数：発音・義眼・「時は金なり」のアナグラム・灰原の反応）。キールの CIA は File 605–609（58・59巻「赤と黒のクラッシュ［嫌疑／潔白／決死／殉職］」）。ベルモット＝クリス＝シャロンは、File 242「白の世界」（24巻「黒の組織との再会」）でクリスと判明し、File 433「仮面の下の真実」（42巻「黒の組織と真っ向勝負満月の夜の二元ミステリー」）でクリス＝シャロンと判明する、という 2 段階。
 

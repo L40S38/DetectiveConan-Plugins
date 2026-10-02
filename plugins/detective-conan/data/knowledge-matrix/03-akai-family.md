@@ -53,7 +53,7 @@
 | **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |  |
 | ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |  |
-| ほかの「その他」：楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro`、板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、勝又力 `C-katsumata-chikara` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「その他」：楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro`、板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、勝又力 `C-katsumata-chikara`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K3-akai-shuichi]: [劇場版] 第24作『緋色の弾丸』のラストで、変装した沖矢を「小僧」と呼んだメアリーに対し、沖矢（秀一）が微笑む場面が「気づいている」根拠としてファンの間で広く語られているが、セリフでの明言はなく解釈の域（映画自体が意図的に曖昧にしている）。原作に該当描写はない。母とエレーナが姉妹だと知っているかは要確認。
 

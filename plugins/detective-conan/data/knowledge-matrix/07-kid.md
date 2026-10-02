@@ -46,7 +46,7 @@
 | **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |
 | ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |
-| ほかの「その他」：楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro`、板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、勝又力 `C-katsumata-chikara` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「その他」：楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro`、板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、勝又力 `C-katsumata-chikara`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K7-kuroba-kaito]: [まじっく快斗] 父・盗一が初代キッドだと知って跡を継いだ。[劇場版] 第 27 作『100万ドルの五稜星』の時点で父の生存を知っているかは要確認。
 

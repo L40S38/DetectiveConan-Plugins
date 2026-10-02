@@ -49,7 +49,7 @@ K4-3 は、アマンダは自ら毒を飲んだと描かれている（File 1106
 | **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |
 | ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |
-| ほかの「その他」：楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro`、板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、勝又力 `C-katsumata-chikara` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「その他」：楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro`、板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、勝又力 `C-katsumata-chikara`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K4-kudo-shinichi]: File 948–950（89・90巻「17年前と同じ現場」）で事件にたどり着く。浅香＝若狭は File 1109「女王の謀」（104巻「17年前の真相［遠見の角行／女王の謀（クイーンズ・ギャンビット）］」）で赤井とともに「間違いなさそう」と結論する。APTX の使用は推理の段階（要確認）。
 
