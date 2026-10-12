@@ -1,4 +1,4 @@
-# 伏線リスト：人間関係
+# 伏線リスト：人間関係（正体の秘密・カップルの行方・グループの変化）
 
 [← 伏線一覧に戻る](README.md)
 
@@ -45,3 +45,36 @@
 - 回収: —
 - 内容: 小五郎は自分が眠っている間に事件が解けていることをどう思っているのか
 - 関連: 人物 [毛利小五郎](../characters.md#C-mori-kogoro)／知識表 [K1-6](../knowledge-matrix/01-conan-shinichi.md)
+
+<a id="F-REL-005"></a>
+### F-REL-005 大和敢助と上原由衣の関係はどうなるのか
+- 状態: 未回収
+- 重要度: ★
+- 区分: [原作]
+- 初出: 要確認
+- 経過: 要確認
+- 回収: —
+- 内容: 互いに恋愛感情があると見られる両者の関係が今後明確になるか
+- 関連: 人物 [大和敢助](../characters.md#C-yamato-kansuke)、[上原由衣](../characters.md#C-uehara-yui)／恋愛関係 [loves.md B](../relationships/loves.md)
+
+<a id="F-REL-006"></a>
+### F-REL-006 黒羽快斗と中森青子は正式に交際するのか
+- 状態: 未回収
+- 重要度: ★
+- 区分: [まじっく快斗]
+- 初出: 要確認
+- 経過: 要確認
+- 回収: —
+- 内容: 幼馴染として描かれてきた二人が正式な交際に至るか
+- 関連: 人物 [黒羽快斗](../characters.md#C-kuroba-kaito)、[中森青子](../characters.md#C-nakamori-aoko)／恋愛関係 [loves.md B](../relationships/loves.md)
+
+<a id="F-REL-007"></a>
+### F-REL-007 毛利小五郎と妃英理は別居を解消するのか
+- 状態: 未回収
+- 重要度: ★
+- 区分: [原作]
+- 初出: 要確認
+- 経過: 要確認
+- 回収: —
+- 内容: 長年別居が続く二人が同居・関係修復に至るか
+- 関連: 人物 [毛利小五郎](../characters.md#C-mori-kogoro)、[妃英理](../characters.md#C-kisaki-eri)／恋愛関係 [loves.md C](../relationships/loves.md)
