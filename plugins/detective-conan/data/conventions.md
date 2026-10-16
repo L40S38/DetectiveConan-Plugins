@@ -157,7 +157,7 @@ File を書くときは、必ず「どの話か」がわかる名前を付ける
 
 ## 9. relationships/ の記入規則
 
-`data/relationships/` 以下には、恋愛関係（`loves.md`）とグループ・関係性（`groups.md`）を記録する。
+`data/relationships/` 以下には、恋愛関係（`loves.md`）、グループ・組織（`groups.md`）、家族・きょうだい（`families.md`）、友人・ライバル関係（`friends-and-rivals.md`）を記録する。どのファイルに書くかと各項目の書き方は `relationships/README.md` を見る。
 知識表（`knowledge-matrix/`）の記号とは **別系統** の記法を使う。タイトルはネタバレを含んでよい（現状記録のため）。
 
 ### 9.1 恋愛関係の段階（loves.md）
@@ -188,6 +188,6 @@ File を書くときは、必ず「どの話か」がわかる名前を付ける
 
 | 種類 | 形式 | 例 |
 |---|---|---|
-| グループ | `G-<英字略称>` | `G-shonen-tantei`、`G-keisatsu-gakko` |
+| グループ・家族 | `G-<英字略称>` | `G-shonen-tantei`、`G-keisatsu-gakko`、`G-kudo-family` |
 
 カップル・友人ペアは人物 ID（例：C-kudo-shinichi × C-mori-ran）の組み合わせで表す。独立した ID は振らない。
