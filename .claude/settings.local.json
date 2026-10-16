@@ -3,15 +3,18 @@
     "allow": [
       "WebSearch",
       "WebFetch",
-      "Bash(python *conan_db.py *)",
-      "Bash(python *lint_data.py)",
-      "Bash(python *lint_data.py *)",
-      "PowerShell(python *conan_db.py *)",
-      "PowerShell(python *lint_data.py)",
-      "PowerShell(python *lint_data.py *)",
-      "Bash(curl -sL \"https://www.detectiveconanworld.com/*)",
-      "Bash(curl -sL \"https://meitantei-conan.fandom.com/*)",
-      "Bash(curl -sL \"https://www.conanwiki.org/*)"
+      "Bash(python plugins/detective-conan/scripts/conan_db.py *)",
+      "Bash(python plugins/detective-conan/scripts/lint_data.py)",
+      "Bash(python plugins/detective-conan/scripts/lint_data.py *)",
+      "Bash(python scripts/conan_db.py *)",
+      "Bash(python scripts/lint_data.py)",
+      "Bash(python scripts/lint_data.py *)",
+      "PowerShell(python plugins/detective-conan/scripts/conan_db.py *)",
+      "PowerShell(python plugins/detective-conan/scripts/lint_data.py)",
+      "PowerShell(python plugins/detective-conan/scripts/lint_data.py *)",
+      "PowerShell(python scripts/conan_db.py *)",
+      "PowerShell(python scripts/lint_data.py)",
+      "PowerShell(python scripts/lint_data.py *)"
     ]
   }
 }
