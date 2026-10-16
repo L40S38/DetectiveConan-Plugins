@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Bash(python *conan_db.py *)",
+      "Bash(python *lint_data.py)",
+      "Bash(python *lint_data.py *)",
+      "PowerShell(python *conan_db.py *)",
+      "PowerShell(python *lint_data.py)",
+      "PowerShell(python *lint_data.py *)",
+      "Bash(curl -sL \"https://www.detectiveconanworld.com/*)",
+      "Bash(curl -sL \"https://meitantei-conan.fandom.com/*)",
+      "Bash(curl -sL \"https://www.conanwiki.org/*)"
+    ]
+  }
+}
