@@ -29,6 +29,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 
    `anomalies` で新しい欠け・重複が出たら、報告に含める。submodule に差分が出たら、コミットと push が必要なことをユーザーに伝える（勝手に push しない）。
    database を更新したら、`単行本未収録` の形で書いていた File（`grep -rn 単行本未収録 data/`）のうち、`conan_db.py file` で引けるようになったものを、`conventions.md` の 3.1「database に入っている話」の形に直す。
+   database の更新で、事件名や話タイトルが変わることがある（単行本の収録時に改題されるなど）。更新の前後で `database/dataset_csv/Volume-Index-Case-Title.csv` を見比べ（submodule の中で `git diff` する）、名前が変わった事件・話があったら、`data/` 以下で古い名前を使っている箇所（`grep -rn "古い名前" data/`）をすべて新しい名前に直す。直した事件名は Step 8 の報告に含める。`lint_data.py` は File 表記の形しか見ず、名前が database と合っているかは見ないので、この確認は省かない。
 3. `data/sources.md` の信頼度の順に情報を集める。単行本未収録の話は、D の速報系 2 サイト以上で一致したものだけを使う。WebFetch の要約は細部を取り違えることがあるので、話数と人物名は原文か database で確かめる。
 
 ## Step 2: 伏線リスト（data/foreshadowing/）
@@ -88,6 +89,7 @@ python scripts/lint_data.py
 - lint：エラー 0 件、警告 0 件
 - 要確認のまま残したもの：…
 - database：更新あり／なし（submodule のコミットと push が必要）
+- database で名前が変わった事件・話：なし／「旧名」→「新名」（data/ の該当箇所を直した）
 ```
 
 コミットはユーザーから頼まれたときだけ行う。

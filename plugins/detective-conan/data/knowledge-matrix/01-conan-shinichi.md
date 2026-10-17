@@ -16,21 +16,64 @@
 |---|---|---|---|---|---|---|---|---|
 | **コナン陣営** |  |  |  |  |  |  |  |  |
 | 工藤新一 `C-kudo-shinichi` | ー | ー | ー | ー | ー | ー | ー | |
-| 宮野志保（灰原哀） `C-miyano-shiho` | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | [^K1-miyano-shiho] |
 | 阿笠博士 `C-agasa-hiroshi` | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | [^K1-agasa-hiroshi] |
 | 工藤優作 `C-kudo-yusaku` | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | [^K1-kudo-yusaku] |
 | 工藤有希子 `C-kudo-yukiko` | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | [^K1-kudo-yusaku] |
 | 服部平次 `C-hattori-heiji` | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | [^K1-hattori-heiji] |
+| 宮野志保（灰原哀） `C-miyano-shiho` | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | [^K1-miyano-shiho] |
 | **毛利家・友人・帝丹小** |  |  |  |  |  |  |  |  |
 | 毛利蘭 `C-mori-ran` | △ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | [^K1-mori-ran] |
 | 毛利小五郎 `C-mori-kogoro` | ✕ | △ | ◎ | ✕ | ✕ | ✕ | ? | [^K1-mori-kogoro] |
 | 妃英理 `C-kisaki-eri` | ✕ | ? | ◎ | ✕ | ✕ | ? | ? | |
 | 鈴木園子 `C-suzuki-sonoko` | ✕ | ✕ | ◎ | ✕ | ✕ | ✕ | ? | |
+| 鈴木朋子 `C-suzuki-tomoko` | ✕ | ? | ◎ | ✕ | ✕ | ✕ | ? | [^K1-suzuki-tomoko] |
 | 京極真 `C-kyogoku-makoto` | ✕ | ? | ? | ✕ | ✕ | ? | ? | |
 | 遠山和葉 `C-toyama-kazuha` | ✕ | ? | ◎ | ✕ | ✕ | ✕ | ? | |
-| 少年探偵団 `C-shonen-tanteidan` | ✕ | ◎ | 〇 | 〇 | 〇 | ✕ | ? | [^K1-shonen-tanteidan] |
+| 少年探偵団（吉田歩美 `C-yoshida-ayumi`・小嶋元太 `C-kojima-genta`・円谷光彦 `C-tsuburaya-mitsuhiko`） | ✕ | ◎ | 〇 | 〇 | 〇 | ✕ | ? | [^K1-shonen-tanteidan] |
 | 榎本梓 `C-enomoto-azusa` | ✕ | ✕ | ✕ | ✕ | ◎ | ✕ | ? | [^K1-enomoto-azusa] |
 | 小林澄子 `C-kobayashi-sumiko` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
+| ほかの「毛利家・友人・帝丹小」：鈴木史郎 `C-suzuki-shiro`、鈴木綾子 `C-suzuki-ayako`、服部静華 `C-hattori-shizuka`、米原桜子 `C-yonehara-sakurako` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **警視庁捜査一課** |  |  |  |  |  |  |  |  |
+| 目暮十三 `C-megure-juzo` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
+| 高木渉 `C-takagi-wataru` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
+| 佐藤美和子 `C-sato-miwako` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
+| 白鳥任三郎 `C-shiratori-ninzaburo` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
+| 千葉和伸 `C-chiba-kazunobu` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
+| 松本清長 `C-matsumoto-kiyonaga` | ✕ | ? | ◎ | ✕ | ✕ | ✕ | ? | |
+| 黒田兵衛 `C-kuroda-hyoe` | ? | ◎ | ? | ? | ? | ? | ? | |
+| 松田陣平 `C-matsuda-jinpei` | ー | ー | ◎ | ー | ー | ー | ? | [^K1-keisatsu-gakko] |
+| 伊達航 `C-date-wataru` | ー | ー | ◎ | ー | ー | ー | ? | [^K1-keisatsu-gakko] |
+| ほかの「警視庁捜査一課」：弓長 `C-yuminaga`、羽鳥 `C-hatori`、高木長介 `C-takagi-chosuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **警視庁交通部** |  |  |  |  |  |  |  |  |
+| 宮本由美 `C-miyamoto-yumi` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
+| 三池苗子 `C-miike-naeko` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
+| **公安警察（警察庁・警視庁公安部）** |  |  |  |  |  |  |  |  |
+| 降谷零（安室透） `C-furuya-rei` | 〇 | ◎ | ◎ | ? | ? | 〇 | ? | [^K1-furuya-rei] |
+| 風見裕也 `C-kazami-yuya` | ✕ | ◎ | ? | ✕ | ✕ | ? | ? | |
+| 諸伏景光 `C-morofushi-hiromitsu` | ー | ー | ◎ | ー | ー | ー | ? | [^K1-keisatsu-gakko] |
+| **警視庁（そのほかの部署）** |  |  |  |  |  |  |  |  |
+| 小田切敏郎 `C-odagiri-toshiro` | ?† | ?† | ?† | ✕† | ✕† | ✕† | ?† | |
+| 中森銀三 `C-nakamori-ginzo` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
+| 萩原研二 `C-hagiwara-kenji` | ー | ー | ◎ | ー | ー | ー | ? | [^K1-keisatsu-gakko] |
+| 鬼塚八蔵 `C-onizuka-hachizo` | ? | ? | ? | ✕ | ✕ | ✕ | ? | |
+| ほかの「警視庁（そのほかの部署）」：茶木神太郎 `C-chaki-shintaro`、百瀬 `C-momose`、佐藤警部 `C-sato-keibu` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **大阪府警** |  |  |  |  |  |  |  |  |
+| 服部平蔵 `C-hattori-heizo` | ✕ | ◎ | ◎ | ✕ | ✕ | ? | ? | |
+| 遠山銀司郎 `C-toyama-ginshiro` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
+| 大滝悟郎 `C-otaki-goro` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
+| ほかの「大阪府警」：遠山櫻 `C-toyama-sakura` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **長野県警** |  |  |  |  |  |  |  |  |
+| 諸伏高明 `C-morofushi-takaaki` | ✕ | ◎ | ? | ✕ | ✕ | ? | ? | |
+| 大和敢助 `C-yamato-kansuke` | ✕ | ◎ | ? | ✕ | ✕ | ? | ? | |
+| 上原由衣 `C-uehara-yui` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
+| **神奈川県警** |  |  |  |  |  |  |  |  |
+| 横溝重悟 `C-yokomizo-jugo` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
+| 萩原千速 `C-hagiwara-chihaya` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
+| **そのほかの道府県警** |  |  |  |  |  |  |  |  |
+| 横溝参悟 `C-yokomizo-sango` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
+| 山村ミサオ `C-yamamura-misao` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
+| 綾小路文麿 `C-ayanokoji-fumimaro` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
+| ほかの「そのほかの道府県警」：西村京兵 `C-nishimura-kyohei`、寺林省二 `C-terabayashi-shoji` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **大岡家（京都）** |  |  |  |  |  |  |  |  |
 | 大岡紅葉 `C-ooka-momiji` | ✕ | ? | ◎ | ✕ | ✕ | ✕ | ? | [^K1-ooka-momiji] |
 | 伊織無我 `C-iori-muga` | ? | ? | ? | ? | ? | ? | ? | [^K1-iori-muga] |
@@ -46,43 +89,13 @@
 | 本堂瑛海（キール） `C-hondo-hidemi` | ✕ | ◎ | ? | ? | ? | ? | ? | |
 | 本堂瑛祐 `C-hondo-eisuke` | ◎ | ◎ | ◎ | ? | ? | ? | ? | [^K1-hondo-eisuke] |
 | ほかの「FBI・CIA・赤井家」：赤井務武 `C-akai-tsutomu`、イーサン・本堂 `C-ethan-hondo` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **警察・公安** |  |  |  |  |  |  |  |  |
-| 降谷零（安室透） `C-furuya-rei` | 〇 | ◎ | ◎ | ? | ? | 〇 | ? | [^K1-furuya-rei] |
-| 風見裕也 `C-kazami-yuya` | ✕ | ◎ | ? | ✕ | ✕ | ? | ? | |
-| 黒田兵衛 `C-kuroda-hyoe` | ? | ◎ | ? | ? | ? | ? | ? | |
-| 諸伏景光 `C-morofushi-hiromitsu` | ー | ー | ◎ | ー | ー | ー | ? | [^K1-keisatsu-gakko] |
-| 目暮十三 `C-megure-juzo` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
-| 高木渉 `C-takagi-wataru` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
-| 佐藤美和子 `C-sato-miwako` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
-| 白鳥任三郎 `C-shiratori-ninzaburo` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
-| 千葉和伸 `C-chiba-kazunobu` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
-| 松本清長 `C-matsumoto-kiyonaga` | ✕ | ? | ◎ | ✕ | ✕ | ✕ | ? | |
-| 小田切敏郎 `C-odagiri-toshiro` | ?† | ?† | ?† | ✕† | ✕† | ✕† | ?† | |
-| 宮本由美 `C-miyamoto-yumi` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
-| 三池苗子 `C-miike-naeko` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
-| 中森銀三 `C-nakamori-ginzo` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
-| 松田陣平 `C-matsuda-jinpei` | ー | ー | ◎ | ー | ー | ー | ? | [^K1-keisatsu-gakko] |
-| 萩原研二 `C-hagiwara-kenji` | ー | ー | ◎ | ー | ー | ー | ? | [^K1-keisatsu-gakko] |
-| 伊達航 `C-date-wataru` | ー | ー | ◎ | ー | ー | ー | ? | [^K1-keisatsu-gakko] |
-| 鬼塚八蔵 `C-onizuka-hachizo` | ? | ? | ? | ✕ | ✕ | ✕ | ? | |
-| 諸伏高明 `C-morofushi-takaaki` | ✕ | ◎ | ? | ✕ | ✕ | ? | ? | |
-| 大和敢助 `C-yamato-kansuke` | ✕ | ◎ | ? | ✕ | ✕ | ? | ? | |
-| 上原由衣 `C-uehara-yui` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
-| 横溝重悟 `C-yokomizo-jugo` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
-| 萩原千速 `C-hagiwara-chihaya` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
-| 横溝参悟 `C-yokomizo-sango` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
-| 山村ミサオ `C-yamamura-misao` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
-| 服部平蔵 `C-hattori-heizo` | ✕ | ◎ | ◎ | ✕ | ✕ | ? | ? | |
-| 遠山銀司郎 `C-toyama-ginshiro` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
-| 大滝悟郎 `C-otaki-goro` | ✕ | ◎ | ◎ | ✕ | ✕ | ✕ | ? | |
-| 綾小路文麿 `C-ayanokoji-fumimaro` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |
 | 黒羽快斗（怪盗キッド） `C-kuroba-kaito` | ◎ | ◎ | ◎ | ? | ? | ? | ◎ | [^K1-kuroba-kaito] |
 | 黒羽盗一 `C-kuroba-toichi` | ? | ? | ? | ? | ? | ? | ? | |
 | 中森青子 `C-nakamori-aoko` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
 | 白馬探 `C-hakuba-saguru` | ✕ | ◎ | ? | ✕ | ✕ | ? | ? | |
 | 鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ◎ | ? | ✕ | ✕ | ✕ | ? | |
-| ほかの「怪盗キッドの関係者」：黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-terai-konosuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「怪盗キッドの関係者」：黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-jii-konosuke`、中森碧子 `C-nakamori-midoriko` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |  |  |
 | ラム `C-rum` | ✕ | ✕ | ✕ | ? | ? | ? | ? | [^K1-rum] |
 | ベルモット `C-vermouth` | ◎ | ◎ | ◎ | ? | ? | ? | ◎ | [^K1-vermouth] |
@@ -92,7 +105,7 @@
 | コルン `C-korn` | ✕ | ? | ? | ✕ | ✕ | ✕ | ? | |
 | ピンガ `C-pinga` | ?† | ?† | ?† | ?† | ?† | ?† | ?† | [^K1-pinga] |
 | アイリッシュ `C-irish` | ◎† | ◎† | ◎† | ?† | ?† | ?† | ?† | [^K1-irish] |
-| ほかの「黒ずくめの組織」：烏丸蓮耶 `C-karasuma-renya`、キュラソー `C-curacao`、故人の構成員 `C-org-deceased` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「黒ずくめの組織」：烏丸蓮耶 `C-karasuma-renya`、キュラソー `C-curacao`、故人の構成員 `C-org-deceased`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **宮野家** |  |  |  |  |  |  |  |  |
 | ほかの「宮野家」：宮野明美 `C-miyano-akemi`、宮野厚司 `C-miyano-atsushi`、宮野エレーナ `C-miyano-elena` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **羽田浩司事件の関係者** |  |  |  |  |  |  |  |  |
@@ -100,8 +113,13 @@
 | ほかの「羽田浩司事件の関係者」：羽田康晴 `C-haneda-yasuharu`、羽田市代 `C-haneda-ichiyo`、羽田浩司 `C-haneda-koji`、アマンダ・ヒューズ `C-amanda-hughes` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |  |
 | ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **スポーツ・芸能関係** |  |  |  |  |  |  |  |  |
+| 比護隆佑 `C-higo-ryusuke` | ✕ | ? | ◎ | ✕ | ✕ | ✕ | ? | [^K1-higo-ryusuke] |
+| ほかの「スポーツ・芸能関係」：沖野ヨーコ `C-okino-yoko`、剣崎修 `C-kenzaki-osamu`、光本兵我 `C-komoto-hyoga`、勝又力 `C-katsumata-chikara` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **剣道界** |  |  |  |  |  |  |  |  |
+| ほかの「剣道界」：沖田総司 `C-okita-soshi`、鬼丸猛 `C-onimaru-takeshi`、鉄刃 `C-kurogane-yaiba`、鉄諸羽 `C-kurogane-moroha`、鉄美智子 `C-kurogane-michiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |  |
-| ほかの「その他」：楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro`、板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、勝又力 `C-katsumata-chikara` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K1-miyano-shiho]: 灰原は File 179–181（18・19巻「黒の組織から来た女大学教授殺人事件［2］」）で、縮んだ新一を知っていたことをコナンに明かす。変声機・麻酔銃は日常的に知っている。
 
@@ -148,3 +166,5 @@
 [^K1-pinga]: [劇場版] 第 26 作『黒鉄の魚影』。コナンの正体に気づいていたとする記述がある（要確認）。
 
 [^K1-wakasa-rumi]: コナンを特別視する言動がある（要確認：話数）。K1-1 は `〇` の可能性がある。
+[^K1-suzuki-tomoko]: K1-3 は、園子の友人の蘭や新一に気前よく接していること（日本語版 Wikipedia「名探偵コナンの登場人物」の鈴木朋子の項）による。要確認：話数。
+[^K1-higo-ryusuke]: K1-3 は、中学時代の新一をスカウトしたことがあること（日本語版 Wikipedia「名探偵コナンの登場人物」の比護隆佑の項）による。要確認：話数。
