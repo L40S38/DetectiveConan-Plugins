@@ -67,7 +67,7 @@ description: 名探偵コナンについて調べる・考察するときに使�
    ```
 
    事件のあらすじは `database/dataset_csv/Number-Title-Explain.csv` を事件名で Grep する（編纂室の公式あらすじなので、Web の要約より信頼できる）。
-   database が無いときは「submodule が取得されていない」と伝え、名探偵コナン編纂室 https://websunday.net/conandb/ を直接見る。
+   database が無いときは「submodule が取得されていない」と伝え、名探偵コナン編纂室 <https://websunday.net/conandb/> を直接見る。
 
 ## Step 3: 足りない分を Web で補う
 

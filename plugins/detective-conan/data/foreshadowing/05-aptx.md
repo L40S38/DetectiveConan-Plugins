@@ -3,7 +3,9 @@
 [← 伏線一覧に戻る](README.md)
 
 <a id="F-APTX-001"></a>
+
 ### F-APTX-001 APTX4869 はもともと何のために作られた薬なのか
+
 - 状態: 未回収
 - 重要度: ★★★
 - 区分: [原作]
@@ -15,7 +17,9 @@
 - 備考: [公式発言] 『ダ・ヴィンチ』2014年5月号 p.60。「組織の目的は APTX4869 の作用から考えて不老不死ではないか」という質問に、作者は「違います」と答えている。**否定の対象は「組織の目的が不老不死かどうか」であり、「APTX4869 が不老不死の薬か」を直接否定したものではない**ので、書くときはこの区別に注意する
 
 <a id="F-APTX-002"></a>
+
 ### F-APTX-002 「シルバーブレット」とは何か
+
 - 状態: 部分回収
 - 重要度: ★★
 - 区分: [原作]
@@ -26,7 +30,9 @@
 - 関連: 人物 [宮野厚司](../characters.md#C-miyano-atsushi)、[宮野エレーナ](../characters.md#C-miyano-elena)、[赤井秀一](../characters.md#C-akai-shuichi)、[工藤新一](../characters.md#C-kudo-shinichi)、[ベルモット](../characters.md#C-vermouth)／考察 Q-005
 
 <a id="F-APTX-003"></a>
+
 ### F-APTX-003 宮野夫妻はなぜ死んだのか
+
 - 状態: 部分回収
 - 重要度: ★★
 - 区分: [原作]
@@ -37,7 +43,9 @@
 - 関連: 人物 [宮野厚司](../characters.md#C-miyano-atsushi)、[宮野エレーナ](../characters.md#C-miyano-elena)／考察 Q-006
 
 <a id="F-APTX-004"></a>
+
 ### F-APTX-004 宮野エレーナが志保に残したテープには何が込められているのか
+
 - 状態: 部分回収
 - 重要度: ★★
 - 区分: [原作]
@@ -48,7 +56,9 @@
 - 関連: 人物 [宮野エレーナ](../characters.md#C-miyano-elena)、[宮野志保](../characters.md#C-miyano-shiho)／考察 Q-005、Q-006
 
 <a id="F-APTX-005"></a>
+
 ### F-APTX-005 宮野エレーナが「ヘルエンジェル」と呼ばれたのはなぜか
+
 - 状態: 部分回収
 - 重要度: ★
 - 区分: [原作]
@@ -59,7 +69,9 @@
 - 関連: 人物 [宮野エレーナ](../characters.md#C-miyano-elena)、[降谷零](../characters.md#C-furuya-rei)／考察 Q-006
 
 <a id="F-APTX-006"></a>
+
 ### F-APTX-006 灰原哀はなぜ APTX4869 を飲んだのか
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -70,7 +82,9 @@
 - 関連: 人物 [宮野志保](../characters.md#C-miyano-shiho)、[宮野明美](../characters.md#C-miyano-akemi)／知識表 [K2-3](../knowledge-matrix/02-haibara-aptx.md)
 
 <a id="F-APTX-007"></a>
+
 ### F-APTX-007 飲んでも死なずに縮む人がいるのはなぜか
+
 - 状態: 未回収
 - 重要度: ★★★
 - 区分: [原作]
@@ -81,7 +95,9 @@
 - 関連: 人物 [工藤新一](../characters.md#C-kudo-shinichi)、[宮野志保](../characters.md#C-miyano-shiho)、[赤井メアリー](../characters.md#C-akai-mary)／考察 Q-007
 
 <a id="F-APTX-008"></a>
+
 ### F-APTX-008 組織は APTX4869 で体が縮むことを知っているのか
+
 - 状態: 部分回収
 - 重要度: ★★★
 - 区分: [原作]
@@ -92,7 +108,9 @@
 - 関連: 人物 [ベルモット](../characters.md#C-vermouth)、[ラム](../characters.md#C-rum)、[ジン](../characters.md#C-gin)／考察 Q-019／知識表 [K2-4](../knowledge-matrix/02-haibara-aptx.md)
 
 <a id="F-APTX-009"></a>
+
 ### F-APTX-009 解毒剤は完成するのか
+
 - 状態: 未回収
 - 重要度: ★★★
 - 区分: [原作]
@@ -103,7 +121,9 @@
 - 関連: 人物 [宮野志保](../characters.md#C-miyano-shiho)、[工藤新一](../characters.md#C-kudo-shinichi)／考察 Q-008、Q-021
 
 <a id="F-APTX-010"></a>
+
 ### F-APTX-010 第5作で組織の構成員は灰原の正体に気づいたか
+
 - 状態: 回収済
 - 重要度: ★
 - 区分: [劇場版]
@@ -114,7 +134,9 @@
 - 関連: 人物 [宮野志保](../characters.md#C-miyano-shiho)、[ジン](../characters.md#C-gin)／伏線 [F-APTX-008](#F-APTX-008)
 
 <a id="F-APTX-011"></a>
+
 ### F-APTX-011 第26作で老若認証システムは灰原の正体を組織にさらしたか
+
 - 状態: 回収済
 - 重要度: ★★★
 - 区分: [劇場版]
@@ -126,7 +148,9 @@
 - 備考: 直美・アルジェントは小学生の頃に志保と知り合っていた
 
 <a id="F-APTX-012"></a>
+
 ### F-APTX-012 紅の修学旅行で使われずに残った解毒剤はいつ使われるのか
+
 - 状態: 未回収
 - 重要度: ★★
 - 区分: [原作]

@@ -3,7 +3,9 @@
 [← 伏線一覧に戻る](README.md)
 
 <a id="F-AKAI-001"></a>
+
 ### F-AKAI-001 赤井秀一は来葉峠で本当に死んだのか
+
 - 状態: 回収済
 - 重要度: ★★★
 - 区分: [原作]
@@ -14,7 +16,9 @@
 - 関連: 人物 [赤井秀一](../characters.md#C-akai-shuichi)、[本堂瑛海](../characters.md#C-hondo-hidemi)、[楠田陸道](../characters.md#C-kusuda-rikumichi)、[降谷零](../characters.md#C-furuya-rei)／知識表 [K3-2](../knowledge-matrix/03-akai-family.md)
 
 <a id="F-AKAI-002"></a>
+
 ### F-AKAI-002 沖矢昴は何者か
+
 - 状態: 回収済
 - 重要度: ★★★
 - 区分: [原作]
@@ -25,7 +29,9 @@
 - 関連: 人物 [赤井秀一](../characters.md#C-akai-shuichi)、[工藤有希子](../characters.md#C-kudo-yukiko)／知識表 [K3-3](../knowledge-matrix/03-akai-family.md)
 
 <a id="F-AKAI-003"></a>
+
 ### F-AKAI-003 世良真純はなぜ新一のことを知っているのか
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -36,7 +42,9 @@
 - 関連: 人物 [世良真純](../characters.md#C-sera-masumi)、[工藤新一](../characters.md#C-kudo-shinichi)／知識表 [K1](../knowledge-matrix/01-conan-shinichi.md)、[K3](../knowledge-matrix/03-akai-family.md)
 
 <a id="F-AKAI-004"></a>
+
 ### F-AKAI-004 「領域外の妹」は誰か
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -47,7 +55,9 @@
 - 関連: 人物 [赤井メアリー](../characters.md#C-akai-mary)、[世良真純](../characters.md#C-sera-masumi)／考察 Q-014／知識表 [K3-1](../knowledge-matrix/03-akai-family.md)
 
 <a id="F-AKAI-005"></a>
+
 ### F-AKAI-005 領域外の妹はなぜ子供の姿なのか
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -58,7 +68,9 @@
 - 関連: 人物 [赤井メアリー](../characters.md#C-akai-mary)／考察 Q-014／知識表 [K3-1](../knowledge-matrix/03-akai-family.md)
 
 <a id="F-AKAI-006"></a>
+
 ### F-AKAI-006 領域外の妹はどんな家の出身か
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -69,7 +81,9 @@
 - 関連: 人物 [赤井メアリー](../characters.md#C-akai-mary)、[宮野エレーナ](../characters.md#C-miyano-elena)、[宮野志保](../characters.md#C-miyano-shiho)／知識表 [K3-6](../knowledge-matrix/03-akai-family.md)
 
 <a id="F-AKAI-007"></a>
+
 ### F-AKAI-007 赤井秀一と宮野明美はどんな関係だったのか
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -80,7 +94,9 @@
 - 関連: 人物 [赤井秀一](../characters.md#C-akai-shuichi)、[宮野明美](../characters.md#C-miyano-akemi)、[ジン](../characters.md#C-gin)／知識表 [K2-6](../knowledge-matrix/02-haibara-aptx.md)、[K5-2](../knowledge-matrix/05-black-org.md)
 
 <a id="F-AKAI-008"></a>
+
 ### F-AKAI-008 赤井務武はなぜ姿を消したのか。今は生きているのか
+
 - 状態: 未回収
 - 重要度: ★★★
 - 区分: [原作]
@@ -91,7 +107,9 @@
 - 関連: 人物 [赤井務武](../characters.md#C-akai-tsutomu)、[ラム](../characters.md#C-rum)／考察 Q-013
 
 <a id="F-AKAI-009"></a>
+
 ### F-AKAI-009 羽田秀吉は何者か
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -102,7 +120,9 @@
 - 関連: 人物 [羽田秀吉](../characters.md#C-haneda-shukichi)、[赤井秀一](../characters.md#C-akai-shuichi)、[世良真純](../characters.md#C-sera-masumi)／知識表 [K3-4](../knowledge-matrix/03-akai-family.md)、[K3-5](../knowledge-matrix/03-akai-family.md)
 
 <a id="F-AKAI-010"></a>
+
 ### F-AKAI-010 宮本由美は羽田秀吉の家族のことをどこまで知っているのか
+
 - 状態: 未回収
 - 重要度: ★
 - 区分: [原作]
@@ -113,7 +133,9 @@
 - 関連: 人物 [宮本由美](../characters.md#C-miyamoto-yumi)、[羽田秀吉](../characters.md#C-haneda-shukichi)／知識表 [K3-4](../knowledge-matrix/03-akai-family.md)
 
 <a id="F-AKAI-011"></a>
+
 ### F-AKAI-011 世良真純とメアリーはどうやってコナン＝新一と気づいたのか
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -124,7 +146,9 @@
 - 関連: 人物 [世良真純](../characters.md#C-sera-masumi)、[赤井メアリー](../characters.md#C-akai-mary)、[工藤新一](../characters.md#C-kudo-shinichi)／考察 Q-018／知識表 [K1-2](../knowledge-matrix/01-conan-shinichi.md)、[K3-1](../knowledge-matrix/03-akai-family.md)
 
 <a id="F-AKAI-012"></a>
+
 ### F-AKAI-012 宮野明美が最後に送ったメールの追伸には何が書かれていたのか
+
 - 状態: 未回収
 - 重要度: ★★
 - 区分: [原作]
@@ -135,7 +159,9 @@
 - 関連: 人物 [宮野明美](../characters.md#C-miyano-akemi)、[赤井秀一](../characters.md#C-akai-shuichi)、[宮野志保](../characters.md#C-miyano-shiho)／恋愛関係 [loves.md D](../relationships/loves.md)／伏線 [F-AKAI-019](#F-AKAI-019)
 
 <a id="F-AKAI-013"></a>
+
 ### F-AKAI-013 世良真純が蘭を「思ったより手強い」と評したのはどういう意味か
+
 - 状態: 未回収
 - 重要度: ★
 - 区分: [原作]
@@ -146,7 +172,9 @@
 - 関連: 人物 [世良真純](../characters.md#C-sera-masumi)、[毛利蘭](../characters.md#C-mori-ran)
 
 <a id="F-AKAI-014"></a>
+
 ### F-AKAI-014 世良真純の「やっぱボク・・・悪い子だな・・・」は何を意味するのか
+
 - 状態: 未回収
 - 重要度: ★★
 - 区分: [原作]
@@ -157,7 +185,9 @@
 - 関連: 人物 [世良真純](../characters.md#C-sera-masumi)、[工藤新一](../characters.md#C-kudo-shinichi)、[毛利蘭](../characters.md#C-mori-ran)／伏線 [F-AKAI-011](#F-AKAI-011)
 
 <a id="F-AKAI-015"></a>
+
 ### F-AKAI-015 世良真純はなぜ初対面のコナンの名前と、探偵であることを知っていたのか
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -168,7 +198,9 @@
 - 関連: 人物 [世良真純](../characters.md#C-sera-masumi)、[赤井メアリー](../characters.md#C-akai-mary)、[工藤新一](../characters.md#C-kudo-shinichi)／伏線 [F-AKAI-003](#F-AKAI-003)、[F-AKAI-011](#F-AKAI-011)
 
 <a id="F-AKAI-016"></a>
+
 ### F-AKAI-016 世良真純はなぜコナンを「魔法使い」と呼ぶのか
+
 - 状態: 回収済
 - 重要度: ★
 - 区分: [原作]
@@ -179,7 +211,9 @@
 - 関連: 人物 [世良真純](../characters.md#C-sera-masumi)、[工藤新一](../characters.md#C-kudo-shinichi)、[赤井秀一](../characters.md#C-akai-shuichi)／伏線 [F-AKAI-003](#F-AKAI-003)
 
 <a id="F-AKAI-017"></a>
+
 ### F-AKAI-017 十二支の館の脱出ゲームに世良真純が来なかったのは、本当に風邪のためか
+
 - 状態: 未回収
 - 重要度: ★★
 - 区分: [原作]
@@ -190,7 +224,9 @@
 - 関連: 人物 [世良真純](../characters.md#C-sera-masumi)、[赤井メアリー](../characters.md#C-akai-mary)、[ラム](../characters.md#C-rum)
 
 <a id="F-AKAI-018"></a>
+
 ### F-AKAI-018 灰原が思い出した「そんな顔をするな…命に代えても守ってやる…」は、いつ、誰に向けた言葉か
+
 - 状態: 未回収
 - 重要度: ★★
 - 区分: [原作]
@@ -202,7 +238,9 @@
 - 備考: [アニオリ] アニメ第684–685話「泡と湯気と煙」（原作回に足された場面）で、沖矢が灰原に「命に代えてもお守りしますよ…姫」と返す（台詞の出典は D の 1 サイト）
 
 <a id="F-AKAI-019"></a>
+
 ### F-AKAI-019 沖矢昴が心の中でつぶやいた「彼女との約束」とは何か
+
 - 状態: 未回収
 - 重要度: ★★
 - 区分: [原作]
