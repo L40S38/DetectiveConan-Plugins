@@ -29,6 +29,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 
    `anomalies` で新しい欠け・重複が出たら、報告に含める。submodule に差分が出たら、コミットと push が必要なことをユーザーに伝える（勝手に push しない）。
    database を更新したら、`単行本未収録` の形で書いていた File（`grep -rn 単行本未収録 data/`）のうち、`conan_db.py file` で引けるようになったものを、`conventions.md` の 3.1「database に入っている話」の形に直す。
+   database の更新で、事件名や話タイトルが変わることがある（単行本の収録時に改題されるなど）。更新の前後で `database/dataset_csv/Volume-Index-Case-Title.csv` を見比べ（submodule の中で `git diff` する）、名前が変わった事件・話があったら、`data/` 以下で古い名前を使っている箇所（`grep -rn "古い名前" data/`）をすべて新しい名前に直す。直した事件名は Step 8 の報告に含める。`lint_data.py` は File 表記の形しか見ず、名前が database と合っているかは見ないので、この確認は省かない。
 3. `data/sources.md` の信頼度の順に情報を集める。単行本未収録の話は、D の速報系 2 サイト以上で一致したものだけを使う。WebFetch の要約は細部を取り違えることがあるので、話数と人物名は原文か database で確かめる。
 
 ## Step 2: 伏線リスト（data/foreshadowing/）
@@ -51,9 +52,9 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 
 ## Step 4: 知識表（data/knowledge-matrix/）
 
-- 値が変わったセルを直し、脚注に根拠の話数を書く。記号と段階値の意味と、行の選び方（グループ分け・個別行とまとめ行の基準）は `knowledge-matrix/README.md` を見る。
-- これまで「ほかの『グループ名』（全員 ✕）」のまとめ行に含まれていた人物について、1 つでも `✕`／`1` 以外の値が付くことになったら、まとめ行から出して個別の行を作る（`characters.md` の同じグループの並び順で挿入する）。
-- 新しく `characters.md` に人物を追加しただけでは、知識表は自動的にまとめ行でカバーされる（同期不要）。その人物について何か知識状態がわかったときだけ、知識表側に個別の行を追加する。
+- 値が変わったセルを直し、脚注に根拠の話数を書く。記号と「コナンの把握」の列の意味と、行の選び方（グループ分け・個別行とまとめ行の基準）は `knowledge-matrix/README.md` を見る。
+- まとめ行（「ほかの『グループ名』：…」）に入っていた人物について、「コナンの把握」以外の列に 1 つでも `✕` 以外の値が付くことになったら、まとめ行から名前と ID を消し、個別の行を作る（`characters.md` の同じグループの並び順で挿入する）。
+- `characters.md` に人物を追加したら、7 表すべてのまとめ行に名前と ID を足す（知識状態がわかっていれば個別の行にする）。足し忘れは `lint_data.py` がエラーにする。
 - `?` のセルを確かめられたら、記号に置き換えて根拠を書く。
 - `knowledge-matrix/README.md` と `conventions.md` の「情報時点」を更新する。
 
@@ -83,11 +84,12 @@ python scripts/lint_data.py
 | ファイル | ID・場所 | 変更 | 根拠 |
 |---|---|---|---|
 | foreshadowing/02-rum.md | F-RUM-009 | 経過を追加 | 原作 File 1168 [原作] |
-| knowledge-matrix/03-akai-family.md | 世良真純 K3-2 | △ → ● | 原作 File 1168 |
+| knowledge-matrix/03-akai-family.md | 世良真純 K3-2 | △ → ◎ | 原作 File 1168 |
 
 - lint：エラー 0 件、警告 0 件
 - 要確認のまま残したもの：…
 - database：更新あり／なし（submodule のコミットと push が必要）
+- database で名前が変わった事件・話：なし／「旧名」→「新名」（data/ の該当箇所を直した）
 ```
 
 コミットはユーザーから頼まれたときだけ行う。
