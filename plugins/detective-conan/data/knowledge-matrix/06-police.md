@@ -69,7 +69,7 @@
 | **FBI・CIA・赤井家** |  |  |  |  |  |  |  |  |  |
 | 赤井秀一 `C-akai-shuichi` | ? | ◎ | ◎ | ◎ | ◎ | ? | ✕ | ? | [^K6-akai-shuichi] |
 | 赤井務武 `C-akai-tsutomu` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ✕ | [^K6-nazo-no-rojin] |
-| ほかの「FBI・CIA・赤井家」：羽田秀吉 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary`、ジョディ・スターリング `C-jodie-starling`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「FBI・CIA・赤井家」：羽田秀𠮷 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary`、ジョディ・スターリング `C-jodie-starling`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |  |
 | ほかの「怪盗キッドの関係者」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-jii-konosuke`、中森青子 `C-nakamori-aoko`、中森碧子 `C-nakamori-midoriko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |  |  |  |

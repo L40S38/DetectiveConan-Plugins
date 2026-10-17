@@ -21,13 +21,15 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
    ```sh
    cd plugins/detective-conan/database
    python ConanData.py
+   python PatchData.py
    python Case.py && python FileTitle.py && python GuestCharacter.py && python MainCharacter.py && python Place.py
    cd ..
    python scripts/conan_db.py latest
    python scripts/conan_db.py anomalies
    ```
 
-   `anomalies` で新しい欠け・重複が出たら、報告に含める。submodule に差分が出たら、コミットと push が必要なことをユーザーに伝える（勝手に push しない）。
+   `PatchData.py` は、編纂室のページそのものの誤り（事件の境目の誤りなど）を、`database/patches.json` に従って直す。`ConanData.py` で取り直すと、直した誤りも編纂室のとおりに戻るので、必ず CSV を作る前に実行する。「直す対象が無い」と出たパッチは、編纂室側で直ったかを確かめ、直っていれば `patches.json` から消す。
+   `anomalies` で新しい欠け・重複が出たら、報告に含める。原作で確かめて編纂室の誤りだとわかったら、`patches.json` に足して `PatchData.py` からやり直す。submodule に差分が出たら、コミットと push が必要なことをユーザーに伝える（勝手に push しない）。
    database を更新したら、`単行本未収録` の形で書いていた File（`grep -rn 単行本未収録 data/`）のうち、`conan_db.py file` で引けるようになったものを、`conventions.md` の 3.1「database に入っている話」の形に直す。
    database の更新で、事件名や話タイトルが変わることがある（単行本の収録時に改題されるなど）。更新の前後で `database/dataset_csv/Volume-Index-Case-Title.csv` を見比べ（submodule の中で `git diff` する）、名前が変わった事件・話があったら、`data/` 以下で古い名前を使っている箇所（`grep -rn "古い名前" data/`）をすべて新しい名前に直す。直した事件名は Step 8 の報告に含める。`lint_data.py` は File 表記の形しか見ず、名前が database と合っているかは見ないので、この確認は省かない。
 3. `data/sources.md` の信頼度の順に情報を集める。単行本未収録の話は、D の速報系 2 サイト以上で一致したものだけを使う。WebFetch の要約は細部を取り違えることがあるので、話数と人物名は原文か database で確かめる。
@@ -53,6 +55,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 ## Step 4: 人物索引（data/characters.md）
 
 - 新しい人物はカードを足し、別名があれば「(a) 別名 → 人物 ID」にも足す。初登場は `python scripts/conan_db.py char <名前>` で引く。原作より先に劇場版・アニメなどで出ていたら「／先行：」を付ける。
+- database で肩書・偽名・変装時の呼び名など、カードと違う名前で載っている人物は、その呼び名を「(a) 別名 → 人物 ID」に種別「database の呼び名」で足す（例：「大滝警部」）。`conan_db.py char` は、カードの見出しと別名表にある同じ人物の名前でも引く。同じ人物が事件によって違う呼び名で載っているときは、Step 1 の `patches.json` で編纂室がほかの事件で使っている名前にそろえる（`rename_guest`）。
 - 所属・生死・役割が変わったら書き換え、根拠の話数を付ける。
 - 新しい劇場版が公開されたら、「(c) 劇場版への登場」に行を足す。
 - 人物やグループ（`###`）を足したとき、人物を別のグループへ移したときは、Step 5 で知識表にも反映する。

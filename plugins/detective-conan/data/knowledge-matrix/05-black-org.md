@@ -49,7 +49,7 @@
 | ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji`、伊織無我 `C-iori-muga` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **FBI・CIA・赤井家** |  |  |  |  |  |  |  |  |  |  |
 | 赤井秀一 `C-akai-shuichi` | ◎ | ー | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | ? | [^K5-akai-shuichi] |
-| 羽田秀吉 `C-haneda-shukichi` | ? | ? | ? | ? | ? | ? | ? | ? | ? | |
+| 羽田秀𠮷 `C-haneda-shukichi` | ? | ? | ? | ? | ? | ? | ? | ? | ? | |
 | 世良真純 `C-sera-masumi` | ◎ | ? | △ | ? | ? | ? | ? | ? | ? | [^K5-sera-masumi] |
 | 赤井メアリー `C-akai-mary` | ◎ | ? | ? | ? | ? | ? | ? | ? | ? | |
 | 赤井務武 `C-akai-tsutomu` | ✕ | ✕ | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | [^K5-nazo-no-rojin] |
