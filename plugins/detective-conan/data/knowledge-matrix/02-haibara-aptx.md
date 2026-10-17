@@ -57,7 +57,7 @@ K2-6 は、明美と会ったことがあり、その人が宮野明美だと知
 | 赤井務武 `C-akai-tsutomu` | ✕ | ✕ | ✕ | ? | ✕ | ✕ | ✕ | [^K2-nazo-no-rojin] |
 | ジョディ・スターリング `C-jodie-starling` | 〇 | 〇 | ? | ? | ? | 〇 | ? | [^K2-jodie-starling] |
 | 本堂瑛海（キール） `C-hondo-hidemi` | ? | ◎† | ? | ? | ? | ? | ? | [^K2-hondo-hidemi] |
-| ほかの「FBI・CIA・赤井家」：羽田秀吉 `C-haneda-shukichi`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「FBI・CIA・赤井家」：羽田秀𠮷 `C-haneda-shukichi`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |
 | 黒羽快斗 `C-kuroba-kaito` | ? | ◎ | ? | ✕ | ✕ | ✕ | ◎ | [^K2-kuroba-kaito] |
 | ほかの「怪盗キッドの関係者」：黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-jii-konosuke`、中森青子 `C-nakamori-aoko`、中森碧子 `C-nakamori-midoriko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
