@@ -8,8 +8,9 @@
   4. foreshadowing/README.md の一覧表と foreshadowing/0*.md の詳細で、タイトル・状態・重要度が一致しているか
   5. F・Q のタイトルが問いの形で、答えの書き方（「＝」など）が入っていないか（警告のみ。最終確認は目で行う）
   6. Markdown の表で、どの行も列数がそろっているか
-  7. 知識表のセルが決められた値だけか。右端が「コナンの把握」の列か。characters.md の全員が、
-     そのグループの個別の行かまとめ行に 1 回ずつ出てくるか
+  7. 知識表のセルが決められた値だけか。右端が「コナンの把握」の列か。グループ見出しが characters.md の
+     グループと同じ順にそろっているか。characters.md の全員が、そのグループの個別の行かまとめ行に
+     1 回ずつ、characters.md の順に出てくるか。まとめ行がグループの最後にあるか
   8. File 表記が conventions.md の 3.1 の形か（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。警告のみ）
 
 使い方:
@@ -238,6 +239,8 @@ def load_character_groups(data):
 
 def check_knowledge_cells(data, rep):
     groups = load_character_groups(data)
+    order = {cid: i for i, cid in enumerate(groups)}
+    group_order = list(dict.fromkeys(groups.values()))
     for p in sorted((data / "knowledge-matrix").glob("0*.md")):
         rel = p.relative_to(data)
         text = p.read_text(encoding="utf-8")
@@ -247,7 +250,8 @@ def check_knowledge_cells(data, rep):
                 continue
             if "コナンの把握" not in header[-2]:
                 rep.error(rel, f"{start} 行目: 根拠の左の列が「コナンの把握」になっていない")
-            seen, group = Counter(), None
+            seen, group, headings = Counter(), None, []
+            last, summary_line = -1, None
             for offset, row in enumerate(rows[2:], 2):
                 line = start + offset
                 cells = split_row(row)
@@ -255,7 +259,11 @@ def check_knowledge_cells(data, rep):
                 m = re.fullmatch(r"\*\*(.+)\*\*", cells[0])
                 if m and not any(cells[1:]):
                     group = m.group(1)  # グループ見出しの行
+                    headings.append(group)
+                    last, summary_line = -1, None
                     continue
+                if summary_line:
+                    rep.error(rel, f"{line} 行目: まとめ行（{summary_line} 行目）の後に行がある（まとめ行はグループの最後に置く）")
                 ids = re.findall(C_ID, cells[0])
                 if not ids:
                     rep.error(rel, f"{line} 行目: 人物 ID が無い（{cells[0]}）")
@@ -263,18 +271,36 @@ def check_knowledge_cells(data, rep):
                 for cid in ids:
                     if cid in groups and groups[cid] != group:
                         rep.error(rel, f"{line} 行目: {cid} は characters.md では「{groups[cid]}」のグループ")
-                if cells[0].startswith("ほかの「"):
+                pos = [order[cid] for cid in ids if cid in order]
+                if cells[0].startswith("ほかの"):
                     # グループ内の残り全員をまとめた行
+                    summary_line = line
                     if not cells[0].startswith(f"ほかの「{group}」："):
                         rep.error(rel, f"{line} 行目: まとめ行は「ほかの「{group}」：」で始める")
                     if not values or any(v != "✕" for v in values[:-1]) or values[-1] != "ー":
                         rep.error(rel, f"{line} 行目: まとめ行は「コナンの把握」を `ー`、ほかの列をすべて `✕` にする")
+                    if pos != sorted(pos):
+                        rep.error(rel, f"{line} 行目: まとめ行の名前が characters.md の順になっていない")
                     continue
+                if pos and (pos[0] < last or pos != sorted(pos)):
+                    rep.error(rel, f"{line} 行目: {ids[0]} の行が characters.md の順になっていない（グループの中の個別の行は characters.md の順に並べる）")
+                if pos:
+                    last = pos[-1]
                 for h, cell in zip(header[1:-1], values):
                     if cell.rstrip("†") not in CELL_VALUES:
                         rep.error(rel, f"{line} 行目 {h}: 値「{cell}」は決められた値ではない")
-                if all(v.rstrip("†") == "✕" for v in values[:-1]):
-                    rep.error(rel, f"{line} 行目: 「コナンの把握」以外がすべて `✕` の人物は、まとめ行に入れる")
+                # ✕† は根拠（正史外）を残すため「✕ 以外」として扱い、個別の行に置く
+                if all(v == "✕" for v in values[:-1]):
+                    rep.error(rel, f"{line} 行目: 「コナンの把握」以外がすべて `✕`（`†` なし）の人物は、まとめ行に入れる")
+            if headings != group_order:
+                missing = [g for g in group_order if g not in headings]
+                extra = [h for h in headings if h not in group_order]
+                if missing:
+                    rep.error(rel, f"{start} 行目の表: グループ見出しが無い（{'、'.join(missing)}）")
+                if extra:
+                    rep.error(rel, f"{start} 行目の表: characters.md に無いグループ見出しがある（{'、'.join(extra)}）")
+                if not missing and not extra:
+                    rep.error(rel, f"{start} 行目の表: グループ見出しの順番が characters.md と違う（または重複している）")
             for cid in groups:
                 if not seen[cid]:
                     rep.error(rel, f"{cid} がどの行にも無い（個別の行かまとめ行に入れる）")
