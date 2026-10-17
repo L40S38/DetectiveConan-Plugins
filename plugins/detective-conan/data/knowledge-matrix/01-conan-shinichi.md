@@ -103,7 +103,7 @@
 | ウォッカ `C-vodka` | ✕ | ✕ | ◎ | ✕ | ✕ | ✕ | ◎ | [^K1-vodka] |
 | ピンガ `C-pinga` | ◎† | ◎† | ◎† | 〇† | 〇† | 〇† | ◎† | [^K1-pinga] |
 | アイリッシュ `C-irish` | ◎† | ◎† | ◎† | ?† | ?† | ?† | ◎† | [^K1-irish] |
-| ほかの「黒ずくめの組織」：烏丸蓮耶 `C-karasuma-renya`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、故人の構成員 `C-org-deceased`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「黒ずくめの組織」：烏丸蓮耶 `C-karasuma-renya`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、テキーラ `C-tequila`、ピスコ `C-pisco`、カルバドス `C-calvados`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **宮野家** |  |  |  |  |  |  |  |  |
 | 宮野明美 `C-miyano-akemi` | ◎ | ◎ | ◎ | ✕ | ✕ | ✕ | ◎ | [^K1-miyano-akemi] |
 | ほかの「宮野家」：宮野厚司 `C-miyano-atsushi`、宮野エレーナ `C-miyano-elena` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
