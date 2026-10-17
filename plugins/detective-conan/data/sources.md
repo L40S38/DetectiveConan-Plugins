@@ -55,6 +55,8 @@ URL はすべて 2026-09-29 に開けることを確認した。開けなかっ�
 | Wikipedia「名探偵コナンのアニメエピソード一覧」 | <https://ja.wikipedia.org/wiki/名探偵コナンのアニメエピソード一覧> | アニメ話数と原作の対応 | — | 2026-09-29 |
 | Wikipedia「劇場版名探偵コナン」 | <https://ja.wikipedia.org/wiki/劇場版名探偵コナン> | 劇場版の一覧、各作の記事への入口 | 作品ごとに個別記事（例：「名探偵コナン 黒鉄の魚影」） | 2026-09-29 |
 | Wikipedia「まじっく快斗」 | <https://ja.wikipedia.org/wiki/まじっく快斗> | キッド陣営の設定、パンドラ・スネイク | — | 2026-09-29 |
+| Wikipedia「灰原哀」 | <https://ja.wikipedia.org/wiki/灰原哀> | 灰原の設定、赤井家との血縁、登場回 | — | 2026-10-17 |
+| Wikipedia「FBI (名探偵コナン)」 | <https://ja.wikipedia.org/wiki/FBI_(名探偵コナン)> | FBI の捜査官の設定、赤井・世良との関わり | — | 2026-10-17 |
 | ニコニコ大百科「名探偵コナン」 | <https://dic.nicovideo.jp/a/名探偵コナン> | 用語、ファンの通称 | 掲示板部分は D 扱い | 2026-09-29 |
 | ニコニコ大百科「黒の組織」 | <https://dic.nicovideo.jp/a/黒の組織> | 組織の用語・メンバー | 同上 | 2026-09-29 |
 | ピクシブ百科事典 | <https://dic.pixiv.net/> | キャラの通称、ファンの呼び名 | 自動取得はブロックされる（ブラウザでは開ける） | 2026-09-29 |
@@ -65,6 +67,7 @@ URL はすべて 2026-09-29 に開けることを確認した。開けなかっ�
 | DCW：黒ずくめの組織 | <https://www.detectiveconanworld.com/wiki/Black_Organization> | 組織の構成、メンバー | ラム関連はネタバレ防止のため別ページに飛ばされる | 2026-09-29 |
 | DCW：コナンの正体を知る人物 | <https://www.detectiveconanworld.com/wiki/List_of_characters_who_know_Conan%27s_identity> | 正体を知る人物と、知った経緯・話数 | knowledge-matrix 表1 の突き合わせに使う | 2026-09-29 |
 | 名探偵コナン Wiki（Fandom 日本語版） | <https://meitantei-conan.fandom.com/ja/wiki/> | 人物・事件の日本語解説 | 自動取得はブロックされる（ブラウザでは開ける） | 2026-09-29 |
+| Namu Wiki（韓国語） | <https://namu.wiki/> | 人物・事件の韓国語解説 | 話数が書かれていないことが多いので、日本語の出典か database で確かめる。自動取得では 403 になることがある | 2026-10-17 |
 
 ### D 考察・速報
 
