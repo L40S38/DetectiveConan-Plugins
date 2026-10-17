@@ -1,0 +1,7 @@
+// foreshadowing/ だけの例外。リポジトリ直下の .markdownlint-cli2.jsonc に重ねて使われる。
+{
+  "config": {
+    // 分類ファイルは # のすぐ下に ### F-… を置く（lint_data.py は ### の見出しで項目を読む）
+    "MD001": false
+  }
+}

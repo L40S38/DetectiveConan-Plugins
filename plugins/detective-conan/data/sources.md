@@ -18,18 +18,18 @@ URL はすべて 2026-09-29 に開けることを確認した。開けなかっ�
 
 | 名称 | URL | 運営 | 調べられること | ネタバレの早さ | 注意点 | 最終確認日 |
 |---|---|---|---|---|---|---|
-| 名探偵コナン編纂室 | https://websunday.net/conandb/ | 小学館（WEBサンデー） | 事件ごとの収録巻・File・話タイトル・メイン／ゲストキャラ・場所・あらすじ | 単行本の発売後 | database submodule の取得元。単行本未収録の話は載らない | 2026-10-16 |
-| WEBサンデー | https://websunday.net/ | 小学館 | 連載の掲載状況、休載、次号予告 | 掲載号の発売日 | 本文は読めない | 2026-09-29 |
-| サンデーうぇぶり | https://www.sunday-webry.com/ | 小学館 | 連載話の配信、作者コメント動画など | 掲載号の発売日前後 | アプリ中心 | 2026-09-29 |
-| 名探偵コナン 原作公式サイト | https://www.conan-portal.com/ | 小学館 | ニュース、あらすじ、キャラクター、関連作品 | 公式発表と同時 | 深い設定は載らない | 2026-09-29 |
-| 小学館コミック（単行本ページ） | https://shogakukan-comic.jp/book?isbn=9784098545322 | 小学館 | 単行本の発売日・内容紹介（例は 108 巻） | 単行本の発売前後 | 巻ごとに ISBN が変わる | 2026-09-29 |
-| 読売テレビ アニメ公式 | https://www.ytv.co.jp/conan/ | 読売テレビ | 放送回、あらすじ、原作回かアニオリか | 放送週 | 古い回は別ページ | 2026-09-29 |
-| 劇場版公式 | https://www.conan-movie.jp/ | 劇場版製作委員会 | 最新劇場版のあらすじ・登場人物・公開日 | 公開前から段階的 | 過去作の情報は少ない | 2026-09-29 |
-| TMS エンタテインメント | https://www.tms-e.co.jp/ | TMS | アニメ制作情報 | — | 作品ページは検索して辿る | 2026-09-29 |
-| 青山剛昌ふるさと館 | https://www.gamf.jp/ | 北栄町・青山剛昌ふるさと館 | 作者関連の展示、企画 | — | 本筋の設定情報は少ない | 2026-09-29 |
-| X：江戸川コナン | https://x.com/conan_file | 週刊少年サンデー編集部 | 掲載告知、単行本告知 | 掲載日 | 公式の告知アカウント | 2026-09-29 |
-| X：アニメ名探偵コナン【公式】 | https://x.com/conan_anime1000 | アニメ公式 | 放送告知 | 放送週 | — | 2026-09-29 |
-| X：劇場版名探偵コナン【公式】 | https://x.com/conan_movie | 劇場版公式 | 劇場版の告知 | 公開前から | — | 2026-09-29 |
+| 名探偵コナン編纂室 | <https://websunday.net/conandb/> | 小学館（WEBサンデー） | 事件ごとの収録巻・File・話タイトル・メイン／ゲストキャラ・場所・あらすじ | 単行本の発売後 | database submodule の取得元。単行本未収録の話は載らない | 2026-10-16 |
+| WEBサンデー | <https://websunday.net/> | 小学館 | 連載の掲載状況、休載、次号予告 | 掲載号の発売日 | 本文は読めない | 2026-09-29 |
+| サンデーうぇぶり | <https://www.sunday-webry.com/> | 小学館 | 連載話の配信、作者コメント動画など | 掲載号の発売日前後 | アプリ中心 | 2026-09-29 |
+| 名探偵コナン 原作公式サイト | <https://www.conan-portal.com/> | 小学館 | ニュース、あらすじ、キャラクター、関連作品 | 公式発表と同時 | 深い設定は載らない | 2026-09-29 |
+| 小学館コミック（単行本ページ） | <https://shogakukan-comic.jp/book?isbn=9784098545322> | 小学館 | 単行本の発売日・内容紹介（例は 108 巻） | 単行本の発売前後 | 巻ごとに ISBN が変わる | 2026-09-29 |
+| 読売テレビ アニメ公式 | <https://www.ytv.co.jp/conan/> | 読売テレビ | 放送回、あらすじ、原作回かアニオリか | 放送週 | 古い回は別ページ | 2026-09-29 |
+| 劇場版公式 | <https://www.conan-movie.jp/> | 劇場版製作委員会 | 最新劇場版のあらすじ・登場人物・公開日 | 公開前から段階的 | 過去作の情報は少ない | 2026-09-29 |
+| TMS エンタテインメント | <https://www.tms-e.co.jp/> | TMS | アニメ制作情報 | — | 作品ページは検索して辿る | 2026-09-29 |
+| 青山剛昌ふるさと館 | <https://www.gamf.jp/> | 北栄町・青山剛昌ふるさと館 | 作者関連の展示、企画 | — | 本筋の設定情報は少ない | 2026-09-29 |
+| X：江戸川コナン | <https://x.com/conan_file> | 週刊少年サンデー編集部 | 掲載告知、単行本告知 | 掲載日 | 公式の告知アカウント | 2026-09-29 |
+| X：アニメ名探偵コナン【公式】 | <https://x.com/conan_anime1000> | アニメ公式 | 放送告知 | 放送週 | — | 2026-09-29 |
+| X：劇場版名探偵コナン【公式】 | <https://x.com/conan_movie> | 劇場版公式 | 劇場版の告知 | 公開前から | — | 2026-09-29 |
 
 ### B 準公式
 
@@ -46,24 +46,24 @@ URL はすべて 2026-09-29 に開けることを確認した。開けなかっ�
 
 | 名称 | URL | 調べられること | 注意点 | 最終確認日 |
 |---|---|---|---|---|
-| Wikipedia「黒ずくめの組織」 | https://ja.wikipedia.org/wiki/黒ずくめの組織 | 組織のメンバー、コードネームと本名、関連事件 | 最新話の反映が遅れることがある | 2026-09-29 |
-| Wikipedia「名探偵コナンの登場人物」 | https://ja.wikipedia.org/wiki/名探偵コナンの登場人物 | 人物の基本設定、所属、初登場 | 人物ごとに個別記事へ分かれている | 2026-09-29 |
-| Wikipedia「江戸川コナン」 | https://ja.wikipedia.org/wiki/江戸川コナン | コナン／新一の設定、正体を知る人物 | — | 2026-09-29 |
-| Wikipedia「名探偵コナンのエピソード一覧」 | https://ja.wikipedia.org/wiki/名探偵コナンのエピソード一覧 | 原作・アニメのエピソード一覧への入口 | 漫画・アニメで別記事あり | 2026-09-29 |
-| Wikipedia「名探偵コナンの漫画エピソード一覧」 | https://ja.wikipedia.org/wiki/名探偵コナンの漫画エピソード一覧 | 原作の話数と事件の対応 | — | 2026-09-29 |
-| Wikipedia「名探偵コナンのアニメエピソード一覧」 | https://ja.wikipedia.org/wiki/名探偵コナンのアニメエピソード一覧 | アニメ話数と原作の対応 | — | 2026-09-29 |
-| Wikipedia「劇場版名探偵コナン」 | https://ja.wikipedia.org/wiki/劇場版名探偵コナン | 劇場版の一覧、各作の記事への入口 | 作品ごとに個別記事（例：「名探偵コナン 黒鉄の魚影」） | 2026-09-29 |
-| Wikipedia「まじっく快斗」 | https://ja.wikipedia.org/wiki/まじっく快斗 | キッド陣営の設定、パンドラ・スネイク | — | 2026-09-29 |
-| ニコニコ大百科「名探偵コナン」 | https://dic.nicovideo.jp/a/名探偵コナン | 用語、ファンの通称 | 掲示板部分は D 扱い | 2026-09-29 |
-| ニコニコ大百科「黒の組織」 | https://dic.nicovideo.jp/a/黒の組織 | 組織の用語・メンバー | 同上 | 2026-09-29 |
-| ピクシブ百科事典 | https://dic.pixiv.net/ | キャラの通称、ファンの呼び名 | 自動取得はブロックされる（ブラウザでは開ける） | 2026-09-29 |
-| Detective Conan World Wiki（英語） | https://www.detectiveconanworld.com/wiki/Main_Page | File・巻・アニメ話数の対応、人物の詳細 | 英語名で検索する | 2026-09-29 |
-| DCW：漫画の話数一覧 | https://www.detectiveconanworld.com/wiki/Manga | File と巻・アニメ話数の対応表 | — | 2026-09-29 |
-| DCW：アニメの話数一覧 | https://www.detectiveconanworld.com/wiki/Anime | アニメ話数と原作 File の対応 | — | 2026-09-29 |
-| DCW：劇場版一覧 | https://www.detectiveconanworld.com/wiki/Movies | 劇場版の一覧 | — | 2026-09-29 |
-| DCW：黒ずくめの組織 | https://www.detectiveconanworld.com/wiki/Black_Organization | 組織の構成、メンバー | ラム関連はネタバレ防止のため別ページに飛ばされる | 2026-09-29 |
-| DCW：コナンの正体を知る人物 | https://www.detectiveconanworld.com/wiki/List_of_characters_who_know_Conan%27s_identity | 正体を知る人物と、知った経緯・話数 | knowledge-matrix 表1 の突き合わせに使う | 2026-09-29 |
-| 名探偵コナン Wiki（Fandom 日本語版） | https://meitantei-conan.fandom.com/ja/wiki/ | 人物・事件の日本語解説 | 自動取得はブロックされる（ブラウザでは開ける） | 2026-09-29 |
+| Wikipedia「黒ずくめの組織」 | <https://ja.wikipedia.org/wiki/黒ずくめの組織> | 組織のメンバー、コードネームと本名、関連事件 | 最新話の反映が遅れることがある | 2026-09-29 |
+| Wikipedia「名探偵コナンの登場人物」 | <https://ja.wikipedia.org/wiki/名探偵コナンの登場人物> | 人物の基本設定、所属、初登場 | 人物ごとに個別記事へ分かれている | 2026-09-29 |
+| Wikipedia「江戸川コナン」 | <https://ja.wikipedia.org/wiki/江戸川コナン> | コナン／新一の設定、正体を知る人物 | — | 2026-09-29 |
+| Wikipedia「名探偵コナンのエピソード一覧」 | <https://ja.wikipedia.org/wiki/名探偵コナンのエピソード一覧> | 原作・アニメのエピソード一覧への入口 | 漫画・アニメで別記事あり | 2026-09-29 |
+| Wikipedia「名探偵コナンの漫画エピソード一覧」 | <https://ja.wikipedia.org/wiki/名探偵コナンの漫画エピソード一覧> | 原作の話数と事件の対応 | — | 2026-09-29 |
+| Wikipedia「名探偵コナンのアニメエピソード一覧」 | <https://ja.wikipedia.org/wiki/名探偵コナンのアニメエピソード一覧> | アニメ話数と原作の対応 | — | 2026-09-29 |
+| Wikipedia「劇場版名探偵コナン」 | <https://ja.wikipedia.org/wiki/劇場版名探偵コナン> | 劇場版の一覧、各作の記事への入口 | 作品ごとに個別記事（例：「名探偵コナン 黒鉄の魚影」） | 2026-09-29 |
+| Wikipedia「まじっく快斗」 | <https://ja.wikipedia.org/wiki/まじっく快斗> | キッド陣営の設定、パンドラ・スネイク | — | 2026-09-29 |
+| ニコニコ大百科「名探偵コナン」 | <https://dic.nicovideo.jp/a/名探偵コナン> | 用語、ファンの通称 | 掲示板部分は D 扱い | 2026-09-29 |
+| ニコニコ大百科「黒の組織」 | <https://dic.nicovideo.jp/a/黒の組織> | 組織の用語・メンバー | 同上 | 2026-09-29 |
+| ピクシブ百科事典 | <https://dic.pixiv.net/> | キャラの通称、ファンの呼び名 | 自動取得はブロックされる（ブラウザでは開ける） | 2026-09-29 |
+| Detective Conan World Wiki（英語） | <https://www.detectiveconanworld.com/wiki/Main_Page> | File・巻・アニメ話数の対応、人物の詳細 | 英語名で検索する | 2026-09-29 |
+| DCW：漫画の話数一覧 | <https://www.detectiveconanworld.com/wiki/Manga> | File と巻・アニメ話数の対応表 | — | 2026-09-29 |
+| DCW：アニメの話数一覧 | <https://www.detectiveconanworld.com/wiki/Anime> | アニメ話数と原作 File の対応 | — | 2026-09-29 |
+| DCW：劇場版一覧 | <https://www.detectiveconanworld.com/wiki/Movies> | 劇場版の一覧 | — | 2026-09-29 |
+| DCW：黒ずくめの組織 | <https://www.detectiveconanworld.com/wiki/Black_Organization> | 組織の構成、メンバー | ラム関連はネタバレ防止のため別ページに飛ばされる | 2026-09-29 |
+| DCW：コナンの正体を知る人物 | <https://www.detectiveconanworld.com/wiki/List_of_characters_who_know_Conan%27s_identity> | 正体を知る人物と、知った経緯・話数 | knowledge-matrix 表1 の突き合わせに使う | 2026-09-29 |
+| 名探偵コナン Wiki（Fandom 日本語版） | <https://meitantei-conan.fandom.com/ja/wiki/> | 人物・事件の日本語解説 | 自動取得はブロックされる（ブラウザでは開ける） | 2026-09-29 |
 
 ### D 考察・速報
 
@@ -71,13 +71,13 @@ URL はすべて 2026-09-29 に開けることを確認した。開けなかっ�
 
 | 名称 | URL | 得意なこと | 注意点 | 最終確認日 |
 |---|---|---|---|---|
-| 名探偵コナン考察・図解 | https://conan-zukai.com/ | 最新話ごとの感想・考察、伏線回収の整理、図解 | 考察部分は `[ファン説]` | 2026-09-29 |
-| “ゼロ”のブログ | https://detective-conan-blog.com/ | 最新話のネタバレ一覧、単行本の収録話、アニメの原作回／アニオリ一覧 | 同上 | 2026-09-29 |
-| hellominju（名探偵コナン ネタバレ） | https://www.hellominju.com/ | 最新話のネタバレ、単行本ごとの収録 File 一覧 | 同上 | 2026-09-29 |
-| skypenguin | https://skypenguin.net/ | 最新話の感想・考察（掲載号付き） | 同上 | 2026-09-29 |
-| 名探偵コナンのネタバレ（conanfan.xyz） | https://conanfan.xyz/ | 本誌の最新ネタバレ | 同上 | 2026-09-29 |
-| ciatr | https://ciatr.jp/topics/284181 | 人物・謎ごとのまとめ記事（例はラムの記事） | まとめの時点が古いことがある | 2026-09-29 |
-| アニメイトタイムズ | https://www.animatetimes.com/news/details.php?id=1612026909 | 単行本の発売日・収録内容のまとめ | ニュースサイト | 2026-09-29 |
+| 名探偵コナン考察・図解 | <https://conan-zukai.com/> | 最新話ごとの感想・考察、伏線回収の整理、図解 | 考察部分は `[ファン説]` | 2026-09-29 |
+| “ゼロ”のブログ | <https://detective-conan-blog.com/> | 最新話のネタバレ一覧、単行本の収録話、アニメの原作回／アニオリ一覧 | 同上 | 2026-09-29 |
+| hellominju（名探偵コナン ネタバレ） | <https://www.hellominju.com/> | 最新話のネタバレ、単行本ごとの収録 File 一覧 | 同上 | 2026-09-29 |
+| skypenguin | <https://skypenguin.net/> | 最新話の感想・考察（掲載号付き） | 同上 | 2026-09-29 |
+| 名探偵コナンのネタバレ（conanfan.xyz） | <https://conanfan.xyz/> | 本誌の最新ネタバレ | 同上 | 2026-09-29 |
+| ciatr | <https://ciatr.jp/topics/284181> | 人物・謎ごとのまとめ記事（例はラムの記事） | まとめの時点が古いことがある | 2026-09-29 |
+| アニメイトタイムズ | <https://www.animatetimes.com/news/details.php?id=1612026909> | 単行本の発売日・収録内容のまとめ | ニュースサイト | 2026-09-29 |
 
 ## (c) 用途別の逆引き
 

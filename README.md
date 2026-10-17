@@ -11,7 +11,7 @@
 
 ## 導入
 
-```
+```text
 # リポジトリを取得（submodule も一緒に）
 git clone --recurse-submodules <このリポジトリの URL>
 
@@ -33,8 +33,12 @@ submodule を取得し忘れたときは `git submodule update --init` を実行
 
 ## 構成
 
-```
+```text
 .claude-plugin/marketplace.json       マーケットプレイスの定義
+.github/workflows/lint.yml            CI（markdownlint と lint_data.py）
+.markdownlint-cli2.jsonc              Markdown の lint 設定
+package.json                          markdownlint-cli2（npm run lint:md / fix:md）。Node 20 以上
+.npmrc                                Node の版が足りないときに npm ci を止める
 plugins/detective-conan/
 ├── .claude-plugin/plugin.json
 ├── data/
@@ -56,8 +60,9 @@ plugins/detective-conan/
 ## データを更新する
 
 1. このリポジトリで Claude Code を開き、update スキルに頼む（例：「File 1168 を反映して」）。インストール済みプラグインのキャッシュではなく、このリポジトリのファイルを直すこと。
-2. `python plugins/detective-conan/scripts/lint_data.py` でエラーが 0 件になることを確かめる。
-3. コミットしたら、`/plugin marketplace update detective-conan-plugins` でインストール済みのプラグインに反映する。
+2. `npm run fix:md` で Markdown の書式を直す（初回だけ先に `npm ci`。markdownlint-cli2 を使う。設定は `.markdownlint-cli2.jsonc`）。
+3. `python plugins/detective-conan/scripts/lint_data.py` と `npm run lint:md` で、どちらもエラーが 0 件になることを確かめる。fix:md は data/ のファイルも書き換えるので、2. の後に実行する。2. で直る書式が残っていないかと 3. のチェックは、main への push と PR のたびに GitHub Actions（`.github/workflows/lint.yml`）でも確かめる。
+4. コミットしたら、`/plugin marketplace update detective-conan-plugins` でインストール済みのプラグインに反映する。
 
 ### database について
 
