@@ -35,6 +35,7 @@ submodule を取得し忘れたときは `git submodule update --init` を実行
 
 ```text
 .claude-plugin/marketplace.json       マーケットプレイスの定義
+.github/workflows/lint.yml            CI（markdownlint と lint_data.py）
 .markdownlint-cli2.jsonc              Markdown の lint 設定
 package.json                          markdownlint-cli2（npm run lint:md / fix:md）
 plugins/detective-conan/
@@ -59,7 +60,7 @@ plugins/detective-conan/
 
 1. このリポジトリで Claude Code を開き、update スキルに頼む（例：「File 1168 を反映して」）。インストール済みプラグインのキャッシュではなく、このリポジトリのファイルを直すこと。
 2. `python plugins/detective-conan/scripts/lint_data.py` でエラーが 0 件になることを確かめる。
-3. `npm run fix:md` で Markdown の書式を直し、`npm run lint:md` でエラーが 0 件になることを確かめる（初回だけ先に `npm install`。markdownlint-cli2 を使う。設定は `.markdownlint-cli2.jsonc`）。
+3. `npm run fix:md` で Markdown の書式を直し、`npm run lint:md` でエラーが 0 件になることを確かめる（初回だけ先に `npm install`。markdownlint-cli2 を使う。設定は `.markdownlint-cli2.jsonc`）。2.・3. のチェックは、main への push と PR のたびに GitHub Actions（`.github/workflows/lint.yml`）でも実行される。
 4. コミットしたら、`/plugin marketplace update detective-conan-plugins` でインストール済みのプラグインに反映する。
 
 ### database について
