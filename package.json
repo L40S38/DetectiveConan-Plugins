@@ -1,9 +1,12 @@
 {
   "name": "detective-conan-plugins",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "lint:md": "markdownlint-cli2 \"**/*.md\"",
-    "fix:md": "markdownlint-cli2 --fix \"**/*.md\""
+    "lint:md": "markdownlint-cli2",
+    "fix:md": "markdownlint-cli2 --fix"
   },
   "devDependencies": {
     "markdownlint-cli2": "0.22.1"

@@ -1,17 +1,20 @@
 // Markdown の lint 設定。npm run lint:md で確かめ、npm run fix:md で自動修正する。
+// 特定のディレクトリだけの例外は、そのディレクトリの .markdownlint-cli2.jsonc に書く（この設定に重ねて使われる）。
 {
+  // 調べるファイル。npm run lint:md・fix:md も、エディタの拡張機能もこれを使う
+  "globs": ["**/*.md"],
   "config": {
     "default": true,
     // 段落は 1 行で書くので、行の長さは見ない
     "MD013": false,
     // 人物カードなどのアンカー <a id="C-…"></a> は使う
     "MD033": { "allowed_elements": ["a"] },
-    // 正史区分タグ [原作][劇場版] が参照リンクと見なされるので見ない
-    "MD052": false,
-    // foreshadowing は # のすぐ下に ### F-… を置く
-    "MD001": false,
-    // knowledge-matrix/README.md の **表1 …** は見出しにしない
-    "MD036": false,
+    // lint_data.py は箇条書きを「- 」、太字を「**」で読むので、fix:md がほかの記法に書き換えないよう固定する
+    "MD004": { "style": "dash" },
+    "MD049": { "style": "asterisk" },
+    "MD050": { "style": "asterisk" },
+    // 正史区分タグの並び [原作][劇場版] は参照リンクと見なされるので、タグ名だけ見ない（"x" はチェックボックス用の既定値）
+    "MD052": { "ignored_labels": ["x", "原作", "まじっく快斗", "劇場版", "アニオリ", "TVSP", "スピンオフ", "公式発言", "ファン説"] },
     // 別々の節で同じ小見出しが繰り返されるのは許す
     "MD024": { "siblings_only": true },
     // 表は区切り行を |---| と詰め、本文の行は | a | と書く（この組み合わせを MD060 はどの形とも見なさない）

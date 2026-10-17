@@ -39,7 +39,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 - 新しい謎を見つけたら、分類ごとに次の番号で項目を立てる。ID は再利用しない。
 - **タイトルは謎の形**で書き、答えも、ほかの謎の答えになる名前も入れない（`conventions.md` の 5.）。
 - `README.md` の一覧表と、対応する分類ファイルの詳細の両方に書く（ID・タイトル・状態・重要度・初出・回収）。
-  - 詳細の項目には `<a id="F-XXX-NNN"></a>` を見出しの直前に付ける（既存項目にならう）。README.md の一覧表からはこのアンカーへリンクする（`ファイル名#F-XXX-NNN`）。
+  - 詳細の項目には、見出しの前に `<a id="F-XXX-NNN"></a>` を置く。アンカー・見出し・箇条書きのあいだは空行を 1 行ずつあける（既存項目にならう。空行が無いと markdownlint のエラーになる）。README.md の一覧表からはこのアンカーへリンクする（`ファイル名#F-XXX-NNN`）。
   - 「関連」欄で人物・知識表に触れるときは、`characters.md#C-xxx`／`../knowledge-matrix/0N-〜.md` へのリンクにする（既存項目の書き方にならう）。
 - 回収されたら「状態」を変え、「回収」欄に話数と答えを書く。答えを書くのは「回収」欄だけ。
 - 途中の進展は「経過」欄に時系列で足す。
@@ -71,12 +71,12 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 ## Step 7: チェックする
 
 ```sh
+npm run fix:md    # Markdown の書式を自動で直す（初回だけ先に npm ci）
 python scripts/lint_data.py
-npm run fix:md    # Markdown の書式を自動で直す（初回だけ先に npm install）
 npm run lint:md
 ```
 
-どちらもエラーが 0 件になるまで直す。lint_data.py の警告（タイトルの書き方）は、答えが入っていないことを目で確かめる。markdownlint の設定はリポジトリ直下の `.markdownlint-cli2.jsonc` にある。
+fix:md は data/ のファイルも書き換えるので、lint_data.py はその後に実行する。lint_data.py と lint:md のどちらもエラーが 0 件になるまで直す。lint_data.py の警告（タイトルの書き方）は、答えが入っていないことを目で確かめる。markdownlint の設定はリポジトリ直下の `.markdownlint-cli2.jsonc` にある（`data/foreshadowing/`・`data/relationships/` には、そのディレクトリだけの例外を書いた同名のファイルがある）。
 
 ## Step 8: 変更をまとめて示す
 
