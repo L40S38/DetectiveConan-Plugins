@@ -64,7 +64,8 @@
 | **剣道界** |  |  |  |  |  |  |  |
 | ほかの「剣道界」：沖田総司 `C-okita-soshi`、鬼丸猛 `C-onimaru-takeshi`、鉄刃 `C-kurogane-yaiba`、鉄諸羽 `C-kurogane-moroha`、鉄美智子 `C-kurogane-michiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |
-| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 鷹ジジイ `C-taka-jiji` | ? | ? | ? | ? | ? | ✕ | [^K7-taka-jiji] |
+| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago`、ベーダーさん `C-beda-san` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K7-kuroba-kaito]: [まじっく快斗] 父・盗一が初代キッドだと知って跡を継いだ。[劇場版] 第 27 作『100万ドルの五稜星』の時点で父の生存を知っているかは要確認。
 
@@ -79,3 +80,5 @@
 [^K7-kudo-yukiko]: 盗一から変装を習った（F-KID-002）。
 
 [^K7-vermouth]: 盗一から変装を習った（F-KID-002）。
+
+[^K7-taka-jiji]: File 1102「表裏」（103巻「怪盗キッドと王冠マジック」）の最後で、コナンがキッドを退けたニュースを見て、キッドを退けたコナンに怒り、杖で携帯電話を叩き壊す。キッドとのつながりがうかがえるが、何を知っているかは描かれていないので K7-1〜K7-5 は `?`。K7-6 は、コナンのいない場面なので `✕`。
