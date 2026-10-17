@@ -1,0 +1,22 @@
+// Markdown の lint 設定。npm run lint:md で確かめ、npm run fix:md で自動修正する。
+{
+  "config": {
+    "default": true,
+    // 段落は 1 行で書くので、行の長さは見ない
+    "MD013": false,
+    // 人物カードなどのアンカー <a id="C-…"></a> は使う
+    "MD033": { "allowed_elements": ["a"] },
+    // 正史区分タグ [原作][劇場版] が参照リンクと見なされるので見ない
+    "MD052": false,
+    // foreshadowing は # のすぐ下に ### F-… を置く
+    "MD001": false,
+    // knowledge-matrix/README.md の **表1 …** は見出しにしない
+    "MD036": false,
+    // 別々の節で同じ小見出しが繰り返されるのは許す
+    "MD024": { "siblings_only": true },
+    // 表は区切り行を |---| と詰め、本文の行は | a | と書く（この組み合わせを MD060 はどの形とも見なさない）
+    "MD060": false
+  },
+  "gitignore": true,
+  "ignores": ["plugins/detective-conan/database/**"]
+}
