@@ -76,7 +76,7 @@
 
 ---
 
-### 毛利事務所 `G-mouri-jimusho`
+### 毛利探偵事務所 `G-mouri-jimusho`
 
 **状態**: ◎ 活動中  
 **構成員**: 毛利小五郎 `C-mori-kogoro`、毛利蘭 `C-mori-ran`、江戸川コナン `C-kudo-shinichi`
