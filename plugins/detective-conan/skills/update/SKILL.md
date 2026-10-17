@@ -5,7 +5,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 
 # 名探偵コナン データ更新
 
-`data/` 以下のデータを、`data/conventions.md` の約束事を守って書き換える。最後に `lint_data.py` を通し、何を変えたかを表で示す。
+`data/` 以下のデータを、`data/conventions.md` の約束事を守って書き換える。最後に `lint_data.py` と markdownlint を通し、何を変えたかを表で示す。
 
 ## Step 0: 編集する場所を確かめる
 
@@ -18,7 +18,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 1. 反映する範囲をユーザーと確かめる（例：「File 1168」「109巻」「劇場版第 30 作」「表3 の世良」）。
 2. 単行本が出たときは、database を最新にする。
 
-   ```
+   ```sh
    cd plugins/detective-conan/database
    python ConanData.py
    python Case.py && python FileTitle.py && python GuestCharacter.py && python MainCharacter.py && python Place.py
@@ -70,11 +70,13 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 
 ## Step 7: チェックする
 
-```
+```sh
 python scripts/lint_data.py
+npm run fix:md    # Markdown の書式を自動で直す（初回だけ先に npm install）
+npm run lint:md
 ```
 
-エラーが 0 件になるまで直す。警告（タイトルの書き方）は、答えが入っていないことを目で確かめる。
+どちらもエラーが 0 件になるまで直す。lint_data.py の警告（タイトルの書き方）は、答えが入っていないことを目で確かめる。markdownlint の設定はリポジトリ直下の `.markdownlint-cli2.jsonc` にある。
 
 ## Step 8: 変更をまとめて示す
 
@@ -86,7 +88,7 @@ python scripts/lint_data.py
 | foreshadowing/02-rum.md | F-RUM-009 | 経過を追加 | 原作 File 1168 [原作] |
 | knowledge-matrix/03-akai-family.md | 世良真純 K3-2 | △ → ◎ | 原作 File 1168 |
 
-- lint：エラー 0 件、警告 0 件
+- lint：lint_data.py エラー 0 件・警告 0 件／markdownlint エラー 0 件
 - 要確認のまま残したもの：…
 - database：更新あり／なし（submodule のコミットと push が必要）
 - database で名前が変わった事件・話：なし／「旧名」→「新名」（data/ の該当箇所を直した）

@@ -58,7 +58,7 @@ description: 名探偵コナンについて調べる・考察するときに使�
    記号と、各表の右端にある「コナンの把握」の列の意味は `knowledge-matrix/README.md` にある。`?` は「描写がない、またはまだ確かめていない」なので、`?` のセルは Web で補えるか確かめてから答える。
 4. 話数・巻・初登場は、CSV を直接読まずに `conan_db.py` で引く。CSV の `number` 列は公式の File 番号とずれている（欠け・重複があるため）。
 
-   ```
+   ```sh
    python "${CLAUDE_PLUGIN_ROOT}/scripts/conan_db.py" file 1103
    python "${CLAUDE_PLUGIN_ROOT}/scripts/conan_db.py" case 17年前
    python "${CLAUDE_PLUGIN_ROOT}/scripts/conan_db.py" char 若狭留美
