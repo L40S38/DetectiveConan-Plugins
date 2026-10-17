@@ -64,21 +64,26 @@
 | ほかの「そのほかの道府県警」：西村京兵 `C-nishimura-kyohei`、寺林省二 `C-terabayashi-shoji` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **大岡家（京都）** |  |  |  |  |  |  |  |  |  |
 | 伊織無我（元公安） `C-iori-muga` | ? | ◎ | ◎ | ? | ? | ー | 〇 | ? | [^K6-iori-muga] |
-| ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji`、大岡家のご隠居 `C-ooka-goinkyo` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 大岡家のご隠居 `C-ooka-goinkyo` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ✕ | [^K6-nazo-no-rojin] |
+| ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **FBI・CIA・赤井家** |  |  |  |  |  |  |  |  |  |
 | 赤井秀一 `C-akai-shuichi` | ? | ◎ | ◎ | ◎ | ◎ | ? | ✕ | ? | [^K6-akai-shuichi] |
-| ほかの「FBI・CIA・赤井家」：羽田秀吉 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary`、赤井務武 `C-akai-tsutomu`、ジョディ・スターリング `C-jodie-starling`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 赤井務武 `C-akai-tsutomu` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ✕ | [^K6-nazo-no-rojin] |
+| ほかの「FBI・CIA・赤井家」：羽田秀吉 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary`、ジョディ・スターリング `C-jodie-starling`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |  |
 | ほかの「怪盗キッドの関係者」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-jii-konosuke`、中森青子 `C-nakamori-aoko`、中森碧子 `C-nakamori-midoriko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |  |  |  |
+| 烏丸蓮耶 `C-karasuma-renya` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ✕ | [^K6-nazo-no-rojin] |
 | ラム `C-rum` | ? | ? | ? | ? | ? | ✕ | ✕ | ? | |
 | ベルモット `C-vermouth` | ? | ? | ? | ? | ? | ✕ | ✕ | ? | |
 | ジン `C-gin` | ? | ✕ | ✕ | ? | ◎ | ✕ | ✕ | ? | [^K6-gin] |
-| ほかの「黒ずくめの組織」：烏丸蓮耶 `C-karasuma-renya`、ウォッカ `C-vodka`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、ピンガ `C-pinga`、アイリッシュ `C-irish`、テキーラ `C-tequila`、ピスコ `C-pisco`、カルバドス `C-calvados`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「黒ずくめの組織」：ウォッカ `C-vodka`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、ピンガ `C-pinga`、アイリッシュ `C-irish`、テキーラ `C-tequila`、ピスコ `C-pisco`、カルバドス `C-calvados`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **宮野家** |  |  |  |  |  |  |  |  |  |
 | ほかの「宮野家」：宮野明美 `C-miyano-akemi`、宮野厚司 `C-miyano-atsushi`、宮野エレーナ `C-miyano-elena` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **羽田浩司事件の関係者** |  |  |  |  |  |  |  |  |  |
-| ほかの「羽田浩司事件の関係者」：羽田康晴 `C-haneda-yasuharu`、羽田市代 `C-haneda-ichiyo`、羽田浩司 `C-haneda-koji`、アマンダ・ヒューズ `C-amanda-hughes`、若狭留美 `C-wakasa-rumi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 羽田康晴 `C-haneda-yasuharu` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ✕ | [^K6-nazo-no-rojin] |
+| 羽田市代 `C-haneda-ichiyo` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ✕ | [^K6-nazo-no-rojin] |
+| ほかの「羽田浩司事件の関係者」：羽田浩司 `C-haneda-koji`、アマンダ・ヒューズ `C-amanda-hughes`、若狭留美 `C-wakasa-rumi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |  |  |
 | ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **スポーツ・芸能関係** |  |  |  |  |  |  |  |  |  |
@@ -86,8 +91,9 @@
 | **剣道界** |  |  |  |  |  |  |  |  |  |
 | ほかの「剣道界」：沖田総司 `C-okita-soshi`、鬼丸猛 `C-onimaru-takeshi`、鉄刃 `C-kurogane-yaiba`、鉄諸羽 `C-kurogane-moroha`、鉄美智子 `C-kurogane-michiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |  |  |
+| ベーダーさん `C-beda-san` | ✕ | ✕ | ✕ | ✕ | ✕ | ? | ✕ | ✕ | [^K6-beda-san] |
 | 鷹ジジイ `C-taka-jiji` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ✕ | [^K6-taka-jiji] |
-| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago`、ベーダーさん `C-beda-san` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K6-furuya-rei]: スコッチ＝諸伏景光は幼なじみで警察学校の同期。潜入中の同僚でもあった。
 
@@ -129,4 +135,8 @@
 
 [^K6-gin]: 組織はスコッチが NOC（潜入捜査官）だと突き止めた（F-POL-004）。本名まで知っていたかは要確認。
 
-[^K6-taka-jiji]: File 1115「執事と探偵」（105巻「執事になった理由」）の最後で、降谷に電話をかけ、江戸川コナンを徹底的に調べるよう命じる（呼び名はない）。降谷が乗っていた無人の車両は伊織が仕組んだ可能性が高く（伊織は上記の回で、その車両の全席を予約して平次と和葉の分だけキャンセルしたとモノローグで語っている）、降谷は風見と一緒にその列車に向かっているので、公安の案件の可能性が高い。ただし、電話の直後にかかってきた黒田の電話には「何でもありません」と答えており、黒田にも伏せた案件なのか、老人との接触に問題はなかったという意味なのかはわからない。そのため K6-2・K6-3 は `?`。伊織とのつながりがうかがえるので、K6-6 も `?`。K6-8 は、コナンのいない場面なので `✕`。
+[^K6-nazo-no-rojin]: 大岡家のご隠居・羽田康晴・羽田市代・赤井務武・烏丸蓮耶で共有。正体のわからない老人（ベーダーさん `C-beda-san`・鷹ジジイ `C-taka-jiji`）の候補（候補の説は `C-beda-san` を参照）。どちらかの老人だとすると、鷹ジジイ（K6-2・K6-3・K6-6）やベーダーさん（K6-6）の行と同じく、K6-2・K6-3・K6-6 を知っていてもおかしくないので `?`。ほかの列は、候補であることによっては変えていない（`✕` のまま）。K6-8 は、老人の場面にはコナンがいないので `✕`。
+
+[^K6-beda-san]: File 1090「扉の先の真実」（102巻「大岡紅葉の甘い罠」）の最後に、車で黒田・伊織・コナンたちのそばを通り過ぎ、警察など愚鈍な輩が群れているだけだという趣旨のことを運転手に言う（老人のほかの場面は `C-beda-san` を参照）。伊織や警察とのつながりがうかがえるが、何を知っているかは描かれていないので K6-6 は `?`。ほかの列に関わる言動はないので `✕`。K6-8 は、コナンも老人の車を目にするが、車内の言葉は聞いていないので `✕`。
+
+[^K6-taka-jiji]: File 1115「執事と探偵」（105巻「執事になった理由」）の最後で、降谷に電話をかけ、江戸川コナンを徹底的に調べるよう命じる。降谷が乗っていた無人の車両は伊織が仕組んだ可能性が高く、降谷は風見と一緒にその列車に向かっているので公安の案件の可能性が高いが、電話の直後にかかってきた黒田の電話には「何でもありません」と答えており、確証はない（詳しくは `C-taka-jiji` を参照）。そのため K6-2・K6-3 は `?`。伊織とのつながりがうかがえるので、K6-6 も `?`。K6-8 は、コナンのいない場面なので `✕`。

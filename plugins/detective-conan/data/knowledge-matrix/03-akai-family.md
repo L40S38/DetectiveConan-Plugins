@@ -42,28 +42,33 @@
 | **そのほかの道府県警** |  |  |  |  |  |  |  |  |
 | ほかの「そのほかの道府県警」：横溝参悟 `C-yokomizo-sango`、山村ミサオ `C-yamamura-misao`、綾小路文麿 `C-ayanokoji-fumimaro`、西村京兵 `C-nishimura-kyohei`、寺林省二 `C-terabayashi-shoji` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **大岡家（京都）** |  |  |  |  |  |  |  |  |
-| ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji`、伊織無我 `C-iori-muga`、大岡家のご隠居 `C-ooka-goinkyo` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 大岡家のご隠居 `C-ooka-goinkyo` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | [^K3-nazo-no-rojin] |
+| ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji`、伊織無我 `C-iori-muga` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **FBI・CIA・赤井家** |  |  |  |  |  |  |  |  |
 | 赤井秀一 `C-akai-shuichi` | 〇† | ー | ー | ◎ | ◎ | ? | ? | [^K3-akai-shuichi] |
 | 羽田秀吉 `C-haneda-shukichi` | ? | ◎ | ? | ◎ | ー | ? | ? | [^K3-haneda-shukichi] |
 | 世良真純 `C-sera-masumi` | ◎ | △ | ? | ◎ | ◎ | ? | ? | [^K3-sera-masumi] |
 | 赤井メアリー `C-akai-mary` | ー | 〇† | ? | ◎ | ◎ | ◎ | ? | [^K3-akai-mary] |
+| 赤井務武 `C-akai-tsutomu` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | [^K3-nazo-no-rojin] |
 | ジョディ・スターリング `C-jodie-starling` | ? | ◎ | ◎ | ? | ? | ? | ? | [^K3-fbi] |
 | アンドレ・キャメル `C-andre-camel` | ? | ◎ | ◎ | ? | ? | ? | ? | [^K3-fbi] |
 | ジェイムズ・ブラック `C-james-black` | ? | ◎ | ◎ | ? | ? | ? | ? | [^K3-fbi] |
 | 本堂瑛海（キール） `C-hondo-hidemi` | ? | ◎ | ? | ? | ? | ? | ? | [^K3-hondo-hidemi] |
-| ほかの「FBI・CIA・赤井家」：赤井務武 `C-akai-tsutomu`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「FBI・CIA・赤井家」：イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |
 | ほかの「怪盗キッドの関係者」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-jii-konosuke`、中森青子 `C-nakamori-aoko`、中森碧子 `C-nakamori-midoriko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |  |  |
+| 烏丸蓮耶 `C-karasuma-renya` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | [^K3-nazo-no-rojin] |
 | ラム `C-rum` | ? | ? | ? | ? | ? | ? | ? | |
 | ベルモット `C-vermouth` | ? | ? | ? | ? | ? | ? | ? | |
 | ジン `C-gin` | ? | ✕ | ✕ | ? | ? | ? | ? | [^K3-gin] |
-| ほかの「黒ずくめの組織」：烏丸蓮耶 `C-karasuma-renya`、ウォッカ `C-vodka`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、ピンガ `C-pinga`、アイリッシュ `C-irish`、テキーラ `C-tequila`、ピスコ `C-pisco`、カルバドス `C-calvados`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「黒ずくめの組織」：ウォッカ `C-vodka`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、ピンガ `C-pinga`、アイリッシュ `C-irish`、テキーラ `C-tequila`、ピスコ `C-pisco`、カルバドス `C-calvados`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **宮野家** |  |  |  |  |  |  |  |  |
 | ほかの「宮野家」：宮野明美 `C-miyano-akemi`、宮野厚司 `C-miyano-atsushi`、宮野エレーナ `C-miyano-elena` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **羽田浩司事件の関係者** |  |  |  |  |  |  |  |  |
-| ほかの「羽田浩司事件の関係者」：羽田康晴 `C-haneda-yasuharu`、羽田市代 `C-haneda-ichiyo`、羽田浩司 `C-haneda-koji`、アマンダ・ヒューズ `C-amanda-hughes`、若狭留美 `C-wakasa-rumi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 羽田康晴 `C-haneda-yasuharu` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | [^K3-nazo-no-rojin] |
+| 羽田市代 `C-haneda-ichiyo` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | [^K3-nazo-no-rojin] |
+| ほかの「羽田浩司事件の関係者」：羽田浩司 `C-haneda-koji`、アマンダ・ヒューズ `C-amanda-hughes`、若狭留美 `C-wakasa-rumi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |  |
 | ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **スポーツ・芸能関係** |  |  |  |  |  |  |  |  |
@@ -98,4 +103,6 @@
 
 [^K3-gin]: 赤井は来葉峠で死んだと思っている（要確認：現在も疑っていないか）。
 
-[^K3-beda-san]: K3-1 は、File 1096「四角の秘密」（103巻「ホテル連続爆破事件」）で、運転手に火災報知器を鳴らさせて客を外に出させ、最後に縮んだ姿のメアリーと世良を見て、夢を見ているようだという趣旨のことを運転手に言っており、メアリーが縮んでいることを前もって知っていたとみられることによる（確証の描写はないので `〇`）。K3-7 は、コナンのいない場面なので `✕`。
+[^K3-nazo-no-rojin]: 大岡家のご隠居・羽田康晴・羽田市代・赤井務武・烏丸蓮耶で共有。正体のわからない老人（ベーダーさん `C-beda-san`・鷹ジジイ `C-taka-jiji`）の候補（候補の説は `C-beda-san` を参照）。どちらかの老人だとすると、ベーダーさんの行と同じく K3-1 を知っていてもおかしくないので `?`。ほかの列は、候補であることによっては変えていない（`✕` のまま）。K3-7 は、老人の場面にはコナンがいないので `✕`。
+
+[^K3-beda-san]: K3-1 は、File 1096「四角の秘密」（103巻「ホテル連続爆破事件」）で、運転手に火災報知器を鳴らさせて客を外に出させ、最後に縮んだ姿のメアリーと世良を見て、夢を見ているようだという趣旨のことを運転手に言っており、メアリーが縮んでいることを前もって知っていたとみられることによる（確証の描写はないので `〇`）。老人のほかの場面は `C-beda-san`、正体の候補は大岡家のご隠居ほかの行の脚注を参照。K3-7 は、コナンのいない場面なので `✕`。
