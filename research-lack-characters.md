@@ -562,12 +562,12 @@
 | ベルモット | File 1147–1150（108巻「混沌の行先」） | ベルモット［メイン］ |
 | 羽田秀吉 | File 1051–1054（99巻「牧場に墜ちた火種」） | 羽田秀𠮷［メイン］ |
 
-### CSV にあるが DCW では変装（または変装後の姿）としての登場だけ（逆向き）（14 件・残り 2 件）
+### CSV にあるが DCW では変装（または変装後の姿）としての登場だけ（逆向き）（14 件・残り 1 件）
 
 | 人物 | 事件 | DCW の登場話（注記） | CSV の記載 |
 |---|---|---|---|
 | 安室透 | File 801–803（76巻「１ミリも許さない」） | 801（Background, Disguised - Scar Akai） | 安室透［メイン］ |
-| 工藤有希子 | File 429–434（42巻「黒の組織と真っ向勝負満月の夜の二元ミステリー」） | 429（Disguised as Medusa）・430（Disguised as Medusa）・431（Disguised as Medusa）・432（Disguised as Medusa）・433（Disguised as Medusa）・434（Disguised as Medusa） | 工藤有希子［メイン］ |
+| ~~工藤有希子~~（対応不要：メデューサに変装した有希子本人（ユーザーが確認）。CSV は本人の工藤有希子をメインに、見え方どおりの「メデューサ（パーティー参加者）」をゲストに載せている） | File 429–434（42巻「黒の組織と真っ向勝負満月の夜の二元ミステリー」） | 429（Disguised as Medusa）・430（Disguised as Medusa）・431（Disguised as Medusa）・432（Disguised as Medusa）・433（Disguised as Medusa）・434（Disguised as Medusa） | 工藤有希子［メイン］ |
 | ~~ベルモット~~（対応不要：榎本梓に変装したベルモット（ユーザーが確認）。CSV は本人のベルモットを載せている（4台のポルシェと同じ扱い）） | File 954–957（90巻「裏切りのステージ」） | 954（Background / Disguised as Azusa Enomoto）・955（Background / Disguised as Azusa Enomoto）・956（Disguised as Azusa Enomoto）・957（Disguised as Azusa Enomoto） | ベルモット［メイン］ |
 | ~~脇田兼則~~（対応不要：ラムが脇田兼則に変装して出ている（ユーザーが確認）。CSV は見え方どおりの脇田兼則で載せていて、別名表でラムに結び付いている） | File 975–977（92巻「となりの江戸前推理ショー」） | 975（disguised as Kanenori Wakita）・976（disguised as Kanenori Wakita）・977（disguised as Kanenori Wakita） | 脇田兼則［メイン］ |
 | ~~脇田兼則~~（対応不要：ラムが脇田兼則に変装して出ている（ユーザーが確認）。CSV は見え方どおりの脇田兼則で載せていて、別名表でラムに結び付いている） | File 978–980（92巻「白い手の女」） | 980（disguised as Kanenori Wakita） | 脇田兼則［メイン］ |
