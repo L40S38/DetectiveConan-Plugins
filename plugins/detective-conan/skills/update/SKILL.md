@@ -5,7 +5,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 
 # 名探偵コナン データ更新
 
-`data/` 以下のデータを、`data/conventions.md` の約束事を守って書き換える。最後に `lint_data.py` を通し、何を変えたかを表で示す。
+`data/` 以下のデータを、`data/conventions.md` の約束事を守って書き換える。最後に `lint_data.py` と markdownlint を通し、何を変えたかを表で示す。
 
 ## Step 0: 編集する場所を確かめる
 
@@ -18,7 +18,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 1. 反映する範囲をユーザーと確かめる（例：「File 1168」「109巻」「劇場版第 30 作」「表3 の世良」）。
 2. 単行本が出たときは、database を最新にする。
 
-   ```
+   ```sh
    cd plugins/detective-conan/database
    python ConanData.py
    python Case.py && python FileTitle.py && python GuestCharacter.py && python MainCharacter.py && python Place.py
@@ -39,7 +39,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 - 新しい謎を見つけたら、分類ごとに次の番号で項目を立てる。ID は再利用しない。
 - **タイトルは謎の形**で書き、答えも、ほかの謎の答えになる名前も入れない（`conventions.md` の 5.）。
 - `README.md` の一覧表と、対応する分類ファイルの詳細の両方に書く（ID・タイトル・状態・重要度・初出・回収）。
-  - 詳細の項目には `<a id="F-XXX-NNN"></a>` を見出しの直前に付ける（既存項目にならう）。README.md の一覧表からはこのアンカーへリンクする（`ファイル名#F-XXX-NNN`）。
+  - 詳細の項目には、見出しの前に `<a id="F-XXX-NNN"></a>` を置く。アンカー・見出し・箇条書きのあいだは空行を 1 行ずつあける（既存項目にならう。空行が無いと markdownlint のエラーになる）。README.md の一覧表からはこのアンカーへリンクする（`ファイル名#F-XXX-NNN`）。
   - 「関連」欄で人物・知識表に触れるときは、`characters.md#C-xxx`／`../knowledge-matrix/0N-〜.md` へのリンクにする（既存項目の書き方にならう）。
 - 回収されたら「状態」を変え、「回収」欄に話数と答えを書く。答えを書くのは「回収」欄だけ。
 - 途中の進展は「経過」欄に時系列で足す。
@@ -70,11 +70,13 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 
 ## Step 7: チェックする
 
-```
+```sh
+npm run fix:md    # Markdown の書式を自動で直す（初回だけ先に npm ci）
 python scripts/lint_data.py
+npm run lint:md
 ```
 
-エラーが 0 件になるまで直す。警告（タイトルの書き方）は、答えが入っていないことを目で確かめる。
+fix:md は data/ のファイルも書き換えるので、lint_data.py はその後に実行する。lint_data.py と lint:md のどちらもエラーが 0 件になるまで直す。lint_data.py の警告（タイトルの書き方）は、答えが入っていないことを目で確かめる。markdownlint の設定はリポジトリ直下の `.markdownlint-cli2.jsonc` にある（`data/foreshadowing/`・`data/relationships/` には、そのディレクトリだけの例外を書いた同名のファイルがある）。
 
 ## Step 8: 変更をまとめて示す
 
@@ -86,7 +88,7 @@ python scripts/lint_data.py
 | foreshadowing/02-rum.md | F-RUM-009 | 経過を追加 | 原作 File 1168 [原作] |
 | knowledge-matrix/03-akai-family.md | 世良真純 K3-2 | △ → ◎ | 原作 File 1168 |
 
-- lint：エラー 0 件、警告 0 件
+- lint：lint_data.py エラー 0 件・警告 0 件／markdownlint エラー 0 件
 - 要確認のまま残したもの：…
 - database：更新あり／なし（submodule のコミットと push が必要）
 - database で名前が変わった事件・話：なし／「旧名」→「新名」（data/ の該当箇所を直した）

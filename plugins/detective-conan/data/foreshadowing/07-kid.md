@@ -3,7 +3,9 @@
 [← 伏線一覧に戻る](README.md)
 
 <a id="F-KID-001"></a>
+
 ### F-KID-001 初代怪盗キッドは誰か `[まじっく快斗]`
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [まじっく快斗]
@@ -14,7 +16,9 @@
 - 関連: 人物 [黒羽盗一](../characters.md#C-kuroba-toichi)、[黒羽快斗](../characters.md#C-kuroba-kaito)／知識表 [K7-2](../knowledge-matrix/07-kid.md)
 
 <a id="F-KID-002"></a>
+
 ### F-KID-002 ベルモットと工藤有希子に変装を教えたのは誰か
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -25,7 +29,9 @@
 - 関連: 人物 [黒羽盗一](../characters.md#C-kuroba-toichi)、[ベルモット](../characters.md#C-vermouth)、[工藤有希子](../characters.md#C-kudo-yukiko)／知識表 [K7-5](../knowledge-matrix/07-kid.md)
 
 <a id="F-KID-003"></a>
+
 ### F-KID-003 黒羽盗一は本当に死んだのか
+
 - 状態: 部分回収
 - 重要度: ★★
 - 区分: [まじっく快斗][劇場版]
@@ -36,7 +42,9 @@
 - 関連: 人物 [黒羽盗一](../characters.md#C-kuroba-toichi)／考察 Q-016／知識表 [K7-3](../knowledge-matrix/07-kid.md)
 
 <a id="F-KID-004"></a>
+
 ### F-KID-004 黒羽盗一と工藤優作はどういう関係か
+
 - 状態: 部分回収
 - 重要度: ★★
 - 区分: [劇場版]
@@ -47,7 +55,9 @@
 - 関連: 人物 [黒羽盗一](../characters.md#C-kuroba-toichi)、[工藤優作](../characters.md#C-kudo-yusaku)／考察 Q-016／知識表 [K7-4](../knowledge-matrix/07-kid.md)
 
 <a id="F-KID-005"></a>
+
 ### F-KID-005 黒羽快斗と工藤新一はなぜそっくりなのか
+
 - 状態: 部分回収
 - 重要度: ★★
 - 区分: [原作][劇場版]
@@ -58,7 +68,9 @@
 - 関連: 人物 [黒羽快斗](../characters.md#C-kuroba-kaito)、[工藤新一](../characters.md#C-kudo-shinichi)／考察 Q-017
 
 <a id="F-KID-006"></a>
+
 ### F-KID-006 怪盗キッドはコナンの正体を知っているのか
+
 - 状態: 回収済
 - 重要度: ★
 - 区分: [原作]
@@ -69,7 +81,9 @@
 - 関連: 人物 [黒羽快斗](../characters.md#C-kuroba-kaito)／知識表 [K1-1](../knowledge-matrix/01-conan-shinichi.md)
 
 <a id="F-KID-007"></a>
+
 ### F-KID-007 パンドラとは何か。スネイクの組織は何者か `[まじっく快斗]`
+
 - 状態: 未回収
 - 重要度: ★
 - 区分: [まじっく快斗]

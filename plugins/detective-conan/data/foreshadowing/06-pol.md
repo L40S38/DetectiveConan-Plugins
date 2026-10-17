@@ -3,7 +3,9 @@
 [← 伏線一覧に戻る](README.md)
 
 <a id="F-POL-001"></a>
+
 ### F-POL-001 安室透は何者か
+
 - 状態: 回収済
 - 重要度: ★★★
 - 区分: [原作]
@@ -14,7 +16,9 @@
 - 関連: 人物 [降谷零](../characters.md#C-furuya-rei)、[風見裕也](../characters.md#C-kazami-yuya)／知識表 [K6-2](../knowledge-matrix/06-police.md)、[K6-3](../knowledge-matrix/06-police.md)
 
 <a id="F-POL-002"></a>
+
 ### F-POL-002 バーボンは誰か
+
 - 状態: 回収済
 - 重要度: ★★★
 - 区分: [原作]
@@ -25,7 +29,9 @@
 - 関連: 人物 [降谷零](../characters.md#C-furuya-rei)、[ベルモット](../characters.md#C-vermouth)／知識表 [K5-3](../knowledge-matrix/05-black-org.md)
 
 <a id="F-POL-003"></a>
+
 ### F-POL-003 「ゼロ」とは何を指すのか
+
 - 状態: 回収済
 - 重要度: ★
 - 区分: [原作]
@@ -36,7 +42,9 @@
 - 関連: 人物 [降谷零](../characters.md#C-furuya-rei)／知識表 [K6-3](../knowledge-matrix/06-police.md)
 
 <a id="F-POL-004"></a>
+
 ### F-POL-004 スコッチはなぜ死んだのか
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -48,7 +56,9 @@
 - 備考: 誰がどうやってスコッチの潜入を組織に密告したかは、作中で描かれていない（Q-025 と関連）
 
 <a id="F-POL-005"></a>
+
 ### F-POL-005 安室透はなぜ赤井秀一を憎んでいるのか
+
 - 状態: 部分回収
 - 重要度: ★★
 - 区分: [原作]
@@ -59,7 +69,9 @@
 - 関連: 人物 [降谷零](../characters.md#C-furuya-rei)、[赤井秀一](../characters.md#C-akai-shuichi)、[諸伏景光](../characters.md#C-morofushi-hiromitsu)／考察 Q-020
 
 <a id="F-POL-006"></a>
+
 ### F-POL-006 安室透の警察学校の同期たちはどうなったのか
+
 - 状態: 回収済
 - 重要度: ★★
 - 区分: [原作]
@@ -71,7 +83,9 @@
 - 備考: スピンオフ『警察学校編 Wild Police Story』[スピンオフ]、劇場版『ハロウィンの花嫁』[劇場版] でも描かれる
 
 <a id="F-POL-007"></a>
+
 ### F-POL-007 諸伏高明の弟は誰か
+
 - 状態: 回収済
 - 重要度: ★
 - 区分: [原作]
@@ -82,7 +96,9 @@
 - 関連: 人物 [諸伏高明](../characters.md#C-morofushi-takaaki)、[諸伏景光](../characters.md#C-morofushi-hiromitsu)／知識表 [K6-4](../knowledge-matrix/06-police.md)
 
 <a id="F-POL-008"></a>
+
 ### F-POL-008 降谷零が警察学校卒業式前に出会った大学生は誰か
+
 - 状態: 回収済
 - 重要度: ★
 - 区分: [原作]
@@ -93,7 +109,9 @@
 - 関連: 人物 [宮本由美](../characters.md#C-miyamoto-yumi)、[佐藤美和子](../characters.md#C-sato-miwako)、[降谷零](../characters.md#C-furuya-rei)／知識表 [K6-1](../knowledge-matrix/06-police.md)、[K6-2](../knowledge-matrix/06-police.md)
 
 <a id="F-POL-009"></a>
+
 ### F-POL-009 伊織無我は執事になる前に何をしていたのか
+
 - 状態: 部分回収
 - 重要度: ★★
 - 区分: [原作]

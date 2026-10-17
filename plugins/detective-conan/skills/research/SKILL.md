@@ -58,7 +58,7 @@ description: 名探偵コナンについて調べる・考察するときに使�
    記号と、各表の右端にある「コナンの把握」の列の意味は `knowledge-matrix/README.md` にある。`?` は「描写がない、またはまだ確かめていない」なので、`?` のセルは Web で補えるか確かめてから答える。
 4. 話数・巻・初登場は、CSV を直接読まずに `conan_db.py` で引く。CSV の `number` 列は公式の File 番号とずれている（欠け・重複があるため）。
 
-   ```
+   ```sh
    python "${CLAUDE_PLUGIN_ROOT}/scripts/conan_db.py" file 1103
    python "${CLAUDE_PLUGIN_ROOT}/scripts/conan_db.py" case 17年前
    python "${CLAUDE_PLUGIN_ROOT}/scripts/conan_db.py" char 若狭留美
@@ -67,7 +67,7 @@ description: 名探偵コナンについて調べる・考察するときに使�
    ```
 
    事件のあらすじは `database/dataset_csv/Number-Title-Explain.csv` を事件名で Grep する（編纂室の公式あらすじなので、Web の要約より信頼できる）。
-   database が無いときは「submodule が取得されていない」と伝え、名探偵コナン編纂室 https://websunday.net/conandb/ を直接見る。
+   database が無いときは「submodule が取得されていない」と伝え、名探偵コナン編纂室 <https://websunday.net/conandb/> を直接見る。
 
 ## Step 3: 足りない分を Web で補う
 
@@ -85,7 +85,7 @@ description: 名探偵コナンについて調べる・考察するときに使�
 
 ### 出力テンプレート
 
-**知識状態**
+#### 知識状態
 
 ```markdown
 原作 File 1167 までの情報を含みます。
@@ -99,7 +99,7 @@ description: 名探偵コナンについて調べる・考察するときに使�
 - 表の `?`（不明）だった人物：…（Web で補った場合はその出典）
 ```
 
-**伏線を追う**
+#### 伏線を追う
 
 ```markdown
 ## ラムの正体をめぐる伏線（F-RUM-001, F-RUM-002）
@@ -112,7 +112,7 @@ description: 名探偵コナンについて調べる・考察するときに使�
 - 関連する考察：Q-011
 ```
 
-**考察**
+#### 考察
 
 ```markdown
 ## 問い：赤井務武は生きているのか（Q-013）
