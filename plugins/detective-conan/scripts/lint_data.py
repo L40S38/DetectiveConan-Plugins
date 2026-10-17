@@ -267,7 +267,7 @@ def check_knowledge_cells(data, rep):
                     # グループ内の残り全員をまとめた行
                     if not cells[0].startswith(f"ほかの「{group}」："):
                         rep.error(rel, f"{line} 行目: まとめ行は「ほかの「{group}」：」で始める")
-                    if any(v != "✕" for v in values[:-1]) or values[-1] != "ー":
+                    if not values or any(v != "✕" for v in values[:-1]) or values[-1] != "ー":
                         rep.error(rel, f"{line} 行目: まとめ行は「コナンの把握」を `ー`、ほかの列をすべて `✕` にする")
                     continue
                 for h, cell in zip(header[1:-1], values):
