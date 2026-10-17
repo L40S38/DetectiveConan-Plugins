@@ -29,13 +29,13 @@
 | ほかの「FBI・CIA・赤井家」：赤井秀一 `C-akai-shuichi`、羽田秀吉 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary`、赤井務武 `C-akai-tsutomu`、ジョディ・スターリング `C-jodie-starling`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **警察・公安** |  |  |  |  |  |  |  |
 | ほかの「警察・公安」：降谷零 `C-furuya-rei`、風見裕也 `C-kazami-yuya`、黒田兵衛 `C-kuroda-hyoe`、諸伏景光 `C-morofushi-hiromitsu`、目暮十三 `C-megure-juzo`、高木渉 `C-takagi-wataru`、佐藤美和子 `C-sato-miwako`、白鳥任三郎 `C-shiratori-ninzaburo`、千葉和伸 `C-chiba-kazunobu`、松本清長 `C-matsumoto-kiyonaga`、小田切敏郎 `C-odagiri-toshiro`、宮本由美 `C-miyamoto-yumi`、三池苗子 `C-miike-naeko`、中森銀三 `C-nakamori-ginzo`、松田陣平 `C-matsuda-jinpei`、萩原研二 `C-hagiwara-kenji`、伊達航 `C-date-wataru`、鬼塚八蔵 `C-onizuka-hachizo`、諸伏高明 `C-morofushi-takaaki`、大和敢助 `C-yamato-kansuke`、上原由衣 `C-uehara-yui`、横溝重悟 `C-yokomizo-jugo`、萩原千速 `C-hagiwara-chihaya`、横溝参悟 `C-yokomizo-sango`、山村ミサオ `C-yamamura-misao`、服部平蔵 `C-hattori-heizo`、遠山銀司郎 `C-toyama-ginshiro`、大滝悟郎 `C-otaki-goro`、綾小路文麿 `C-ayanokoji-fumimaro` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **キッド陣営** |  |  |  |  |  |  |  |
+| **怪盗キッドの関係者** |  |  |  |  |  |  |  |
 | 黒羽快斗 `C-kuroba-kaito` | ー | ◎ | ? | ? | ? | ? | [^K7-kuroba-kaito] |
 | 黒羽盗一 `C-kuroba-toichi` | ◎ | ー | ー | ◎ | ー | ? | [^K7-kuroba-toichi] |
 | 黒羽千影 `C-kuroba-chikage` | ◎ | ◎ | ? | ? | ? | ? | |
 | 寺井黄之助 `C-terai-konosuke` | ◎ | ◎ | ? | ? | ? | ? | |
 | 白馬探 `C-hakuba-saguru` | △ | ? | ✕ | ✕ | ✕ | ? | [^K7-hakuba-saguru] |
-| ほかの「キッド陣営」：中森青子 `C-nakamori-aoko`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「怪盗キッドの関係者」：中森青子 `C-nakamori-aoko`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |  |
 | ベルモット `C-vermouth` | ? | ? | ? | ? | ◎ | ? | [^K7-vermouth] |
 | ほかの「黒ずくめの組織」：烏丸蓮耶 `C-karasuma-renya`、ラム `C-rum`、ジン `C-gin`、ウォッカ `C-vodka`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、ピンガ `C-pinga`、アイリッシュ `C-irish`、故人の構成員 `C-org-deceased` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |

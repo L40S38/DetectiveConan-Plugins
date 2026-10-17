@@ -43,9 +43,9 @@
 | 風見裕也 `C-kazami-yuya` | ◎ | ? | ◎ | ? | ? | ? | ? | ? | ? | |
 | 黒田兵衛 `C-kuroda-hyoe` | ◎ | ? | ◎ | ? | ? | ? | ? | ? | ? | [^K5-kuroda-hyoe] |
 | ほかの「警察・公安」：諸伏景光 `C-morofushi-hiromitsu`、目暮十三 `C-megure-juzo`、高木渉 `C-takagi-wataru`、佐藤美和子 `C-sato-miwako`、白鳥任三郎 `C-shiratori-ninzaburo`、千葉和伸 `C-chiba-kazunobu`、松本清長 `C-matsumoto-kiyonaga`、小田切敏郎 `C-odagiri-toshiro`、宮本由美 `C-miyamoto-yumi`、三池苗子 `C-miike-naeko`、中森銀三 `C-nakamori-ginzo`、松田陣平 `C-matsuda-jinpei`、萩原研二 `C-hagiwara-kenji`、伊達航 `C-date-wataru`、鬼塚八蔵 `C-onizuka-hachizo`、諸伏高明 `C-morofushi-takaaki`、大和敢助 `C-yamato-kansuke`、上原由衣 `C-uehara-yui`、横溝重悟 `C-yokomizo-jugo`、萩原千速 `C-hagiwara-chihaya`、横溝参悟 `C-yokomizo-sango`、山村ミサオ `C-yamamura-misao`、服部平蔵 `C-hattori-heizo`、遠山銀司郎 `C-toyama-ginshiro`、大滝悟郎 `C-otaki-goro`、綾小路文麿 `C-ayanokoji-fumimaro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **キッド陣営** |  |  |  |  |  |  |  |  |  |  |
+| **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |  |  |
 | 黒羽盗一 `C-kuroba-toichi` | ? | ? | ? | ? | ? | ? | 〇 | 〇 | ? | [^K5-kuroba-toichi] |
-| ほかの「キッド陣営」：黒羽快斗 `C-kuroba-kaito`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-terai-konosuke`、中森青子 `C-nakamori-aoko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「怪盗キッドの関係者」：黒羽快斗 `C-kuroba-kaito`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-terai-konosuke`、中森青子 `C-nakamori-aoko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |  |  |  |  |
 | ラム `C-rum` | ー | ◎ | ◎ | ◎ | ✕ | ー | ◎ | ? | ? | [^K5-org] |
 | ベルモット `C-vermouth` | ー | ◎ | ◎ | ◎ | ✕ | ? | ー | ー | ? | [^K5-org] |

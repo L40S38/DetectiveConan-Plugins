@@ -57,8 +57,8 @@
 | 遠山銀司郎 `C-toyama-ginshiro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
 | 大滝悟郎 `C-otaki-goro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
 | 綾小路文麿 `C-ayanokoji-fumimaro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
-| **キッド陣営** |  |  |  |  |  |  |  |  |  |
-| ほかの「キッド陣営」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-terai-konosuke`、中森青子 `C-nakamori-aoko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |  |
+| ほかの「怪盗キッドの関係者」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-terai-konosuke`、中森青子 `C-nakamori-aoko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |  |  |  |
 | ラム `C-rum` | ? | ? | ? | ? | ? | ✕ | ✕ | ? | |
 | ベルモット `C-vermouth` | ? | ? | ? | ? | ? | ✕ | ✕ | ? | |
