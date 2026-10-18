@@ -354,6 +354,21 @@ def check_file_refs(data, rep):
                 rep.warn(rel, f"「{snippet}」が File の書き方になっていない（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。conventions.md の 3.1）")
 
 
+ELLIPSIS_NG = re.compile(r"…{2,}|・{2,}|･{2,}|\.{3,}")
+
+
+def check_ellipsis(data, rep):
+    # 三点リーダーは「…」1 字（conventions.md の 3.1）。conventions.md は決まりの説明に NG の例を書いているので対象外
+    for p in sorted(data.rglob("*.md")):
+        if p.name == "conventions.md":
+            continue
+        text = strip_code(p.read_text(encoding="utf-8"))
+        rel = p.relative_to(data)
+        for m in ELLIPSIS_NG.finditer(text):
+            snippet = text[max(0, m.start() - 10):m.end() + 5].split("\n")[-1]
+            rep.warn(rel, f"「{snippet}」の「{m.group()}」は「…」1 字にする（conventions.md の 3.1）")
+
+
 def main():
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -370,6 +385,7 @@ def main():
     check_knowledge_cells(args.data, rep)
     check_profile_cells(args.data, rep)
     check_file_refs(args.data, rep)
+    check_ellipsis(args.data, rep)
 
     for line in rep.errors + rep.warnings:
         print(line)

@@ -40,10 +40,10 @@
 | **そのほかの道府県警** |  |  |  |  |  |  |  |
 | ほかの「そのほかの道府県警」：横溝参悟 `C-yokomizo-sango`、山村ミサオ `C-yamamura-misao`、綾小路文麿 `C-ayanokoji-fumimaro`、西村京兵 `C-nishimura-kyohei`、寺林省二 `C-terabayashi-shoji` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **大岡家（京都）** |  |  |  |  |  |  |  |
-| 大岡家のご隠居 `C-ooka-goinkyo` | ? | ? | ? | ? | ? | ✕ | [^K7-nazo-no-rojin] |
+| 大岡家のご隠居 `C-ooka-goinkyo` | ? | ? | ? | ? | ? | ? | [^K7-nazo-no-rojin] |
 | ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji`、伊織無我 `C-iori-muga` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **FBI・CIA・赤井家** |  |  |  |  |  |  |  |
-| 赤井務武 `C-akai-tsutomu` | ? | ? | ? | ? | ? | ✕ | [^K7-nazo-no-rojin] |
+| 赤井務武 `C-akai-tsutomu` | ? | ? | ? | ? | ? | ? | [^K7-nazo-no-rojin] |
 | ほかの「FBI・CIA・赤井家」：赤井秀一 `C-akai-shuichi`、羽田秀吉 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary`、ジョディ・スターリング `C-jodie-starling`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |
 | 黒羽快斗 `C-kuroba-kaito` | ー | ◎ | ? | ? | ? | ? | [^K7-kuroba-kaito] |
@@ -53,14 +53,14 @@
 | 白馬探 `C-hakuba-saguru` | △ | ? | ✕ | ✕ | ✕ | ? | [^K7-hakuba-saguru] |
 | ほかの「怪盗キッドの関係者」：中森青子 `C-nakamori-aoko`、中森碧子 `C-nakamori-midoriko`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |  |
-| 烏丸蓮耶 `C-karasuma-renya` | ? | ? | ? | ? | ? | ✕ | [^K7-nazo-no-rojin] |
+| 烏丸蓮耶 `C-karasuma-renya` | ? | ? | ? | ? | ? | ? | [^K7-nazo-no-rojin] |
 | ベルモット `C-vermouth` | ? | ? | ? | ? | ◎ | ? | [^K7-vermouth] |
 | ほかの「黒ずくめの組織」：ラム `C-rum`、ジン `C-gin`、ウォッカ `C-vodka`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、ピンガ `C-pinga`、アイリッシュ `C-irish`、テキーラ `C-tequila`、ピスコ `C-pisco`、カルバドス `C-calvados`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **宮野家** |  |  |  |  |  |  |  |
 | ほかの「宮野家」：宮野明美 `C-miyano-akemi`、宮野厚司 `C-miyano-atsushi`、宮野エレーナ `C-miyano-elena` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **羽田浩司事件の関係者** |  |  |  |  |  |  |  |
-| 羽田康晴 `C-haneda-yasuharu` | ? | ? | ? | ? | ? | ✕ | [^K7-nazo-no-rojin] |
-| 羽田市代 `C-haneda-ichiyo` | ? | ? | ? | ? | ? | ✕ | [^K7-nazo-no-rojin] |
+| 羽田康晴 `C-haneda-yasuharu` | ? | ? | ? | ? | ? | ? | [^K7-nazo-no-rojin] |
+| 羽田市代 `C-haneda-ichiyo` | ? | ? | ? | ? | ? | ? | [^K7-nazo-no-rojin] |
 | ほかの「羽田浩司事件の関係者」：羽田浩司 `C-haneda-koji`、アマンダ・ヒューズ `C-amanda-hughes`、若狭留美 `C-wakasa-rumi` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |
 | ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
@@ -69,7 +69,7 @@
 | **剣道界** |  |  |  |  |  |  |  |
 | ほかの「剣道界」：沖田総司 `C-okita-soshi`、鬼丸猛 `C-onimaru-takeshi`、鉄刃 `C-kurogane-yaiba`、鉄諸羽 `C-kurogane-moroha`、鉄美智子 `C-kurogane-michiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **その他** |  |  |  |  |  |  |  |
-| 鷹ジジイ `C-taka-jiji` | ? | ? | ? | ? | ? | ✕ | [^K7-taka-jiji] |
+| 鷹ジジイ `C-taka-jiji` | ? | ? | ? | ? | ? | ? | [^K7-taka-jiji] |
 | ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago`、ベーダーさん `C-beda-san` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 
 [^K7-kuroba-kaito]: [まじっく快斗] 父・盗一が初代キッドだと知って跡を継いだ。[劇場版] 第 27 作『100万ドルの五稜星』の時点で父の生存を知っているかは要確認。
@@ -86,6 +86,6 @@
 
 [^K7-vermouth]: 盗一から変装を習った（F-KID-002）。
 
-[^K7-nazo-no-rojin]: 大岡家のご隠居・羽田康晴・羽田市代・赤井務武・烏丸蓮耶で共有。正体のわからない老人（ベーダーさん `C-beda-san`・鷹ジジイ `C-taka-jiji`）の候補（候補の説は `C-beda-san` を参照）。どちらかの老人だとすると、鷹ジジイの行と同じく K7-1〜K7-5 を知っていてもおかしくないので `?`。K7-6 は、老人の場面にはコナンがいないので `✕`。
+[^K7-nazo-no-rojin]: 大岡家のご隠居・羽田康晴・羽田市代・赤井務武・烏丸蓮耶で共有。正体のわからない老人（ベーダーさん `C-beda-san`・鷹ジジイ `C-taka-jiji`）の候補（候補の説は `C-beda-san` を参照）。どちらかの老人だとすると、鷹ジジイの行と同じく K7-1〜K7-5 を知っていてもおかしくないので `?`。K7-6 は、`◎`・`〇` の列がなく、K7-1〜K7-5 が `?` なので `?`（老人の場面にコナンはいない。File 1090「扉の先の真実」（102巻「大岡紅葉の甘い罠」）でコナンが目にするのは老人の車だけ）。
 
-[^K7-taka-jiji]: File 1102「表裏」（103巻「怪盗キッドと王冠マジック」）の最後で、コナンがキッドを退けたニュースを見て、キッドを退けたコナンに怒り、杖で携帯電話を叩き壊す。キッドとのつながりがうかがえるが、何を知っているかは描かれていないので K7-1〜K7-5 は `?`。K7-6 は、コナンのいない場面なので `✕`。
+[^K7-taka-jiji]: File 1102「表裏」（103巻「怪盗キッドと王冠マジック」）の最後で、コナンがキッドを退けたニュースを見て、キッドを退けたコナンに怒り、杖で携帯電話を叩き壊す。キッドとのつながりがうかがえるが、何を知っているかは描かれていないので K7-1〜K7-5 は `?`。K7-6 は、`◎`・`〇` の列がなく、K7-1〜K7-5 が `?` なので `?`（上記の場面にコナンはいない）。
