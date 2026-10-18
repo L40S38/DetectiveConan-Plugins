@@ -47,7 +47,8 @@ plugins/detective-conan/
 │   ├── characters.md                 人物索引（別名の逆引き・人物カード・劇場版への登場）
 │   ├── foreshadowing/                伏線リスト（README.md が一覧、F-分類ごとにファイル）
 │   ├── open-questions.md             考察項目リスト
-│   └── knowledge-matrix/             誰が何を知っているか（表1〜7）
+│   ├── knowledge-matrix/             誰が何を知っているか（表1〜8）
+│   └── profiles/                     作品が人物をどこまで描いたか（私生活・過去・内面・素性）
 ├── database/                         submodule: L40S38/DetectiveConan-Database
 ├── scripts/
 │   ├── conan_db.py                   編纂室データの検索（公式 File 番号に直して引く）

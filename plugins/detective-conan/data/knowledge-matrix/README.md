@@ -22,6 +22,7 @@
 | 表5 | [05-black-org.md](05-black-org.md) | 黒ずくめの組織 |
 | 表6 | [06-police.md](06-police.md) | 警察関係 |
 | 表7 | [07-kid.md](07-kid.md) | キッド関連（追加候補） |
+| 表8 | [08-hondo-family.md](08-hondo-family.md) | 本堂家 |
 
 ## 凡例
 
