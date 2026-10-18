@@ -2,15 +2,16 @@
 """data/ 以下のデータの整合性をチェックする（標準ライブラリのみ）。
 
 チェック内容:
-  1. ID の重複（伏線 F・考察 Q・人物 C・知識表の列 K）
-  2. F・Q・K・C の参照が、実在する ID を指しているか
+  1. ID の重複（伏線 F・考察 Q・人物 C・知識表の列 K・人物の掘り下げの列 P）
+  2. F・Q・K・P・C の参照が、実在する ID を指しているか
   3. 脚注の参照と定義が対応しているか
   4. foreshadowing/README.md の一覧表と foreshadowing/0*.md の詳細で、タイトル・状態・重要度が一致しているか
   5. F・Q のタイトルが問いの形で、答えの書き方（「＝」など）が入っていないか（警告のみ。最終確認は目で行う）
   6. Markdown の表で、どの行も列数がそろっているか
   7. 知識表のセルが決められた値だけか。右端が「コナンの把握」の列か。グループ見出しが characters.md の
      グループと同じ順にそろっているか。characters.md の全員が、そのグループの個別の行かまとめ行に
-     1 回ずつ、characters.md の順に出てくるか。まとめ行がグループの最後にあるか
+     1 回ずつ、characters.md の順に出てくるか。まとめ行がグループの最後にあるか。
+     人物の掘り下げ（profiles/0*.md）の表も同じ規則で見る（記号は同じ。「コナンの把握」の列は無く、まとめ行はすべて `✕`）
   8. File 表記が conventions.md の 3.1 の形か（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。警告のみ）
 
 使い方:
@@ -30,6 +31,7 @@ DEFAULT_DATA = Path(__file__).resolve().parent.parent / "data"
 F_ID = r"F-[A-Z]+-\d{3}"
 Q_ID = r"Q-\d{3}"
 K_ID = r"K\d-\d+"
+P_ID = r"P\d-\d+"
 C_ID = r"C-[a-z]+(?:-[a-z]+)*"
 
 CELL_VALUES = {"◎", "〇", "△", "✕", "ー", "?"}
@@ -85,7 +87,7 @@ def strip_code(text):
 
 
 def collect_definitions(data, rep):
-    defs = {"F": [], "Q": [], "C": [], "K": []}
+    defs = {"F": [], "Q": [], "C": [], "K": [], "P": []}
     for p in sorted((data / "foreshadowing").glob("0*.md")):
         text = strip_code(p.read_text(encoding="utf-8"))
         defs["F"] += re.findall(rf"^### ({F_ID}) ", text, flags=re.M)
@@ -96,6 +98,9 @@ def collect_definitions(data, rep):
     for p in sorted((data / "knowledge-matrix").glob("0*.md")):
         text = p.read_text(encoding="utf-8")
         defs["K"] += re.findall(rf"^\| ({K_ID}) \|", text, flags=re.M)
+    for p in sorted((data / "profiles").glob("0*.md")):
+        text = p.read_text(encoding="utf-8")
+        defs["P"] += re.findall(rf"^\| ({P_ID}) \|", text, flags=re.M)
     for kind, ids in defs.items():
         for i, n in Counter(ids).items():
             if n > 1:
@@ -120,6 +125,9 @@ def check_references(data, defs, rep):
         for m in re.finditer(r"(?<![\w^\-])K(\d)(?![\d-])", text):
             if int(m.group(1)) not in tables:
                 rep.error(rel, f"存在しない知識表 K{m.group(1)} を参照している")
+        for m in re.finditer(rf"(?<![\w^]){P_ID}", text):
+            if m.group() not in defs["P"]:
+                rep.error(rel, f"存在しない人物の掘り下げの列 {m.group()} を参照している")
         for m in re.finditer(rf"(?<![\w-]){C_ID}", text):
             if m.group() not in defs["C"]:
                 rep.error(rel, f"存在しない人物 {m.group()} を参照している")
@@ -238,17 +246,29 @@ def load_character_groups(data):
 
 
 def check_knowledge_cells(data, rep):
+    check_person_tables(data, rep, "knowledge-matrix", conan=True)
+
+
+def check_profile_cells(data, rep):
+    check_person_tables(data, rep, "profiles", conan=False)
+
+
+def check_person_tables(data, rep, subdir, conan):
+    """人物を行にした表（知識表・人物の掘り下げ）の記号・行の並び・まとめ行を見る。
+
+    conan が真なら、根拠の左に「コナンの把握」の列がある表として見る。
+    """
     groups = load_character_groups(data)
     order = {cid: i for i, cid in enumerate(groups)}
     group_order = list(dict.fromkeys(groups.values()))
-    for p in sorted((data / "knowledge-matrix").glob("0*.md")):
+    for p in sorted((data / subdir).glob("0*.md")):
         rel = p.relative_to(data)
         text = p.read_text(encoding="utf-8")
         for start, rows in iter_tables(text):
             header = split_row(rows[0])
             if header[-1] != "根拠":
                 continue
-            if "コナンの把握" not in header[-2]:
+            if conan and "コナンの把握" not in header[-2]:
                 rep.error(rel, f"{start} 行目: 根拠の左の列が「コナンの把握」になっていない")
             seen, group, headings = Counter(), None, []
             last, summary_line = -1, None
@@ -256,6 +276,7 @@ def check_knowledge_cells(data, rep):
                 line = start + offset
                 cells = split_row(row)
                 values = cells[1:-1]
+                body = values[:-1] if conan else values  # 「コナンの把握」以外の列
                 m = re.fullmatch(r"\*\*(.+)\*\*", cells[0])
                 if m and not any(cells[1:]):
                     group = m.group(1)  # グループ見出しの行
@@ -277,8 +298,10 @@ def check_knowledge_cells(data, rep):
                     summary_line = line
                     if not cells[0].startswith(f"ほかの「{group}」："):
                         rep.error(rel, f"{line} 行目: まとめ行は「ほかの「{group}」：」で始める")
-                    if not values or any(v != "✕" for v in values[:-1]) or values[-1] != "ー":
+                    if conan and (not values or any(v != "✕" for v in body) or values[-1] != "ー"):
                         rep.error(rel, f"{line} 行目: まとめ行は「コナンの把握」を `ー`、ほかの列をすべて `✕` にする")
+                    if not conan and (not values or any(v != "✕" for v in body)):
+                        rep.error(rel, f"{line} 行目: まとめ行はすべての列を `✕` にする")
                     if pos != sorted(pos):
                         rep.error(rel, f"{line} 行目: まとめ行の名前が characters.md の順になっていない")
                     continue
@@ -290,8 +313,9 @@ def check_knowledge_cells(data, rep):
                     if cell.rstrip("†") not in CELL_VALUES:
                         rep.error(rel, f"{line} 行目 {h}: 値「{cell}」は決められた値ではない")
                 # ✕† は根拠（正史外）を残すため「✕ 以外」として扱い、個別の行に置く
-                if all(v == "✕" for v in values[:-1]):
-                    rep.error(rel, f"{line} 行目: 「コナンの把握」以外がすべて `✕`（`†` なし）の人物は、まとめ行に入れる")
+                if all(v == "✕" for v in body):
+                    who = "「コナンの把握」以外" if conan else "すべての列"
+                    rep.error(rel, f"{line} 行目: {who}が `✕`（`†` なし）の人物は、まとめ行に入れる")
             if headings != group_order:
                 missing = [g for g in group_order if g not in headings]
                 extra = [h for h in headings if h not in group_order]
@@ -344,13 +368,14 @@ def main():
     fs_details = check_foreshadowing(args.data, rep)
     check_titles(args.data, fs_details, rep)
     check_knowledge_cells(args.data, rep)
+    check_profile_cells(args.data, rep)
     check_file_refs(args.data, rep)
 
     for line in rep.errors + rep.warnings:
         print(line)
     print(
         f"\n伏線 {len(defs['F'])} 件／考察 {len(defs['Q'])} 件／人物 {len(defs['C'])} 件／"
-        f"知識表の列 {len(defs['K'])} 件 — エラー {len(rep.errors)} 件、警告 {len(rep.warnings)} 件"
+        f"知識表の列 {len(defs['K'])} 件／人物の掘り下げの列 {len(defs['P'])} 件 — エラー {len(rep.errors)} 件、警告 {len(rep.warnings)} 件"
     )
     return 1 if rep.errors else 0
 
