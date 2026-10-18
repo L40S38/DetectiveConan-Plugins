@@ -11,7 +11,7 @@
   7. 知識表のセルが決められた値だけか。右端が「コナンの把握」の列か。グループ見出しが characters.md の
      グループと同じ順にそろっているか。characters.md の全員が、そのグループの個別の行かまとめ行に
      1 回ずつ、characters.md の順に出てくるか。まとめ行がグループの最後にあるか。
-     人物の掘り下げ（profiles/0*.md）の表も同じ規則で見る（「コナンの把握」の列は無く、まとめ行はすべて `0`）
+     人物の掘り下げ（profiles/0*.md）の表も同じ規則で見る（記号は同じ。「コナンの把握」の列は無く、まとめ行はすべて `✕`）
   8. File 表記が conventions.md の 3.1 の形か（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。警告のみ）
 
 使い方:
@@ -35,7 +35,6 @@ P_ID = r"P\d-\d+"
 C_ID = r"C-[a-z]+(?:-[a-z]+)*"
 
 CELL_VALUES = {"◎", "〇", "△", "✕", "ー", "?"}
-PROFILE_VALUES = {"3", "2", "1", "0", "ー", "?"}
 STATUS_VALUES = {"回収済", "部分回収", "未回収", "ミスリード判明"}
 
 # 物語の前提そのものなので、タイトルに含まれていても答えではない表現
@@ -247,17 +246,16 @@ def load_character_groups(data):
 
 
 def check_knowledge_cells(data, rep):
-    check_person_tables(data, rep, "knowledge-matrix", CELL_VALUES, blank="✕", conan=True)
+    check_person_tables(data, rep, "knowledge-matrix", conan=True)
 
 
 def check_profile_cells(data, rep):
-    check_person_tables(data, rep, "profiles", PROFILE_VALUES, blank="0", conan=False)
+    check_person_tables(data, rep, "profiles", conan=False)
 
 
-def check_person_tables(data, rep, subdir, cell_values, blank, conan):
-    """人物を行にした表（知識表・人物の掘り下げ）の値・行の並び・まとめ行を見る。
+def check_person_tables(data, rep, subdir, conan):
+    """人物を行にした表（知識表・人物の掘り下げ）の記号・行の並び・まとめ行を見る。
 
-    blank はまとめ行に入れる人物の値（知識表は `✕`、人物の掘り下げは `0`）。
     conan が真なら、根拠の左に「コナンの把握」の列がある表として見る。
     """
     groups = load_character_groups(data)
@@ -300,10 +298,10 @@ def check_person_tables(data, rep, subdir, cell_values, blank, conan):
                     summary_line = line
                     if not cells[0].startswith(f"ほかの「{group}」："):
                         rep.error(rel, f"{line} 行目: まとめ行は「ほかの「{group}」：」で始める")
-                    if conan and (not values or any(v != blank for v in body) or values[-1] != "ー"):
-                        rep.error(rel, f"{line} 行目: まとめ行は「コナンの把握」を `ー`、ほかの列をすべて `{blank}` にする")
-                    if not conan and (not values or any(v != blank for v in body)):
-                        rep.error(rel, f"{line} 行目: まとめ行はすべての列を `{blank}` にする")
+                    if conan and (not values or any(v != "✕" for v in body) or values[-1] != "ー"):
+                        rep.error(rel, f"{line} 行目: まとめ行は「コナンの把握」を `ー`、ほかの列をすべて `✕` にする")
+                    if not conan and (not values or any(v != "✕" for v in body)):
+                        rep.error(rel, f"{line} 行目: まとめ行はすべての列を `✕` にする")
                     if pos != sorted(pos):
                         rep.error(rel, f"{line} 行目: まとめ行の名前が characters.md の順になっていない")
                     continue
@@ -312,12 +310,12 @@ def check_person_tables(data, rep, subdir, cell_values, blank, conan):
                 if pos:
                     last = pos[-1]
                 for h, cell in zip(header[1:-1], values):
-                    if cell.rstrip("†") not in cell_values:
+                    if cell.rstrip("†") not in CELL_VALUES:
                         rep.error(rel, f"{line} 行目 {h}: 値「{cell}」は決められた値ではない")
-                # ✕† や 0† は根拠（正史外）を残すため「まとめ行の値以外」として扱い、個別の行に置く
-                if all(v == blank for v in body):
+                # ✕† は根拠（正史外）を残すため「✕ 以外」として扱い、個別の行に置く
+                if all(v == "✕" for v in body):
                     who = "「コナンの把握」以外" if conan else "すべての列"
-                    rep.error(rel, f"{line} 行目: {who}が `{blank}`（`†` なし）の人物は、まとめ行に入れる")
+                    rep.error(rel, f"{line} 行目: {who}が `✕`（`†` なし）の人物は、まとめ行に入れる")
             if headings != group_order:
                 missing = [g for g in group_order if g not in headings]
                 extra = [h for h in headings if h not in group_order]
