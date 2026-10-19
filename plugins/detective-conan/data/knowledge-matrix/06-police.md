@@ -7,95 +7,96 @@
 | K6-1 | 警察学校組（降谷・諸伏景光・松田・萩原・伊達）が同期だと知っている |
 | K6-2 | 安室透＝降谷零だと知っている |
 | K6-3 | 降谷零が公安警察だと知っている |
-| K6-4 | スコッチ＝諸伏景光だと知っている |
 | K6-5 | 諸伏景光が公安の潜入捜査官だったと知っている |
 | K6-6 | 伊織無我が元公安警察官だと知っている |
 | K6-7 | 伊織無我と風見裕也が警察学校の同期だと知っている |
-| K6-8 | この人物が K6-1〜K6-7 の情報を知っていることを、コナンが把握している |
+| K6-8 | この人物が K6-1〜K6-3・K6-5〜K6-7 の情報を知っていることを、コナンが把握している |
 
-| 人物 | K6-1 同期 | K6-2 安室＝降谷 | K6-3 降谷＝公安 | K6-4 スコッチ＝景光 | K6-5 景光＝公安 | K6-6 伊織＝元公安 | K6-7 伊織と風見が同期 | K6-8 コナンの把握 | 根拠 |
-|---|---|---|---|---|---|---|---|---|---|
-| **コナン陣営** |  |  |  |  |  |  |  |  |  |
-| 工藤新一 `C-kudo-shinichi` | ◎ | ◎ | ◎ | 〇 | 〇 | ? | ✕ | ー | [^K6-kudo-shinichi] |
-| ほかの「コナン陣営」：阿笠博士 `C-agasa-hiroshi`、工藤優作 `C-kudo-yusaku`、工藤有希子 `C-kudo-yukiko`、服部平次 `C-hattori-heiji`、宮野志保 `C-miyano-shiho` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **毛利家・友人・帝丹小** |  |  |  |  |  |  |  |  |  |
-| 毛利蘭 `C-mori-ran` | 〇 | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | [^K6-mori-ran] |
-| ほかの「毛利家・友人・帝丹小」：毛利小五郎 `C-mori-kogoro`、妃英理 `C-kisaki-eri`、鈴木園子 `C-suzuki-sonoko`、鈴木史郎 `C-suzuki-shiro`、鈴木朋子 `C-suzuki-tomoko`、鈴木綾子 `C-suzuki-ayako`、京極真 `C-kyogoku-makoto`、遠山和葉 `C-toyama-kazuha`、服部静華 `C-hattori-shizuka`、吉田歩美 `C-yoshida-ayumi`、小嶋元太 `C-kojima-genta`、円谷光彦 `C-tsuburaya-mitsuhiko`、榎本梓 `C-enomoto-azusa`、小林澄子 `C-kobayashi-sumiko`、米原桜子 `C-yonehara-sakurako` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **警視庁捜査一課** |  |  |  |  |  |  |  |  |  |
-| 目暮十三 `C-megure-juzo` | ? | ✕ | ◎† | ✕ | 〇 | ✕ | ✕ | ? | [^K6-halloween-keishicho] [^K6-yosei-no-kuchibiru] |
-| 高木渉 `C-takagi-wataru` | 〇 | ✕ | ◎† | ✕ | 〇 | ✕ | ✕ | ? | [^K6-takagi-wataru] [^K6-halloween-keishicho] [^K6-yosei-no-kuchibiru] |
-| 佐藤美和子 `C-sato-miwako` | 〇 | △ | ◎† | ✕ | 〇 | ✕ | ✕ | ? | [^K6-sato-miwako] [^K6-halloween-keishicho] [^K6-yosei-no-kuchibiru] |
-| 白鳥任三郎 `C-shiratori-ninzaburo` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
-| 千葉和伸 `C-chiba-kazunobu` | ◎† | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | [^K6-chiba-kazunobu] |
-| 松本清長 `C-matsumoto-kiyonaga` | ? | ? | ? | ? | ? | ? | ? | ? | |
-| 黒田兵衛 `C-kuroda-hyoe` | ? | ◎ | ◎ | ? | ? | ◎ | ? | ? | [^K6-kuroda-hyoe] |
-| 松田陣平 `C-matsuda-jinpei` | ー | ? | ◎† | ? | ◎† | ー | ー | ? | [^K6-doki] [^K6-halloween] |
-| 伊達航 `C-date-wataru` | ー | ? | ◎† | ? | ◎† | ー | ー | ? | [^K6-doki] [^K6-halloween] |
-| ほかの「警視庁捜査一課」：弓長 `C-yuminaga`、羽鳥 `C-hatori`、高木長介 `C-takagi-chosuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **警視庁交通部** |  |  |  |  |  |  |  |  |  |
-| 宮本由美 `C-miyamoto-yumi` | ? | △ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | [^K6-miyamoto-yumi] |
-| 三池苗子 `C-miike-naeko` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
-| **公安警察（警察庁・警視庁公安部）** |  |  |  |  |  |  |  |  |  |
-| 降谷零（安室透） `C-furuya-rei` | ー | ー | ー | ◎ | ◎ | ? | ? | ? | [^K6-furuya-rei] |
-| 風見裕也 `C-kazami-yuya` | ? | ◎ | ◎ | ? | ? | ◎ | ◎ | ? | [^K6-kazami-yuya] |
-| 諸伏景光 `C-morofushi-hiromitsu` | ー | ◎ | ◎ | ー | ー | ー | ー | ? | [^K6-doki] |
-| **警視庁（そのほかの部署）** |  |  |  |  |  |  |  |  |  |
-| 小田切敏郎 `C-odagiri-toshiro` | ?† | ?† | ?† | ?† | ?† | ?† | ?† | ?† | |
-| 中森銀三 `C-nakamori-ginzo` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
-| 萩原研二 `C-hagiwara-kenji` | ー | ? | ? | ? | ? | ー | ー | ? | [^K6-doki] |
-| 鬼塚八蔵 `C-onizuka-hachizo` | ◎ | ✕ | ? | ✕ | ? | ✕ | ✕ | ? | [^K6-onizuka-hachizo] |
-| ほかの「警視庁（そのほかの部署）」：茶木神太郎 `C-chaki-shintaro`、百瀬 `C-momose`、佐藤警部 `C-sato-keibu` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **大阪府警** |  |  |  |  |  |  |  |  |  |
-| 服部平蔵 `C-hattori-heizo` | ? | ? | ? | ? | ? | ? | ? | ? | |
-| 遠山銀司郎 `C-toyama-ginshiro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
-| 大滝悟郎 `C-otaki-goro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
-| ほかの「大阪府警」：遠山櫻 `C-toyama-sakura` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **長野県警** |  |  |  |  |  |  |  |  |  |
-| 諸伏高明 `C-morofushi-takaaki` | 〇 | ◎ | 〇 | ✕ | ◎ | ✕ | ✕ | ? | [^K6-morofushi-takaaki] |
-| 大和敢助 `C-yamato-kansuke` | ? | ? | ? | ✕ | ✕ | ✕ | ✕ | ? | |
-| 上原由衣 `C-uehara-yui` | ? | ? | ? | ✕ | ✕ | ✕ | ✕ | ? | |
-| **神奈川県警** |  |  |  |  |  |  |  |  |  |
-| 横溝重悟 `C-yokomizo-jugo` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
-| 萩原千速 `C-hagiwara-chihaya` | 〇 | ? | ? | ? | ? | ✕ | ✕ | ? | [^K6-hagiwara-chihaya] |
-| **そのほかの道府県警** |  |  |  |  |  |  |  |  |  |
-| 横溝参悟 `C-yokomizo-sango` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
-| 山村ミサオ `C-yamamura-misao` | ? | ✕ | ✕ | ✕ | 〇 | ✕ | ✕ | ? | [^K6-yamamura-misao] |
-| 綾小路文麿 `C-ayanokoji-fumimaro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
-| ほかの「そのほかの道府県警」：西村京兵 `C-nishimura-kyohei`、寺林省二 `C-terabayashi-shoji` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **大岡家（京都）** |  |  |  |  |  |  |  |  |  |
-| 伊織無我（元公安） `C-iori-muga` | ? | ◎ | ◎ | ? | ? | ー | 〇 | ? | [^K6-iori-muga] |
-| 大岡家のご隠居 `C-ooka-goinkyo` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ? | [^K6-nazo-no-rojin] |
-| ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **FBI・CIA・赤井家** |  |  |  |  |  |  |  |  |  |
-| 赤井秀一 `C-akai-shuichi` | ? | ◎ | ◎ | ◎ | ◎ | ? | ✕ | ? | [^K6-akai-shuichi] |
-| 赤井務武 `C-akai-tsutomu` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ? | [^K6-nazo-no-rojin] |
-| ほかの「FBI・CIA・赤井家」：羽田秀吉 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary`、ジョディ・スターリング `C-jodie-starling`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |  |
-| ほかの「怪盗キッドの関係者」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-jii-konosuke`、中森青子 `C-nakamori-aoko`、中森碧子 `C-nakamori-midoriko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **黒ずくめの組織** |  |  |  |  |  |  |  |  |  |
-| 烏丸蓮耶 `C-karasuma-renya` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ? | [^K6-nazo-no-rojin] |
-| ラム `C-rum` | ? | ? | ? | ? | ? | ✕ | ✕ | ? | |
-| ベルモット `C-vermouth` | ? | ? | ? | ? | ? | ✕ | ✕ | ? | |
-| ジン `C-gin` | ? | ✕ | ✕ | ? | ◎ | ✕ | ✕ | ? | [^K6-gin] |
-| ほかの「黒ずくめの組織」：ウォッカ `C-vodka`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、ピンガ `C-pinga`、アイリッシュ `C-irish`、テキーラ `C-tequila`、ピスコ `C-pisco`、カルバドス `C-calvados`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **宮野家** |  |  |  |  |  |  |  |  |  |
-| ほかの「宮野家」：宮野明美 `C-miyano-akemi`、宮野厚司 `C-miyano-atsushi`、宮野エレーナ `C-miyano-elena` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **羽田浩司事件の関係者** |  |  |  |  |  |  |  |  |  |
-| 羽田康晴 `C-haneda-yasuharu` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ? | [^K6-nazo-no-rojin] |
-| 羽田市代 `C-haneda-ichiyo` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ? | [^K6-nazo-no-rojin] |
-| ほかの「羽田浩司事件の関係者」：羽田浩司 `C-haneda-koji`、アマンダ・ヒューズ `C-amanda-hughes`、若狭留美 `C-wakasa-rumi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |  |  |
-| ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **スポーツ・芸能関係** |  |  |  |  |  |  |  |  |  |
-| ほかの「スポーツ・芸能関係」：沖野ヨーコ `C-okino-yoko`、剣崎修 `C-kenzaki-osamu`、光本兵我 `C-komoto-hyoga`、比護隆佑 `C-higo-ryusuke`、勝又力 `C-katsumata-chikara` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **剣道界** |  |  |  |  |  |  |  |  |  |
-| ほかの「剣道界」：沖田総司 `C-okita-soshi`、鬼丸猛 `C-onimaru-takeshi`、鉄刃 `C-kurogane-yaiba`、鉄諸羽 `C-kurogane-moroha`、鉄美智子 `C-kurogane-michiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
-| **その他** |  |  |  |  |  |  |  |  |  |
-| ベーダーさん `C-beda-san` | ✕ | ✕ | ✕ | ✕ | ✕ | ? | ✕ | ? | [^K6-beda-san] |
-| 鷹ジジイ `C-taka-jiji` | ✕ | ? | ? | ✕ | ✕ | ? | ✕ | ? | [^K6-taka-jiji] |
-| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+列 ID の 4 番は欠番（もとは「スコッチ＝諸伏景光だと知っている」。組織の中での顔なので、2026-10-18 に表5 の K5-10 に移した。ID は再利用しない）。
 
-[^K6-furuya-rei]: スコッチ＝諸伏景光は幼なじみで警察学校の同期。潜入中の同僚でもあった。
+| 人物 | K6-1 同期 | K6-2 安室＝降谷 | K6-3 降谷＝公安 | K6-5 景光＝公安 | K6-6 伊織＝元公安 | K6-7 伊織と風見が同期 | K6-8 コナンの把握 | 根拠 |
+|---|---|---|---|---|---|---|---|---|
+| **コナン陣営** |  |  |  |  |  |  |  |  |
+| 工藤新一 `C-kudo-shinichi` | ◎ | ◎ | ◎ | 〇 | ? | ✕ | ー | [^K6-kudo-shinichi] |
+| ほかの「コナン陣営」：阿笠博士 `C-agasa-hiroshi`、工藤優作 `C-kudo-yusaku`、工藤有希子 `C-kudo-yukiko`、服部平次 `C-hattori-heiji`、宮野志保 `C-miyano-shiho` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **毛利家・友人・帝丹小** |  |  |  |  |  |  |  |  |
+| 毛利蘭 `C-mori-ran` | 〇 | ✕ | ✕ | ✕ | ✕ | ✕ | ? | [^K6-mori-ran] |
+| ほかの「毛利家・友人・帝丹小」：毛利小五郎 `C-mori-kogoro`、妃英理 `C-kisaki-eri`、鈴木園子 `C-suzuki-sonoko`、鈴木史郎 `C-suzuki-shiro`、鈴木朋子 `C-suzuki-tomoko`、鈴木綾子 `C-suzuki-ayako`、京極真 `C-kyogoku-makoto`、遠山和葉 `C-toyama-kazuha`、服部静華 `C-hattori-shizuka`、吉田歩美 `C-yoshida-ayumi`、小嶋元太 `C-kojima-genta`、円谷光彦 `C-tsuburaya-mitsuhiko`、榎本梓 `C-enomoto-azusa`、小林澄子 `C-kobayashi-sumiko`、米原桜子 `C-yonehara-sakurako` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **警視庁捜査一課** |  |  |  |  |  |  |  |  |
+| 目暮十三 `C-megure-juzo` | ? | ✕ | ◎† | 〇 | ✕ | ✕ | ? | [^K6-halloween-keishicho] [^K6-yosei-no-kuchibiru] |
+| 高木渉 `C-takagi-wataru` | 〇 | ✕ | ◎† | 〇 | ✕ | ✕ | ? | [^K6-takagi-wataru] [^K6-halloween-keishicho] [^K6-yosei-no-kuchibiru] |
+| 佐藤美和子 `C-sato-miwako` | 〇 | △ | ◎† | 〇 | ✕ | ✕ | ? | [^K6-sato-miwako] [^K6-halloween-keishicho] [^K6-yosei-no-kuchibiru] |
+| 白鳥任三郎 `C-shiratori-ninzaburo` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
+| 千葉和伸 `C-chiba-kazunobu` | ◎† | ✕ | ✕ | ✕ | ✕ | ✕ | ? | [^K6-chiba-kazunobu] |
+| 松本清長 `C-matsumoto-kiyonaga` | ? | ? | ? | ? | ? | ? | ? | |
+| 黒田兵衛 `C-kuroda-hyoe` | ? | ◎ | ◎ | ? | ◎ | ? | ? | [^K6-kuroda-hyoe] |
+| 松田陣平 `C-matsuda-jinpei` | ー | ? | ◎† | ◎† | ー | ー | ? | [^K6-doki] [^K6-halloween] |
+| 伊達航 `C-date-wataru` | ー | ? | ◎† | ◎† | ー | ー | ? | [^K6-doki] [^K6-halloween] |
+| ほかの「警視庁捜査一課」：弓長 `C-yuminaga`、羽鳥 `C-hatori`、高木長介 `C-takagi-chosuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **警視庁交通部** |  |  |  |  |  |  |  |  |
+| 宮本由美 `C-miyamoto-yumi` | ? | △ | ✕ | ✕ | ✕ | ✕ | ? | [^K6-miyamoto-yumi] |
+| 三池苗子 `C-miike-naeko` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
+| **公安警察（警察庁・警視庁公安部）** |  |  |  |  |  |  |  |  |
+| 降谷零（安室透） `C-furuya-rei` | ー | ー | ー | ◎ | ? | ? | ? | [^K6-furuya-rei] |
+| 風見裕也 `C-kazami-yuya` | ? | ◎ | ◎ | ? | ◎ | ◎ | ? | [^K6-kazami-yuya] |
+| 諸伏景光 `C-morofushi-hiromitsu` | ー | ◎ | ◎ | ー | ー | ー | ? | [^K6-doki] |
+| **警視庁（そのほかの部署）** |  |  |  |  |  |  |  |  |
+| 小田切敏郎 `C-odagiri-toshiro` | ?† | ?† | ?† | ?† | ?† | ?† | ?† | |
+| 中森銀三 `C-nakamori-ginzo` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
+| 萩原研二 `C-hagiwara-kenji` | ー | ? | ? | ? | ー | ー | ? | [^K6-doki] |
+| 鬼塚八蔵 `C-onizuka-hachizo` | ◎ | ✕ | ? | ? | ✕ | ✕ | ? | [^K6-onizuka-hachizo] |
+| ほかの「警視庁（そのほかの部署）」：茶木神太郎 `C-chaki-shintaro`、百瀬 `C-momose`、佐藤警部 `C-sato-keibu` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **大阪府警** |  |  |  |  |  |  |  |  |
+| 服部平蔵 `C-hattori-heizo` | ? | ? | ? | ? | ? | ? | ? | |
+| 遠山銀司郎 `C-toyama-ginshiro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
+| 大滝悟郎 `C-otaki-goro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
+| ほかの「大阪府警」：遠山櫻 `C-toyama-sakura` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **長野県警** |  |  |  |  |  |  |  |  |
+| 諸伏高明 `C-morofushi-takaaki` | 〇 | ◎ | 〇 | ◎ | ✕ | ✕ | ? | [^K6-morofushi-takaaki] |
+| 大和敢助 `C-yamato-kansuke` | ? | ? | ? | ✕ | ✕ | ✕ | ? | |
+| 上原由衣 `C-uehara-yui` | ? | ? | ? | ✕ | ✕ | ✕ | ? | |
+| **神奈川県警** |  |  |  |  |  |  |  |  |
+| 横溝重悟 `C-yokomizo-jugo` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
+| 萩原千速 `C-hagiwara-chihaya` | 〇 | ? | ? | ? | ✕ | ✕ | ? | [^K6-hagiwara-chihaya] |
+| **そのほかの道府県警** |  |  |  |  |  |  |  |  |
+| 横溝参悟 `C-yokomizo-sango` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
+| 山村ミサオ `C-yamamura-misao` | ? | ✕ | ✕ | 〇 | ✕ | ✕ | ? | [^K6-yamamura-misao] |
+| 綾小路文麿 `C-ayanokoji-fumimaro` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ? | |
+| ほかの「そのほかの道府県警」：西村京兵 `C-nishimura-kyohei`、寺林省二 `C-terabayashi-shoji` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **大岡家（京都）** |  |  |  |  |  |  |  |  |
+| 伊織無我（元公安） `C-iori-muga` | ? | ◎ | ◎ | ? | ー | 〇 | ? | [^K6-iori-muga] |
+| 大岡家のご隠居 `C-ooka-goinkyo` | ✕ | ? | ? | ✕ | ? | ✕ | ? | [^K6-nazo-no-rojin] |
+| ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **FBI・CIA・赤井家** |  |  |  |  |  |  |  |  |
+| 赤井秀一 `C-akai-shuichi` | ? | ◎ | ◎ | ◎ | ? | ✕ | ? | [^K6-akai-shuichi] |
+| 赤井務武 `C-akai-tsutomu` | ✕ | ? | ? | ✕ | ? | ✕ | ? | [^K6-nazo-no-rojin] |
+| ほかの「FBI・CIA・赤井家」：羽田秀吉 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary`、ジョディ・スターリング `C-jodie-starling`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |
+| ほかの「怪盗キッドの関係者」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-jii-konosuke`、中森青子 `C-nakamori-aoko`、中森碧子 `C-nakamori-midoriko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **黒ずくめの組織** |  |  |  |  |  |  |  |  |
+| 烏丸蓮耶 `C-karasuma-renya` | ✕ | ? | ? | ✕ | ? | ✕ | ? | [^K6-nazo-no-rojin] |
+| ラム `C-rum` | ? | ? | ? | ? | ✕ | ✕ | ? | |
+| ベルモット `C-vermouth` | ? | ? | ? | ? | ✕ | ✕ | ? | |
+| ジン `C-gin` | ? | ✕ | ✕ | ◎ | ✕ | ✕ | ? | [^K6-gin] |
+| ほかの「黒ずくめの組織」：ウォッカ `C-vodka`、キャンティ `C-chianti`、コルン `C-korn`、キュラソー `C-curacao`、ピンガ `C-pinga`、アイリッシュ `C-irish`、テキーラ `C-tequila`、ピスコ `C-pisco`、カルバドス `C-calvados`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **宮野家** |  |  |  |  |  |  |  |  |
+| ほかの「宮野家」：宮野明美 `C-miyano-akemi`、宮野厚司 `C-miyano-atsushi`、宮野エレーナ `C-miyano-elena` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **羽田浩司事件の関係者** |  |  |  |  |  |  |  |  |
+| 羽田康晴 `C-haneda-yasuharu` | ✕ | ? | ? | ✕ | ? | ✕ | ? | [^K6-nazo-no-rojin] |
+| 羽田市代 `C-haneda-ichiyo` | ✕ | ? | ? | ✕ | ? | ✕ | ? | [^K6-nazo-no-rojin] |
+| ほかの「羽田浩司事件の関係者」：羽田浩司 `C-haneda-koji`、アマンダ・ヒューズ `C-amanda-hughes`、若狭留美 `C-wakasa-rumi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |  |  |
+| ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **スポーツ・芸能関係** |  |  |  |  |  |  |  |  |
+| ほかの「スポーツ・芸能関係」：沖野ヨーコ `C-okino-yoko`、剣崎修 `C-kenzaki-osamu`、光本兵我 `C-komoto-hyoga`、比護隆佑 `C-higo-ryusuke`、勝又力 `C-katsumata-chikara` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **剣道界** |  |  |  |  |  |  |  |  |
+| ほかの「剣道界」：沖田総司 `C-okita-soshi`、鬼丸猛 `C-onimaru-takeshi`、鉄刃 `C-kurogane-yaiba`、鉄諸羽 `C-kurogane-moroha`、鉄美智子 `C-kurogane-michiko` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| **その他** |  |  |  |  |  |  |  |  |
+| ベーダーさん `C-beda-san` | ✕ | ✕ | ✕ | ✕ | ? | ✕ | ? | [^K6-beda-san] |
+| 鷹ジジイ `C-taka-jiji` | ✕ | ? | ? | ✕ | ? | ✕ | ? | [^K6-taka-jiji] |
+| ほかの「その他」：板倉卓 `C-itakura-taku`、毒島桐子 `C-busujima-kiriko`、フサエ・キャンベル・木之下 `C-fusae-campbell-kinoshita`、目暮みどり `C-megure-midori`、ナタリー・来間 `C-natalie-kuruma`、黒塗りの赤子 `C-kuronuri-no-akago` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+
+[^K6-furuya-rei]: 諸伏景光は幼なじみで警察学校の同期。組織への潜入中の同僚でもあった（景光がスコッチだと知っていることは表5 の K5-10）。
 
 [^K6-doki]: 警察学校組の 5 人。File 1134–1136（107巻「出会っていた５人組」）で 5 人そろって描かれる。降谷が安室透という偽名を、景光がスコッチというコードネームを使い始めた時期が、各人の死より前か後かは要確認。4 人が死んだ順は次のとおり。File 369–373（36・37巻「揺れる警視庁1200万人の人質」）で語られる経緯では、萩原研二はその 7 年前の 11 月 7 日に、松田は 3 年前の同じ日（研二の命日）に殉職した。伊達は File 804–808（76・77巻「命を賭けた恋愛中継［中継開始／絶体絶命／現場突入］」）の 1 年前の 2 月 7 日に事故で死んだ（日付も上記の回で語られる）ので、松田より後。景光は、File 937「消された手がかり」（88巻「仲の悪いガールズバンド」）の世良の回想で 4 年前にはまだ生きているので、研二より後に死んでいる。景光が死んだのは赤井が組織にいたころ（File 954–957（90巻「裏切りのステージ」））で、原作だけでは松田とどちらが先かは決まらない。[劇場版] 第 25 作『ハロウィンの花嫁』では、松田が殉職する前日の 3 年前の 11 月 6 日に、景光は降谷・伊達・松田と研二の墓参りをしていて生きているので、劇場版の範囲では、景光が死んだのは松田より後。景光と伊達のどちらが先に死んだかは要確認（File 1021「遺品」（96巻「キッドＶＳ高明狙われた唇」）で、高明が弟のものだと悟る穴の空いたスマートフォンは、1 年前に伊達に届いた小包に入っていたが、小包が届いたのが伊達の死の前かは確かめていない）。
 
@@ -111,11 +112,11 @@
 
 [^K6-halloween-keishicho]: K6-3（降谷＝公安）は [劇場版] 第 25 作『ハロウィンの花嫁』の描写による（`†`）。原作での描写は要確認。
 
-[^K6-yosei-no-kuchibiru]: 原作 File 1018–1021（96巻「キッドＶＳ高明狙われた唇」）の「妖精の唇」の回で、「諸伏高明の弟が公安に配属され、任務中に殉職した可能性が高い」ことを知る。スコッチとして組織に潜入していたことまでは知らないので、K6-5 は 〇、K6-4 は ✕。
+[^K6-yosei-no-kuchibiru]: 原作 File 1018–1021（96巻「キッドＶＳ高明狙われた唇」）の「妖精の唇」の回で、「諸伏高明の弟が公安に配属され、任務中に殉職した可能性が高い」ことを知る。K6-5 は 〇。スコッチとして組織に潜入していたことまでは知らない（表5 の K5-10 は ✕）。
 
 [^K6-chiba-kazunobu]: K6-1 は [劇場版] 第 25 作『ハロウィンの花嫁』で、警察学校組が同期だったことを認識している描写による（`†`）。原作での描写は要確認。
 
-[^K6-yamamura-misao]: 原作 File 1084「ミッちゃんのお家」（102巻「群馬と長野県境（ボーダー）の遺体」）で、高明から「弟は公安に行ったのだろう」と聞かされる（死は伏せられる）。景光が公安に進んだことは知っているが、殉職したこと、組織に「スコッチ」として潜入していたことは知らない（K6-4 は ✕）。
+[^K6-yamamura-misao]: 原作 File 1084「ミッちゃんのお家」（102巻「群馬と長野県境（ボーダー）の遺体」）で、高明から「弟は公安に行ったのだろう」と聞かされる（死は伏せられる）。景光が公安に進んだことは知っているが、殉職したこと、組織に「スコッチ」として潜入していたことは知らない（表5 の K5-10 は ✕）。
 
 [^K6-takagi-wataru]: 伊達の後輩。File 1079–1081（101・102巻「高木と伊達と手帳の約束」）で安室と同席するが、安室と伊達の関係には気づいていない（要確認）。
 
@@ -123,17 +124,17 @@
 
 [^K6-miyamoto-yumi]: 警察学校時代の降谷に会ったことがある（[スピンオフ]『警察学校編 Wild Police Story』最終話）。安室透とその時の人物を結び付けているかは要確認。
 
-[^K6-morofushi-takaaki]: 安室透＝降谷零だと知っている（File 1030「兄さんみたいに」（97巻「36マスの完全犯罪(パーフェクトゲーム)」）— 小五郎から届いた画像の金髪の男が、大学時代に弟から紹介された「降谷零君」だと気づく）。弟・景光が公安に配属され、任務中に殉職した可能性が高いと推理している（File 1021「遺品」（96巻「キッドＶＳ高明狙われた唇」）。File 1084「ミッちゃんのお家」（102巻「群馬と長野県境（ボーダー）の遺体」）でも山村に同じ趣旨を話す）。ただし、**組織内のコードネーム「スコッチ」までは知らないとみられる**（K6-4 は ✕）。降谷が公安であることは、File 1021「遺品」（96巻「キッドＶＳ高明狙われた唇」）・File 1030「兄さんみたいに」（97巻「36マスの完全犯罪(パーフェクトゲーム)」）からの推理でたどり着いているか、あるいは黒田兵衛（降谷の上司格）から直接聞いている可能性が高いが、明言する描写は確認できていない（K6-3 は 〇）。警察学校の同期 5 人については一部を把握している（〇）。
+[^K6-morofushi-takaaki]: 安室透＝降谷零だと知っている（File 1030「兄さんみたいに」（97巻「36マスの完全犯罪(パーフェクトゲーム)」）— 小五郎から届いた画像の金髪の男が、大学時代に弟から紹介された「降谷零君」だと気づく）。弟・景光が公安に配属され、任務中に殉職した可能性が高いと推理している（File 1021「遺品」（96巻「キッドＶＳ高明狙われた唇」）。File 1084「ミッちゃんのお家」（102巻「群馬と長野県境（ボーダー）の遺体」）でも山村に同じ趣旨を話す）。ただし、**組織内のコードネーム「スコッチ」までは知らないとみられる**（表5 の K5-10 は ✕）。降谷が公安であることは、File 1021「遺品」（96巻「キッドＶＳ高明狙われた唇」）・File 1030「兄さんみたいに」（97巻「36マスの完全犯罪(パーフェクトゲーム)」）からの推理でたどり着いているか、あるいは黒田兵衛（降谷の上司格）から直接聞いている可能性が高いが、明言する描写は確認できていない（K6-3 は 〇）。警察学校の同期 5 人については一部を把握している（〇）。
 
 [^K6-hagiwara-chihaya]: 弟・研二と松田陣平の高校時代を知っている（File 1154–1156（108・109巻「指輪の思い出」））。降谷・諸伏景光・伊達を知っているかは要確認。
 
-[^K6-kudo-shinichi]: 幼い頃に 5 人と会っていたことを、蘭の回想で知る（File 1134–1136（107巻「出会っていた５人組」））。スコッチ＝諸伏景光は推理でつかんでいる段階（要確認）。
+[^K6-kudo-shinichi]: 幼い頃に 5 人と会っていたことを、蘭の回想で知る（File 1134–1136（107巻「出会っていた５人組」））。スコッチ＝諸伏景光は表5 の K5-10 で扱う。
 
 [^K6-mori-ran]: 幼い頃に 5 人と会っていたことを思い出す（File 1134–1136（107巻「出会っていた５人組」））。彼らが同期の警察官だということまで覚えているかは要確認。
 
-[^K6-akai-shuichi]: スコッチの最期に立ち会った。スコッチが公安の潜入捜査官だと知っていた。
+[^K6-akai-shuichi]: スコッチの最期に立ち会った。スコッチが公安の潜入捜査官だと知っていた（スコッチの本名を知っているかは表5 の K5-10）。
 
-[^K6-gin]: 組織はスコッチが NOC（潜入捜査官）だと突き止めた（F-POL-004）。本名まで知っていたかは要確認。
+[^K6-gin]: 組織はスコッチが NOC（潜入捜査官）だと突き止めた（F-POL-004）。本名まで知っていたかは要確認（表5 の K5-10）。
 
 [^K6-nazo-no-rojin]: 大岡家のご隠居・羽田康晴・羽田市代・赤井務武・烏丸蓮耶で共有。正体のわからない老人（ベーダーさん `C-beda-san`・鷹ジジイ `C-taka-jiji`）の候補（候補の説は `C-beda-san` を参照）。どちらかの老人だとすると、鷹ジジイ（K6-2・K6-3・K6-6）やベーダーさん（K6-6）の行と同じく、K6-2・K6-3・K6-6 を知っていてもおかしくないので `?`。ほかの列は、候補であることによっては変えていない（`✕` のまま）。K6-8 は、`◎`・`〇` の列がなく、K6-2・K6-3・K6-6 が `?` なので `?`（老人の場面にコナンはいない。File 1090「扉の先の真実」（102巻「大岡紅葉の甘い罠」）でコナンが目にするのは老人の車だけ）。
 
