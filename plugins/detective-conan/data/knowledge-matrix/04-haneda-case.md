@@ -61,7 +61,7 @@ K4-7〜K4-9 は後から足した列なので、番号は K4-6 の次だが、�
 | 赤井メアリー `C-akai-mary` | ◎ | ✕ | ? | ? | ◎ | ✕ | ✕ | ✕ | 〇 | [^K4-akai-mary] |
 | 赤井務武 `C-akai-tsutomu` | ◎ | ? | ? | 〇 | ? | ? | ? | ✕ | 〇 | [^K4-akai-tsutomu] |
 | ジョディ・スターリング `C-jodie-starling` | ? | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ? | [^K4-jodie-starling] |
-| ほかの「FBI・CIA・赤井家」：アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「FBI・CIA・赤井家」：アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、バーニィ `C-barney`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |  |  |
 | ほかの「怪盗キッドの関係者」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-jii-konosuke`、中森青子 `C-nakamori-aoko`、中森碧子 `C-nakamori-midoriko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |  |  |  |  |

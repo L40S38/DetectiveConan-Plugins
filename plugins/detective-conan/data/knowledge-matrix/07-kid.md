@@ -44,7 +44,7 @@
 | ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji`、伊織無我 `C-iori-muga` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **FBI・CIA・赤井家** |  |  |  |  |  |  |  |
 | 赤井務武 `C-akai-tsutomu` | ? | ? | ? | ? | ? | ? | [^K7-nazo-no-rojin] |
-| ほかの「FBI・CIA・赤井家」：赤井秀一 `C-akai-shuichi`、羽田秀吉 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary`、ジョディ・スターリング `C-jodie-starling`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「FBI・CIA・赤井家」：赤井秀一 `C-akai-shuichi`、羽田秀吉 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary`、ジョディ・スターリング `C-jodie-starling`、アンドレ・キャメル `C-andre-camel`、ジェイムズ・ブラック `C-james-black`、本堂瑛海 `C-hondo-hidemi`、イーサン・本堂 `C-ethan-hondo`、バーニィ `C-barney`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |
 | 黒羽快斗 `C-kuroba-kaito` | ー | ◎ | ? | ? | ? | ? | [^K7-kuroba-kaito] |
 | 黒羽盗一 `C-kuroba-toichi` | ◎ | ー | ー | ◎ | ー | ? | [^K7-kuroba-toichi] |

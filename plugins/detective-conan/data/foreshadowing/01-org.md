@@ -137,7 +137,7 @@
 - 経過: スコッチ（公安）とライ（FBI）が過去に露見していたことがわかる
 - 回収: 原作 File 605–609（58・59巻「赤と黒のクラッシュ［嫌疑／潔白／決死／殉職］」）— キールは CIA の NOC と明かされる。バーボンは公安（F-POL-001、F-POL-002）
 - 内容: 組織の中にいる他機関の潜入者は誰で、何人いるのか
-- 関連: 人物 [本堂瑛海](../characters.md#C-hondo-hidemi)、[イーサン・本堂](../characters.md#C-ethan-hondo)、[降谷零](../characters.md#C-furuya-rei)、[諸伏景光](../characters.md#C-morofushi-hiromitsu)、[赤井秀一](../characters.md#C-akai-shuichi)／考察 Q-025／知識表 [K5](../knowledge-matrix/05-black-org.md)、[K6](../knowledge-matrix/06-police.md)
+- 関連: 人物 [本堂瑛海](../characters.md#C-hondo-hidemi)、[イーサン・本堂](../characters.md#C-ethan-hondo)、[バーニィ](../characters.md#C-barney)、[降谷零](../characters.md#C-furuya-rei)、[諸伏景光](../characters.md#C-morofushi-hiromitsu)、[赤井秀一](../characters.md#C-akai-shuichi)／考察 Q-025／知識表 [K5](../knowledge-matrix/05-black-org.md)、[K6](../knowledge-matrix/06-police.md)
 - 備考: 劇場版『純黒の悪夢』では NOC リストが狙われる（F-ORG-011）
 
 <a id="F-ORG-011"></a>

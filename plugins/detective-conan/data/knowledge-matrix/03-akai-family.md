@@ -69,7 +69,7 @@ K3-8 は後から足した列なので、番号は K3-7 の次だが、表では
 | アンドレ・キャメル `C-andre-camel` | ✕ | ◎ | ◎ | ✕ | ?† | ✕ | ✕ | ◎ | [^K3-fbi] |
 | ジェイムズ・ブラック `C-james-black` | ✕ | ◎ | ◎ | 〇 | ✕ | ✕ | ✕ | 〇 | [^K3-james-black] |
 | 本堂瑛海（キール） `C-hondo-hidemi` | ✕ | ◎ | ? | ? | ✕ | ✕ | ✕ | ◎ | [^K3-hondo-hidemi] |
-| ほかの「FBI・CIA・赤井家」：イーサン・本堂 `C-ethan-hondo`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「FBI・CIA・赤井家」：イーサン・本堂 `C-ethan-hondo`、バーニィ `C-barney`、本堂瑛祐 `C-hondo-eisuke` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |  |
 | ほかの「怪盗キッドの関係者」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-jii-konosuke`、中森青子 `C-nakamori-aoko`、中森碧子 `C-nakamori-midoriko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |  |  |  |
