@@ -89,7 +89,7 @@
 | ジェイムズ・ブラック `C-james-black` | ✕ | ◎ | ? | ? | ? | ? | ◎ | [^K1-fbi] |
 | 本堂瑛海（キール） `C-hondo-hidemi` | ✕ | ◎ | ? | ? | ? | ? | ◎ | [^K1-hondo-hidemi] |
 | 本堂瑛祐 `C-hondo-eisuke` | ◎ | ◎ | ◎ | ? | ? | ◎ | ◎ | [^K1-hondo-eisuke] |
-| ほかの「FBI・CIA・赤井家」：イーサン・本堂 `C-ethan-hondo` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「FBI・CIA・赤井家」：イーサン・本堂 `C-ethan-hondo`、バーニィ `C-barney` | ✕ | ✕ | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |  |
 | 黒羽快斗（怪盗キッド） `C-kuroba-kaito` | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | [^K1-kuroba-kaito] |
 | 黒羽盗一 `C-kuroba-toichi` | 〇† | 〇† | ◎ | ? | ? | ? | 〇 | [^K1-kuroba-toichi] |

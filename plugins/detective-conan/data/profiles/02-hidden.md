@@ -115,6 +115,7 @@ P2-6 は後から足した列なので、番号は P2-5 の次だが、表では
 | ジェイムズ・ブラック `C-james-black` | ? | ◎ | △ | ◎ | ? | ◎ | [^P2-james-black] |
 | 本堂瑛海 `C-hondo-hidemi` | ◎ | ◎ | 〇 | ◎ | ◎ | ◎ | [^P2-hondo-hidemi] |
 | イーサン・本堂 `C-ethan-hondo` | ? | ◎ | ? | ◎ | ✕ | ◎ | [^P2-ethan-hondo] |
+| バーニィ `C-barney` | ? | ? | ? | ? | ? | ? |  |
 | 本堂瑛祐 `C-hondo-eisuke` | ◎ | 〇 | ◎ | ◎ | ◎ | ◎ | [^P2-hondo-eisuke] |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |  |
 | 黒羽快斗 `C-kuroba-kaito` | ◎ | ◎ | ◎ | ◎ | ◎ | ◎ | [^P2-kuroba-kaito] |
