@@ -52,7 +52,7 @@
 - 経過: —
 - 回収: 原作 File 954「裏切りの制裁」（90巻「裏切りのステージ」）— 安室の回想。屋上でスコッチのそばに拳銃を持った赤井がおり、「裏切りには制裁を」と言う。原作 File 957「裏切りの真相」（90巻「裏切りのステージ」）— 真相が描かれる。正体が露見したスコッチは赤井の拳銃を奪い、胸ポケットの携帯ごと自分を撃とうとする。赤井はシリンダーを押さえて FBI だと明かし、逃がそうとするが、近づく足音（実は降谷）を組織の追っ手と思い込んだスコッチが自ら命を絶つ
 - 内容: 組織にいたスコッチが死んだ経緯
-- 関連: 人物 [諸伏景光](../characters.md#C-morofushi-hiromitsu)、[赤井秀一](../characters.md#C-akai-shuichi)、[降谷零](../characters.md#C-furuya-rei)／知識表 [K5-10](../knowledge-matrix/05-black-org.md)、[K6-5](../knowledge-matrix/06-police.md)
+- 関連: 人物 [諸伏景光](../characters.md#C-morofushi-hiromitsu)、[赤井秀一](../characters.md#C-akai-shuichi)、[降谷零](../characters.md#C-furuya-rei)／知識表 [K5-10](../knowledge-matrix/05-black-org.md)、[K6-5](../knowledge-matrix/06-police.md)、[K6-10](../knowledge-matrix/06-police.md)
 - 備考: 誰がどうやってスコッチの潜入を組織に密告したかは、作中で描かれていない（Q-025 と関連）
 
 <a id="F-POL-005"></a>
@@ -93,7 +93,7 @@
 - 経過: —
 - 回収: 原作 File 1021「遺品」（96巻「キッドＶＳ高明狙われた唇」）— 高明が警視庁で、弾痕のあるスマホ（裏に「H」）を受け取り、弟・景光のものだと悟る。読者に対して、スコッチ＝景光＝高明の弟が明示される
 - 内容: 長野県警の諸伏高明の家族
-- 関連: 人物 [諸伏高明](../characters.md#C-morofushi-takaaki)、[諸伏景光](../characters.md#C-morofushi-hiromitsu)／知識表 [K5-10](../knowledge-matrix/05-black-org.md)、[K6-5](../knowledge-matrix/06-police.md)
+- 関連: 人物 [諸伏高明](../characters.md#C-morofushi-takaaki)、[諸伏景光](../characters.md#C-morofushi-hiromitsu)／知識表 [K5-10](../knowledge-matrix/05-black-org.md)、[K6-5](../knowledge-matrix/06-police.md)、[K6-10](../knowledge-matrix/06-police.md)
 
 <a id="F-POL-008"></a>
 
