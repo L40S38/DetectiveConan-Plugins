@@ -65,6 +65,8 @@
 | 火傷の彼 | database の呼び名（赤井に変装したバーボン。File 677–679（65巻「探偵団VS強盗団［騒然／沈黙］」）など） | C-furuya-rei |
 | 池波静華 | 偽名（File 276–278（28巻「偽りだらけの依頼人」）で名乗った旧姓。database の呼び名） | C-hattori-shizuka |
 | 百瀬刑事 | database の呼び名（patches.json でそろえる前） | C-momose |
+| 百瀬警部 | database の呼び名 | C-momose |
+| 羽田秀吉 | 表記ゆれ（公式の字は「秀𠮷」） | C-haneda-shukichi |
 
 ## (b) 人物カード
 
