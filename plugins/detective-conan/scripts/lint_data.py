@@ -15,8 +15,8 @@
   8. File 表記が conventions.md の 3.1 の形か（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。警告のみ）
   9. 出来事の正本（events/ 以下）の書き方（conventions.md の 11.・events/README.md）。ID の形と重複、
      ファイルとグループ（##）の ID の頭の対応、略号が略号の表にあるか、欄の名前・順番・必須の欄、
-     欄の中身が空でないか、区分・時期の値、「出来事」のラベル（知識・関係・伏線・描写・生死）と、
-     その下の項目の書き方。ほかのファイルから参照している出来事の ID（E-…）と、件の中のグループの
+     欄の中身が空でないか、写し元の行ごとのコミット（写し元だけは、コミットごとに 2 行以上書ける）、
+     区分・時期の値、「出来事」のラベル（知識・関係・伏線・描写・生死）と、その下の項目の書き方。ほかのファイルから参照している出来事の ID（E-…）と、件の中のグループの
      ID（G-…）が実在するかは 2. で見る
   10. 知識表で、knowledge-matrix/README.md の「経路の一覧」の伝える人が `◎`・`〇`・`ー`・`?` の列なのに、
       受け取る人が `✕` になっていて、「経路の例外」にも書いていないセルがないか（警告のみ）
@@ -63,6 +63,8 @@ EVENT_KINDS = {
 # 1 件の欄（この順に書く）と、必須の欄
 EVENT_FIELDS = ["区分", "出典", "時期", "場面にいた人物", "出来事", "関わる ID", "要確認", "写し元"]
 EVENT_REQUIRED = ["区分", "出典", "時期", "出来事", "写し元"]
+# 写し元はコミットごとに 1 行なので、2 行以上書いてよい（ほかの欄は 1 回だけ）
+EVENT_REPEATABLE = {"写し元"}
 EVENT_LABELS = ["知識", "関係", "伏線", "描写", "生死"]
 KNOW_HOW = ["見た", "聞いた", "推理した", "疑った", "既知"]
 FS_ROLES = ["初出", "経過", "回収"]
@@ -570,7 +572,7 @@ def check_event_entry(rel, entry, kind, group, rep):
     tags = EVENT_KINDS[kind][0]
     names = [f[0] for f in entry["fields"]]
     for n, c in Counter(names).items():
-        if c > 1:
+        if c > 1 and n not in EVENT_REPEATABLE:
             rep.error(rel, f"{eid}: 欄「{n}」が {c} 回ある")
     for n in EVENT_REQUIRED:
         if n not in names:
@@ -599,10 +601,14 @@ def check_event_entry(rel, entry, kind, group, rep):
             rep.error(rel, f"{fields['時期'][3]} 行目: {eid} の時期は「物語の今」か「過去：<作中の言い方>」にする")
     if "場面にいた人物" in fields and not re.search(C_ID, fields["場面にいた人物"][2]):
         rep.error(rel, f"{fields['場面にいた人物'][3]} 行目: {eid} の場面にいた人物に人物 ID が無い")
-    if "写し元" in fields:
-        _, paren, value, ln = fields["写し元"]
+    commits = Counter()
+    for _, paren, value, ln in (f for f in entry["fields"] if f[0] == "写し元" and f[2].strip()):
         if re.search(r"\.md\b", value) and not re.fullmatch(r"[0-9a-f]{7,40}", paren or ""):
             rep.error(rel, f"{ln} 行目: {eid} の写し元に、写したときのコミットが無い（「写し元（<コミット>）: …」）")
+        commits[paren] += 1
+    for c, n in commits.items():
+        if n > 1:
+            rep.error(rel, f"{eid}: 写し元（{c or 'コミットなし'}）の行が {n} 行ある（同じコミットの写し元は 1 行にまとめる）")
     if "出来事" in fields and not entry["events"]:
         rep.error(rel, f"{eid}: 「出来事」に 1 段目の項目が無い")
     person = rf"[^`]+ `({C_ID})`"
