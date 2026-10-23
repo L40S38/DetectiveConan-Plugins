@@ -246,10 +246,12 @@ def trim_paren(s):
 
 
 def changed_lines(commit, path):
-    """<commit> の時点の data/<path> にあって、今のファイルに無い行を [(場所, 行の中身, 今の同じ場所の中身)] で返す。
+    """<commit> の時点の data/<path> にあって、今のファイルの同じ場所に無い行を [(場所, 行の中身, 今の同じ場所の中身)] で返す。
 
     脚注の行（[^…]:）は脚注 ID を場所にし、今の同じ脚注と比べる。ほかの行（relationships の経緯の項目など）は、
     その上の見出し（### 以下の深さ。「### 羽田浩司 × 浅香… > 経緯」）を場所にし、今の同じ節で書き換わった行と比べる。
+    行は (場所, 行) の組で比べる。同じ行がほかの節にもある（relationships の 2 つのペアの経緯に同じ項目がある
+    など）ので、ファイル全体で比べると、片方の節だけで消した行を見逃す。見出しを変えた節の行は、すべて消えた行になる。
     """
     def sections(lines):
         """[(場所, 行)]。脚注の行は脚注 ID、ほかの行は上の見出しを場所にする。"""
@@ -268,15 +270,15 @@ def changed_lines(commit, path):
 
     old = sections(git_show(commit, path).splitlines())
     new = sections((DATA / path).read_text(encoding="utf-8").splitlines())
-    old_set, new_set = {ln for _, _, ln in old}, {ln for _, _, ln in new}
-    # 今のファイルで、その場所に書き換わった（commit の時点に無かった）行。脚注は今の同じ脚注そのもの
+    old_set, new_set = {(place, ln) for place, _, ln in old}, {(place, ln) for place, _, ln in new}
+    # 今のファイルで、その場所に書き換わった（commit の時点の同じ場所に無かった）行。脚注は今の同じ脚注そのもの
     current = {}
     for place, body, ln in new:
         if place.startswith("[^"):
             current[place] = body
-        elif ln not in old_set:
+        elif (place, ln) not in old_set:
             current[place] = "\n".join(filter(None, [current.get(place), body]))
-    return [(place, body, current.get(place, "")) for place, body, ln in old if ln not in new_set]
+    return [(place, body, current.get(place, "")) for place, body, ln in old if (place, ln) not in new_set]
 
 
 def check_removed(commit, paths):
