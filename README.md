@@ -5,6 +5,7 @@
 - 参考サイトを信頼度つきでまとめた一覧
 - 主な伏線リストと、未解明の謎の考察項目リスト（出典の話数と正史区分つき）
 - 各キャラクターが物語の根幹となる秘密をどこまで知っているかの表（テーマ別に 7 表）
+- 作中の出来事に ID を振ってまとめた正本（その場にいた人物、誰が何を知ったか）
 - 名探偵コナン編纂室のデータ（[L40S38/DetectiveConan-Database](https://github.com/L40S38/DetectiveConan-Database)、submodule）を使った話数・巻・初登場の検索
 
 > **ネタバレ注意**：データは原作の最新話（単行本未収録分を含む）と劇場版の内容を含む。
@@ -48,11 +49,13 @@ plugins/detective-conan/
 │   ├── foreshadowing/                伏線リスト（README.md が一覧、F-分類ごとにファイル）
 │   ├── open-questions.md             考察項目リスト
 │   ├── knowledge-matrix/             誰が何を知っているか（表1〜8）
-│   └── profiles/                     作品が人物をどこまで描いたか（私生活・過去・内面・素性）
+│   ├── profiles/                     作品が人物をどこまで描いたか（私生活・過去・内面・素性）
+│   └── events/                       出来事の正本（作中の場面に ID を振った一覧）
 ├── database/                         submodule: L40S38/DetectiveConan-Database
 ├── scripts/
 │   ├── conan_db.py                   編纂室データの検索（公式 File 番号に直して引く）
-│   └── lint_data.py                  データの整合性チェック
+│   ├── lint_data.py                  データの整合性チェック
+│   └── check_event_copy.py           出来事の正本の件が写し元を写しているかの確かめ
 └── skills/
     ├── research/SKILL.md
     └── update/SKILL.md
