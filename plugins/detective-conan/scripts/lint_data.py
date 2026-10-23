@@ -2,8 +2,8 @@
 """data/ 以下のデータの整合性をチェックする（標準ライブラリのみ）。
 
 チェック内容:
-  1. ID の重複（伏線 F・考察 Q・人物 C・知識表の列 K・人物の掘り下げの列 P）
-  2. F・Q・K・P・C の参照が、実在する ID を指しているか
+  1. ID の重複（伏線 F・考察 Q・人物 C・知識表の列 K・人物の掘り下げの列 P・グループ G）
+  2. F・Q・K・P・C・G の参照が、実在する ID を指しているか
   3. 脚注の参照と定義が対応しているか
   4. foreshadowing/README.md の一覧表と foreshadowing/0*.md の詳細で、タイトル・状態・重要度が一致しているか
   5. F・Q のタイトルが問いの形で、答えの書き方（「＝」など）が入っていないか（警告のみ。最終確認は目で行う）
@@ -15,8 +15,9 @@
   8. File 表記が conventions.md の 3.1 の形か（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。警告のみ）
   9. 出来事の正本（events/ 以下）の書き方（conventions.md の 11.・events/README.md）。ID の形と重複、
      ファイルとグループ（##）の ID の頭の対応、略号が略号の表にあるか、欄の名前・順番・必須の欄、
-     区分・時期の値、「出来事」のラベル（知識・関係・伏線・描写・生死）と、その下の項目の書き方。
-     ほかのファイルから参照している出来事の ID（E-…）が実在するかは 2. で見る
+     欄の中身が空でないか、区分・時期の値、「出来事」のラベル（知識・関係・伏線・描写・生死）と、
+     その下の項目の書き方。ほかのファイルから参照している出来事の ID（E-…）と、件の中のグループの
+     ID（G-…）が実在するかは 2. で見る
 
 使い方:
     python lint_data.py [--data PATH]
@@ -165,6 +166,9 @@ def check_references(data, defs, rep):
         for m in re.finditer(rf"(?<![\w-]){C_ID}", text):
             if m.group() not in defs["C"]:
                 rep.error(rel, f"存在しない人物 {m.group()} を参照している")
+        for m in re.finditer(rf"(?<![\w-]){G_ID}", text):
+            if m.group() not in defs["G"]:
+                rep.error(rel, f"存在しないグループ {m.group()} を参照している")
         if rel.as_posix() in E_REF_EXAMPLES:
             continue
         for m in E_LOOSE.finditer(text):
@@ -489,7 +493,7 @@ def check_event_group(rel, line, title, prefix, kind, span, ev_rel, abbrevs, rep
     return None
 
 
-def check_event_entry(rel, entry, kind, group, defs, rep):
+def check_event_entry(rel, entry, kind, group, rep):
     """1 件（### から次の見出しまで）の欄と「出来事」の書き方を見る。"""
     eid, line = entry["id"], entry["line"]
     tags = EVENT_KINDS[kind][0]
@@ -503,7 +507,13 @@ def check_event_entry(rel, entry, kind, group, defs, rep):
     order = [EVENT_FIELDS.index(n) for n in names if n in EVENT_FIELDS]
     if order != sorted(order):
         rep.error(rel, f"{eid}: 欄の順番が決まりと違う（{'・'.join(EVENT_FIELDS)} の順）")
-    fields = {f[0]: f for f in entry["fields"]}
+    # 「出来事」は次の行から項目を書くので、中身が空でよい。空の欄は、下の値の確かめから外す
+    fields = {}
+    for f in entry["fields"]:
+        if f[0] != "出来事" and not f[2].strip():
+            rep.error(rel, f"{f[3]} 行目: {eid} の欄「{f[0]}」が空（必須の欄は中身を書く。ほかの欄は、書くことが無ければ行ごと省く）")
+        else:
+            fields[f[0]] = f
     if "区分" in fields and fields["区分"][2] not in tags:
         rep.error(rel, f"{fields['区分'][3]} 行目: {eid} の区分「{fields['区分'][2]}」は、このファイルの区分（{'・'.join(sorted(tags))}）ではない")
     if "出典" in fields and kind == "manga" and group:
@@ -570,12 +580,9 @@ def check_event_entry(rel, entry, kind, group, defs, rep):
                     ok = re.fullmatch(pattern, body)
                 if not ok:
                     rep.error(rel, f"{iln} 行目: 「{label}」の項目の書き方が違う（{hint}）")
-                for g in re.findall(G_ID, body):
-                    if g not in defs["G"]:
-                        rep.error(rel, f"{iln} 行目: 存在しないグループ {g} を参照している")
 
 
-def check_events(data, defs, rep):
+def check_events(data, rep):
     """出来事の正本（events/ 以下）の書き方を見る（conventions.md の 11.・events/README.md）。"""
     ev_dir = data / "events"
     abbrevs = load_event_abbrevs(ev_dir / "README.md")
@@ -593,7 +600,7 @@ def check_events(data, defs, rep):
 
         def finish():
             if entry:
-                check_event_entry(rel, entry, kind, group[1] if group else None, defs, rep)
+                check_event_entry(rel, entry, kind, group[1] if group else None, rep)
 
         for i, line in enumerate(p.read_text(encoding="utf-8").splitlines(), 1):
             if line.strip().startswith("```"):
@@ -683,7 +690,7 @@ def main():
     check_profile_cells(args.data, rep)
     check_file_refs(args.data, rep)
     check_ellipsis(args.data, rep)
-    check_events(args.data, defs, rep)
+    check_events(args.data, rep)
 
     for line in rep.errors + rep.warnings:
         print(line)
