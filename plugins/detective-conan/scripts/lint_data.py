@@ -13,7 +13,7 @@
      1 回ずつ、characters.md の順に出てくるか。まとめ行がグループの最後にあるか。
      人物の掘り下げ（profiles/0*.md）の表も同じ規則で見る（記号は同じ。「コナンの把握」の列は無く、まとめ行はすべて `✕`）
   8. File 表記が conventions.md の 3.1 の形か（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。警告のみ）
-  9. 知識表で、knowledge-matrix/README.md の「経路の一覧」の伝える人が `◎`・`〇`・`ー` の列なのに、
+  9. 知識表で、knowledge-matrix/README.md の「経路の一覧」の伝える人が `◎`・`〇`・`ー`・`?` の列なのに、
      受け取る人が `✕` になっていて、「経路の例外」にも書いていないセルがないか（警告のみ）
 
 使い方:
@@ -396,7 +396,7 @@ def check_paths(data, rep):
                 for dst in dsts:
                     for col in cols:
                         s, d = values[src][col].rstrip("†"), values.get(dst, {}).get(col, "").rstrip("†")
-                        if s in ("◎", "〇", "ー") and d == "✕" and (dst, col, name) not in exceptions:
+                        if s in ("◎", "〇", "ー", "?") and d == "✕" and (dst, col, name) not in exceptions:
                             rep.warn(rel, f"{col} {dst} が `✕` だが、経路「{name}」の {src} が `{values[src][col]}`（`?` にするか、README の「経路の例外」に書く）")
 
 
