@@ -6,6 +6,7 @@
 
 各件の「写し元（<コミット>）」に書いたファイルを、そのコミットの時点で読み（git show）、
 「出来事」の 1 段目と「要確認」の文が、写し元にそのまま含まれているかを「。」で区切った 1 文ずつ調べる。
+写し元の行は、コミットごとに 2 行以上書ける。行ごとに、その行のコミットで読む。
 含まれていない文は、写し元でいちばん近い文と、どこが違うかを表示する（[-写し元にだけある部分-]・{+正本にだけある部分+}）。
 言い換えたこと自体は誤りではないが、違いはユーザーに見せる（events/README.md の「書くときの確かめ方」）。
 「知識」「描写」「伏線」に書いた K・P・F の ID が、写し元に出てくるかも調べる（「知識」「描写」は、まずその人物の脚注を探す）。
@@ -16,11 +17,18 @@
     profiles/timeline.md                                          … 場所を書かなければファイル全体
     database/dataset_csv/Number-Title-Explain.csv「<事件名>」      … その事件のあらすじ（submodule の今の中身）
 
+--removed は逆の向きを調べる。ほかのファイルの根拠を出来事の ID に置き換えたあとで、<コミット>（置き換える前）の
+時点と今のファイルを比べ、消えた行の文が、今のファイルに残っているか、どれかの件（見出し・出典・「出来事」の
+1 段目・要確認）にそのままあるか（一致）、近い文があるか（違いあり）、どちらでもないか（見つからない）を出す。
+脚注の行は、今の同じ脚注とも比べる。
+
 使い方:
     python check_event_copy.py E-1106-01 [E-… …]
     python check_event_copy.py --all
+    python check_event_copy.py --removed <コミット> knowledge-matrix/04-haneda-case.md [<data からのパス> …]
 
-写しにすべて一致すれば終了コード 0、違いのある文があれば 1、件や写し元が読めなければ 2 を返す。
+写しにすべて一致すれば（--removed では、消えた文がすべて件にそのままあれば）終了コード 0、
+違いのある文（--removed では、違いあり・見つからない文）があれば 1、件や写し元が読めなければ 2 を返す。
 """
 import argparse
 import csv
@@ -39,15 +47,19 @@ ID_IN_SUB = {"知識": r"K\d-\d+", "描写": r"P\d-\d+", "伏線": r"F-[A-Z]+-\d
 
 
 def load_entries():
-    """events/0*.md から {ID: 件} を作る。件は 1 段目の文・ラベルの項目・要確認・写し元を持つ。"""
+    """events/0*.md から {ID: 件} を作る。件は見出し・出典・1 段目の文・ラベルの項目・要確認・写し元を持つ。
+
+    写し元は、行ごとに (コミット, 場所の並び) にする（写し元の行は、コミットごとに 2 行以上書ける）。
+    """
     entries = {}
     for p in sorted(x for x in (DATA / "events").rglob("*.md") if x.name != "README.md"):
         entry = label = item = None
         for line in p.read_text(encoding="utf-8").splitlines():
             if line.startswith("#"):
-                m = re.fullmatch(rf"### ({E_ID}) .+", line)
+                m = re.fullmatch(rf"### ({E_ID}) (.+)", line)
                 label = item = None
-                entry = {"file": p.relative_to(DATA / "events").as_posix(), "events": [], "subs": [], "note": "", "commit": None, "sources": ""} if m else None
+                entry = {"file": p.relative_to(DATA / "events").as_posix(), "title": m.group(2) if m else "", "origin": "",
+                         "events": [], "subs": [], "note": "", "sources": []} if m else None
                 if m:
                     entries[m.group(1)] = entry
             elif entry is None:
@@ -63,10 +75,12 @@ def load_entries():
             elif m := re.fullmatch(r"        - (.+)", line):
                 # 知識：3 段目（何を知ったか）と 4 段目（誰が）を 1 つにして調べる
                 entry["subs"].append((label, f"{m.group(1)} {item}"))
+            elif m := re.fullmatch(r"- 出典: (.+)", line):
+                entry["origin"] = m.group(1)
             elif m := re.fullmatch(r"- 要確認: (.+)", line):
                 entry["note"] = m.group(1)
             elif m := re.fullmatch(r"- 写し元(?:（([^）]*)）)?: (.+)", line):
-                entry["commit"], entry["sources"] = m.group(1), m.group(2)
+                entry["sources"].append((m.group(1), m.group(2)))
     return entries
 
 
@@ -161,14 +175,14 @@ def closest(sentence, sources):
 def check(eid, entry):
     print(f"{eid}（events/{entry['file']}）")
     sources = []
-    items = SOURCE_ITEM.findall(entry["sources"])
+    items = [(commit, *item) for commit, text in entry["sources"] for item in SOURCE_ITEM.findall(text)]
     if not items:
         print("  写し元：data/ のファイルや database の場所が書かれていない（新しい話などで出典から書いた件なら、目で確かめる）")
         return 2
-    for path, footnote, heading in items:
+    for commit, path, footnote, heading in items:
         try:
-            sources.append(read_source(entry["commit"], path, footnote, heading))
-            print(f"  写し元：{sources[-1][0]}（{entry['commit'] or 'submodule'}）を読んだ")
+            sources.append(read_source(commit, path, footnote, heading))
+            print(f"  写し元：{sources[-1][0]}（{'submodule' if path.startswith('database/') else commit}）を読んだ")
         except (OSError, subprocess.CalledProcessError) as e:
             print(f"  写し元：{path} を読めない — {e}")
             return 2
@@ -211,13 +225,122 @@ def check(eid, entry):
     return status
 
 
+def event_texts(entries):
+    """件の見出し・出典・「出来事」の 1 段目・要確認を、(場所の名前, 文字列) の並びにする。"""
+    out = []
+    for eid, e in entries.items():
+        out += [(f"{eid} 見出し", e["title"]), (f"{eid} 出典", e["origin"])]
+        out += [(f"{eid} 出来事 {i}", t) for i, t in enumerate(e["events"], 1)]
+        if e["note"]:
+            out.append((f"{eid} 要確認", e["note"]))
+    return [(name, text) for name, text in out if text]
+
+
+def trim_paren(s):
+    """「。」で区切ったために文の端に残った、対になっていない括弧（「（要確認：…。…）」の「（」「）」）を外す。"""
+    if s.endswith("）") and s.count("）") > s.count("（"):
+        s = s[:-1]
+    if s.startswith("（") and s.count("（") > s.count("）"):
+        s = s[1:]
+    return s
+
+
+def changed_lines(commit, path):
+    """<commit> の時点の data/<path> にあって、今のファイルの同じ場所に無い行を [(場所, 行の中身, 今の同じ場所の中身)] で返す。
+
+    脚注の行（[^…]:）は脚注 ID を場所にし、今の同じ脚注と比べる。ほかの行（relationships の経緯の項目など）は、
+    その上の見出し（### 以下の深さ。「### 羽田浩司 × 浅香… > 経緯」）を場所にし、今の同じ節で書き換わった行と比べる。
+    行は (場所, 行) の組で比べる。同じ行がほかの節にもある（relationships の 2 つのペアの経緯に同じ項目がある
+    など）ので、ファイル全体で比べると、片方の節だけで消した行を見逃す。見出しを変えた節の行は、すべて消えた行になる。
+    """
+    def sections(lines):
+        """[(場所, 行)]。脚注の行は脚注 ID、ほかの行は上の見出しを場所にする。"""
+        out, stack = [], {}
+        for ln in lines:
+            if m := re.match(r"(#{1,6}) (.+)", ln):
+                level = len(m.group(1))
+                stack = {lv: t for lv, t in stack.items() if lv < level}
+                stack[level] = m.group(2).strip()
+            elif m := re.match(r"\[\^([^\]]+)\]:", ln):
+                out.append((f"[^{m.group(1)}]", ln[m.end():].strip(), ln))
+            elif ln.strip():
+                deep = [t for lv, t in sorted(stack.items()) if lv >= 3] or [t for _, t in sorted(stack.items())[-1:]]
+                out.append((f"「{' > '.join(deep) or 'ファイルの頭'}」", re.sub(r"^\s*(?:[-*]|\d+\.)\s+", "", ln), ln))
+        return out
+
+    old = sections(git_show(commit, path).splitlines())
+    new = sections((DATA / path).read_text(encoding="utf-8").splitlines())
+    old_set, new_set = {(place, ln) for place, _, ln in old}, {(place, ln) for place, _, ln in new}
+    # 今のファイルで、その場所に書き換わった（commit の時点の同じ場所に無かった）行。脚注は今の同じ脚注そのもの
+    current = {}
+    for place, body, ln in new:
+        if place.startswith("[^"):
+            current[place] = body
+        elif (place, ln) not in old_set:
+            current[place] = "\n".join(filter(None, [current.get(place), body]))
+    return [(place, body, current.get(place, "")) for place, body, ln in old if (place, ln) not in new_set]
+
+
+def check_removed(commit, paths):
+    """<commit> の時点から今までに消えた文が、どれかの件か、今のファイルにあるかを調べる。
+
+    根拠を出来事の ID に置き換えたときに、消した文の中身が正本に移っているかを確かめるためのもの。
+    1 文ずつ、今のファイルに残っていれば数えるだけにし、残っていなければ、件（見出し・出典・出来事の 1 段目・
+    要確認）にそのままあるか（一致）、近い文があるか（違いあり）、どちらでもないか（見つからない）を出す。
+    """
+    texts = event_texts(load_entries())
+    status = 0
+    for path in paths:
+        try:
+            units = changed_lines(commit, path)
+        except (OSError, subprocess.CalledProcessError) as e:
+            print(f"{path} を読めない — {e}")
+            status = 2
+            continue
+        print(f"{path}（{commit} の時点と今の比較）")
+        if not units:
+            print("  消えた行は無い")
+        for place, body, current in units:
+            sents = [trim_paren(s) for s in sentences(body)]
+            # 今の同じ場所とだけ比べる（同じ言い回しがほかの脚注・項目にもあるので、ファイル全体では比べない）。
+            # ほかの場所へ移した文は「見つからない」になるので、目で確かめる
+            gone = [s for s in sents if s not in current]
+            where = "今の同じ脚注" if place.startswith("[^") else "今の同じ節"
+            print(f"  {place}：{len(sents)} 文のうち、{where}に残っている文 {len(sents) - len(gone)}")
+            cands = texts + ([(f"今の {place}", current)] if current else [])
+            for s in gone:
+                hit = next((name for name, t in texts if s in t), None)
+                if hit:
+                    print(f"    一致　　　　：「{s}」 — {hit}")
+                    continue
+                status = max(status, 1)
+                ratio, name, cand = closest(s, cands)
+                if cand and ratio >= 0.5:
+                    print(f"    違いあり　　：「{s}」")
+                    print(f"      いちばん近い文：{name}（消えた文の {ratio:.0%} が一致）")
+                    print(f"      違い：{show_diff(s, cand)}")
+                else:
+                    print(f"    見つからない：「{s}」")
+                    if cand:
+                        print(f"      いちばん近い文：{name}（消えた文の {ratio:.0%} が一致）")
+        print()
+    return status
+
+
 def main():
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")  # argparse のエラー
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("ids", nargs="*", help="確かめる件の ID（E-1106-01 など）")
     parser.add_argument("--all", action="store_true", help="すべての件を確かめる")
+    parser.add_argument("--removed", nargs="+", metavar=("COMMIT", "PATH"),
+                        help="COMMIT の時点から今までに PATH（data/ からのパス）で消えた文が、件か今のファイルにあるかを調べる")
     args = parser.parse_args()
 
+    if args.removed:
+        if len(args.removed) < 2:
+            parser.error("--removed にはコミットと、data/ からのパスを 1 つ以上書く")
+        return check_removed(args.removed[0], args.removed[1:])
     entries = load_entries()
     ids = list(entries) if args.all else args.ids
     if not ids:
