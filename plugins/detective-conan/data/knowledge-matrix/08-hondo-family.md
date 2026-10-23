@@ -31,14 +31,17 @@
 | 鈴木園子 `C-suzuki-sonoko` | △ | ✕ | ✕ | ✕ | ? | [^K8-eisuke-classmates] |
 | ほかの「毛利家・友人・帝丹小」：妃英理 `C-kisaki-eri`、鈴木史郎 `C-suzuki-shiro`、鈴木朋子 `C-suzuki-tomoko`、鈴木綾子 `C-suzuki-ayako`、京極真 `C-kyogoku-makoto`、遠山和葉 `C-toyama-kazuha`、服部静華 `C-hattori-shizuka`、吉田歩美 `C-yoshida-ayumi`、小嶋元太 `C-kojima-genta`、円谷光彦 `C-tsuburaya-mitsuhiko`、榎本梓 `C-enomoto-azusa`、小林澄子 `C-kobayashi-sumiko`、米原桜子 `C-yonehara-sakurako` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **警視庁捜査一課** |  |  |  |  |  |  |
-| ほかの「警視庁捜査一課」：目暮十三 `C-megure-juzo`、高木渉 `C-takagi-wataru`、佐藤美和子 `C-sato-miwako`、白鳥任三郎 `C-shiratori-ninzaburo`、千葉和伸 `C-chiba-kazunobu`、松本清長 `C-matsumoto-kiyonaga`、黒田兵衛 `C-kuroda-hyoe`、弓長 `C-yuminaga`、羽鳥 `C-hatori`、高木長介 `C-takagi-chosuke`、松田陣平 `C-matsuda-jinpei`、伊達航 `C-date-wataru` | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 黒田兵衛 `C-kuroda-hyoe` | ? | ? | ? | ? | ? | [^K8-kuroda-kazami] |
+| ほかの「警視庁捜査一課」：目暮十三 `C-megure-juzo`、高木渉 `C-takagi-wataru`、佐藤美和子 `C-sato-miwako`、白鳥任三郎 `C-shiratori-ninzaburo`、千葉和伸 `C-chiba-kazunobu`、松本清長 `C-matsumoto-kiyonaga`、弓長 `C-yuminaga`、羽鳥 `C-hatori`、高木長介 `C-takagi-chosuke`、松田陣平 `C-matsuda-jinpei`、伊達航 `C-date-wataru` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **警視庁交通部** |  |  |  |  |  |  |
 | ほかの「警視庁交通部」：宮本由美 `C-miyamoto-yumi`、三池苗子 `C-miike-naeko` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **公安警察（警察庁・警視庁公安部）** |  |  |  |  |  |  |
 | 降谷零（安室透） `C-furuya-rei` | ? | 〇 | 〇 | ? | 〇 | [^K8-furuya-rei] |
-| ほかの「公安警察（警察庁・警視庁公安部）」：風見裕也 `C-kazami-yuya`、諸伏景光 `C-morofushi-hiromitsu` | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 風見裕也 `C-kazami-yuya` | ? | ? | ? | ? | ? | [^K8-kuroda-kazami] |
+| ほかの「公安警察（警察庁・警視庁公安部）」：諸伏景光 `C-morofushi-hiromitsu` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **警視庁（そのほかの部署）** |  |  |  |  |  |  |
-| ほかの「警視庁（そのほかの部署）」：小田切敏郎 `C-odagiri-toshiro`、茶木神太郎 `C-chaki-shintaro`、中森銀三 `C-nakamori-ginzo`、百瀬 `C-momose`、佐藤警部 `C-sato-keibu`、萩原研二 `C-hagiwara-kenji`、鬼塚八蔵 `C-onizuka-hachizo` | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 萩原研二 `C-hagiwara-kenji` | ✕ | ✕ | ✕ | ー | ー | [^K8-hagiwara-kenji] |
+| ほかの「警視庁（そのほかの部署）」：小田切敏郎 `C-odagiri-toshiro`、茶木神太郎 `C-chaki-shintaro`、中森銀三 `C-nakamori-ginzo`、百瀬 `C-momose`、佐藤警部 `C-sato-keibu`、鬼塚八蔵 `C-onizuka-hachizo` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **大阪府警** |  |  |  |  |  |  |
 | ほかの「大阪府警」：服部平蔵 `C-hattori-heizo`、遠山銀司郎 `C-toyama-ginshiro`、遠山櫻 `C-toyama-sakura`、大滝悟郎 `C-otaki-goro` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **長野県警** |  |  |  |  |  |  |
@@ -52,6 +55,7 @@
 | ほかの「大岡家（京都）」：大岡紅葉 `C-ooka-momiji`、伊織無我 `C-iori-muga` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **FBI・CIA・赤井家** |  |  |  |  |  |  |
 | 赤井秀一 `C-akai-shuichi` | ◎ | ◎ | ◎ | ◎ | ◎ | [^K8-akai-shuichi] |
+| 羽田秀吉 `C-haneda-shukichi` | ? | ? | ? | ? | ? | [^K8-haneda-shukichi] |
 | 赤井務武 `C-akai-tsutomu` | ✕ | ? | ? | ✕ | ? | [^K8-nazo-no-rojin] |
 | ジョディ・スターリング `C-jodie-starling` | △ | ◎ | ◎ | ? | ◎ | [^K8-jodie-starling] |
 | アンドレ・キャメル `C-andre-camel` | ? | ◎ | ? | ? | ◎ | [^K8-andre-camel] |
@@ -60,7 +64,7 @@
 | イーサン・本堂 `C-ethan-hondo` | 〇 | ◎ | ー | ー | 〇 | [^K8-ethan-hondo] |
 | バーニィ `C-barney` | ? | ◎ | ◎ | ✕ | 〇 | [^K8-barney] |
 | 本堂瑛祐 `C-hondo-eisuke` | ◎ | ◎ | ◎ | ? | ◎ | [^K8-hondo-eisuke] |
-| ほかの「FBI・CIA・赤井家」：羽田秀吉 `C-haneda-shukichi`、世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary` | ✕ | ✕ | ✕ | ✕ | ー |  |
+| ほかの「FBI・CIA・赤井家」：世良真純 `C-sera-masumi`、赤井メアリー `C-akai-mary` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **怪盗キッドの関係者** |  |  |  |  |  |  |
 | ほかの「怪盗キッドの関係者」：黒羽快斗 `C-kuroba-kaito`、黒羽盗一 `C-kuroba-toichi`、黒羽千影 `C-kuroba-chikage`、寺井黄之助 `C-jii-konosuke`、中森青子 `C-nakamori-aoko`、中森碧子 `C-nakamori-midoriko`、白馬探 `C-hakuba-saguru`、鈴木次郎吉 `C-suzuki-jirokichi` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **黒ずくめの組織** |  |  |  |  |  |  |
@@ -74,11 +78,15 @@
 | キュラソー `C-curacao` | ?† | ◎† | ✕† | ✕† | ?† | [^K8-curacao] |
 | ほかの「黒ずくめの組織」：ピンガ `C-pinga`、アイリッシュ `C-irish`、テキーラ `C-tequila`、ピスコ `C-pisco`、カルバドス `C-calvados`、楠田陸道 `C-kusuda-rikumichi`、沼淵己一郎 `C-numabuchi-kiichiro` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **宮野家** |  |  |  |  |  |  |
-| ほかの「宮野家」：宮野明美 `C-miyano-akemi`、宮野厚司 `C-miyano-atsushi`、宮野エレーナ `C-miyano-elena` | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 宮野厚司 `C-miyano-atsushi` | ー | ー | ✕ | ー | ー | [^K8-shibo-jiki] |
+| 宮野エレーナ `C-miyano-elena` | ー | ー | ✕ | ー | ー | [^K8-shibo-jiki] |
+| ほかの「宮野家」：宮野明美 `C-miyano-akemi` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **羽田浩司事件の関係者** |  |  |  |  |  |  |
 | 羽田康晴 `C-haneda-yasuharu` | ✕ | ? | ? | ✕ | ? | [^K8-nazo-no-rojin] |
 | 羽田市代 `C-haneda-ichiyo` | ✕ | ? | ? | ✕ | ? | [^K8-nazo-no-rojin] |
-| ほかの「羽田浩司事件の関係者」：羽田浩司 `C-haneda-koji`、アマンダ・ヒューズ `C-amanda-hughes`、若狭留美 `C-wakasa-rumi` | ✕ | ✕ | ✕ | ✕ | ー |  |
+| 羽田浩司 `C-haneda-koji` | ー | ー | ✕ | ー | ー | [^K8-shibo-jiki] |
+| アマンダ・ヒューズ `C-amanda-hughes` | ー | ー | ✕ | ー | ー | [^K8-shibo-jiki] |
+| ほかの「羽田浩司事件の関係者」：若狭留美 `C-wakasa-rumi` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **劇場版オリジナル（組織以外）** |  |  |  |  |  |  |
 | ほかの「劇場版オリジナル（組織以外）」：直美・アルジェント `C-naomi-argento` | ✕ | ✕ | ✕ | ✕ | ー |  |
 | **スポーツ・芸能関係** |  |  |  |  |  |  |
@@ -138,3 +146,11 @@
 [^K8-curacao]: [劇場版] 第 20 作『純黒の悪夢』だけに出る構成員で、ラムの腹心。K8-2 は `◎†`：警察庁から NOC リストを盗み見ていて、その中にキールの名前もある（キュラソーが送ったメールにバーボンとキールの名前がある。表6 のラムの脚注。F-ORG-011）。表6 の K6-3（バーボン）と同じく `◎†` にした。リストの画面にキールの所属が映るかは要確認。K8-1 は `?†`：リストの項目には本名と通称の欄がある（表6 のキュラソーの脚注）。キールの項目に本堂瑛海の名があれば知っていたことになるが、確かめていない（要確認）。K8-3・K8-4 は、関わる場面がないので `✕†`。K8-5 は、判断に入れる K8-2 が未確認なので `?†`：コナンはキュラソーを装って「バーボンとキールは関係なかった」という偽のメールを送っている（F-ORG-011）が、キュラソーが NOC リストでキールの正体を知ったことを、コナンが把握している場面は確かめていない（表6 のキュラソーの脚注と同じ。要確認）。
 
 [^K8-taka-jiji]: File 1115「執事と探偵」（105巻「執事になった理由」）の最後で、降谷に電話をかけて指示している（詳しくは `C-taka-jiji` と表6 の鷹ジジイの脚注を参照）。降谷に指示を出す立場なので、降谷が知っている列（降谷の行で `〇` の K8-2・K8-3）は、降谷から報告を受けていて知っていてもおかしくなく `?`。ほかの列は、降谷も知っているかわからず、本堂家に触れた言動もないので `✕`。K8-5 は、`◎`・`〇` の列がなく、`?` の列があるので `?`（上記の場面にコナンはいない）。
+
+[^K8-kuroda-kazami]: 黒田兵衛・風見裕也で共有。2026-10-23 にまとめ行から個別の行にした。K8-2・K8-3 は `?`（ベースラインでは `✕`）：関わる場面はないが、降谷（K8-2・K8-3 `〇`）から聞いていてもおかしくない（経路「降谷の上司・部下」）。K8-1・K8-4 も `?`（ベースラインでは `✕`）：降谷も `?` で、コナンの側（コナンと赤井は K8-1〜K8-4 がすべて `◎`）と公安がどこまで連携しているかもわからないので、`✕` とは言い切れない。K8-5 は、`◎`・`〇` の列がなく、`?` の列があるので `?`。
+
+[^K8-hagiwara-kenji]: 2026-10-23 にまとめ行から個別の行にした。7 年前に殉職していて（File 369–373（36・37巻「揺れる警視庁1200万人の人質」）。表6 の警察学校組の脚注）、イーサンが死んだ 4 年前（File 604「姉弟」（58巻「赤と黒のクラッシュ［覚醒／攪乱／偽装／遺言／嫌疑］」）の回想）より前なので、K8-4 は `ー`。ほかの列は、関わる場面がないので `✕`。K8-5 は、この表の情報を何も知らない行なので `ー`。
+
+[^K8-haneda-shukichi]: 2026-10-23 にまとめ行から個別の行にした。K8-1〜K8-4 は `?`（ベースラインでは `✕`）：関わる場面はないが、兄の赤井（K8-1〜K8-4 `◎`）から聞いていてもおかしくない（経路「赤井から」）。ただし、兄が身を隠している相手が黒ずくめの組織だと知っている描写はなく（表5 の秀吉の脚注）、生きていることを隠している理由（組織と闘っていること）まで兄から伝えられているかも微妙なので、`✕` 寄りの `?`。K8-5 は、`◎`・`〇` の列がなく、`?` の列があるので `?`。
+
+[^K8-shibo-jiki]: 宮野厚司・宮野エレーナ・羽田浩司・アマンダ・ヒューズで共有。2026-10-23 にまとめ行から個別の行にした。宮野夫妻は志保が幼いころ（File 948「握られたハサミ」（89巻「17年前と同じ現場」））、浩司とアマンダは 17 年前（File 1106–1109（104巻「17年前の真相［遠見の角行／女王の謀（クイーンズ・ギャンビット）］」））に死んでいる。瑛海は今 27 歳（読売テレビ公式サイトと、小学館の「名探偵コナン 100巻プロジェクト」の人物紹介）で、そのころはまだ 10 歳前後の子どもだったので、CIA の諜報員でも、水無怜奈（組織に潜入するための偽名）でもなかった。イーサンが死んだのは 4 年前（File 604「姉弟」（58巻「赤と黒のクラッシュ［覚醒／攪乱／偽装／遺言／嫌疑］」）の回想）。なので K8-1・K8-2・K8-4 は `ー`。K8-3 は `✕`：イーサンは 30 年前に CIA に入っている（アニメ第 495 話の読売テレビ公式のあらすじ）が、組織に潜入した時期はわからない。どちらにしても、CIA の諜報員だと知る機会はない。K8-5 は、この表の情報を何も知らない行なので `ー`。
