@@ -406,6 +406,8 @@ def load_paths(data, rep):
         header = split_row(rows[0])
         for row in rows[2:]:
             cells = split_row(row)
+            if len(cells) != len(header):
+                continue  # 列数の誤りは check_tables() が報告する
             if header[:3] == ["経路", "伝える人", "受け取る人"]:
                 src, dsts = re.findall(C_ID, cells[1]), re.findall(C_ID, cells[2])
                 if len(src) != 1 or not dsts:
@@ -433,6 +435,8 @@ def check_paths(data, rep):
             values = {}
             for row in rows[2:]:
                 cells = split_row(row)
+                if len(cells) != len(header):
+                    continue  # 列数の誤りは check_tables() が報告する
                 for cid in re.findall(C_ID, cells[0]):
                     values[cid] = dict(zip(cols, cells[1:-2]))
             for name, src, dsts in paths:
