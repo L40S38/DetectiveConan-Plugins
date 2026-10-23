@@ -18,6 +18,8 @@
      欄の中身が空でないか、区分・時期の値、「出来事」のラベル（知識・関係・伏線・描写・生死）と、
      その下の項目の書き方。ほかのファイルから参照している出来事の ID（E-…）と、件の中のグループの
      ID（G-…）が実在するかは 2. で見る
+  10. 知識表で、knowledge-matrix/README.md の「経路の一覧」の伝える人が `◎`・`〇`・`ー`・`?` の列なのに、
+      受け取る人が `✕` になっていて、「経路の例外」にも書いていないセルがないか（警告のみ）
 
 使い方:
     python lint_data.py [--data PATH]
@@ -378,6 +380,75 @@ def check_person_tables(data, rep, subdir, conan):
                     rep.error(rel, f"{cid} が {n} 行に出てくる")
 
 
+K_RANGE = re.compile(r"K(\d)-(\d+)(?:〜K\1-(\d+))?")
+
+
+def expand_columns(text):
+    """「K1-1、K2-1〜K2-6」のような列の書き方を、列 ID の集合にする。"""
+    cols = set()
+    for m in K_RANGE.finditer(text):
+        first = int(m.group(2))
+        last = int(m.group(3) or first)
+        cols.update(f"K{m.group(1)}-{n}" for n in range(first, last + 1))
+    return cols
+
+
+def load_paths(data, rep):
+    """knowledge-matrix/README.md の「伝わる経路」から、経路の一覧と例外を読む。"""
+    rel = Path("knowledge-matrix/README.md")
+    text = (data / rel).read_text(encoding="utf-8")
+    m = re.search(r"^### 伝わる経路\n(.*?)(?=^##(?!#) |^### |\Z)", text, flags=re.M | re.S)
+    if not m:
+        rep.error(rel, "「### 伝わる経路」の節が無い")
+        return [], set()
+    paths, exceptions, names = [], set(), set()
+    for _, rows in iter_tables(m.group(1)):
+        header = split_row(rows[0])
+        for row in rows[2:]:
+            cells = split_row(row)
+            if len(cells) != len(header):
+                continue  # 列数の誤りは check_tables() が報告する
+            if header[:3] == ["経路", "伝える人", "受け取る人"]:
+                src, dsts = re.findall(C_ID, cells[1]), re.findall(C_ID, cells[2])
+                if len(src) != 1 or not dsts:
+                    rep.error(rel, f"経路「{cells[0]}」: 伝える人は 1 人、受け取る人は 1 人以上の人物 ID で書く")
+                    continue
+                paths.append((cells[0], src[0], dsts))
+                names.add(cells[0])
+            elif header[:3] == ["受け取る人", "表の列", "経路"]:
+                if cells[2] not in names:
+                    rep.error(rel, f"経路の例外: 経路「{cells[2]}」は経路の一覧に無い")
+                for cid in re.findall(C_ID, cells[0]):
+                    exceptions.update((cid, col, cells[2]) for col in expand_columns(cells[1]))
+    return paths, exceptions
+
+
+def check_paths(data, rep):
+    paths, exceptions = load_paths(data, rep)
+    for p in sorted((data / "knowledge-matrix").glob("0*.md")):
+        rel = p.relative_to(data)
+        for _, rows in iter_tables(p.read_text(encoding="utf-8")):
+            header = split_row(rows[0])
+            if header[-1] != "根拠":
+                continue
+            cols = [h.split()[0] for h in header[1:-2]]  # 「コナンの把握」と根拠を除く
+            values = {}
+            for row in rows[2:]:
+                cells = split_row(row)
+                if len(cells) != len(header):
+                    continue  # 列数の誤りは check_tables() が報告する
+                for cid in re.findall(C_ID, cells[0]):
+                    values[cid] = dict(zip(cols, cells[1:-2]))
+            for name, src, dsts in paths:
+                if src not in values:
+                    continue
+                for dst in dsts:
+                    for col in cols:
+                        s, d = values[src][col].rstrip("†"), values.get(dst, {}).get(col, "").rstrip("†")
+                        if s in ("◎", "〇", "ー", "?") and d == "✕" and (dst, col, name) not in exceptions:
+                            rep.warn(rel, f"{col} {dst} が `✕` だが、経路「{name}」の {src} が `{values[src][col]}`（`?` にするか、README の「経路の例外」に書く）")
+
+
 FILE_REF = re.compile(r"File (\d+)(–\d+)?")
 FILE_WHERE = r"（(?:\d+(?:・\d+)*巻「[^「」\n]+」|単行本未収録／サンデー[^）\n]+)）"
 # 単行本未収録の範囲は「File 1163「題」〜File 1166「題」（単行本未収録／…）」と書くので、題の後に「〜File」が続く形も認める
@@ -688,6 +759,7 @@ def main():
     check_titles(args.data, fs_details, rep)
     check_knowledge_cells(args.data, rep)
     check_profile_cells(args.data, rep)
+    check_paths(args.data, rep)
     check_file_refs(args.data, rep)
     check_ellipsis(args.data, rep)
     check_events(args.data, rep)
