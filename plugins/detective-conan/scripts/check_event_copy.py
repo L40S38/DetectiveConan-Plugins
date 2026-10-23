@@ -38,13 +38,13 @@ ID_IN_SUB = {"知識": r"K\d-\d+", "描写": r"P\d-\d+", "伏線": r"F-[A-Z]+-\d
 def load_entries():
     """events/0*.md から {ID: 件} を作る。件は 1 段目の文・ラベルの項目・要確認・写し元を持つ。"""
     entries = {}
-    for p in sorted((DATA / "events").glob("0*.md")):
+    for p in sorted(x for x in (DATA / "events").rglob("*.md") if x.name != "README.md"):
         entry = label = item = None
         for line in p.read_text(encoding="utf-8").splitlines():
             if line.startswith("#"):
                 m = re.fullmatch(rf"### ({E_ID}) .+", line)
                 label = item = None
-                entry = {"file": p.name, "events": [], "subs": [], "note": "", "commit": None, "sources": ""} if m else None
+                entry = {"file": p.relative_to(DATA / "events").as_posix(), "events": [], "subs": [], "note": "", "commit": None, "sources": ""} if m else None
                 if m:
                     entries[m.group(1)] = entry
             elif entry is None:

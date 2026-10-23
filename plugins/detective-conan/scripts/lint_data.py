@@ -13,7 +13,7 @@
      1 回ずつ、characters.md の順に出てくるか。まとめ行がグループの最後にあるか。
      人物の掘り下げ（profiles/0*.md）の表も同じ規則で見る（記号は同じ。「コナンの把握」の列は無く、まとめ行はすべて `✕`）
   8. File 表記が conventions.md の 3.1 の形か（database にある話は巻・事件名、無い話は掲載号。1 話なら話タイトルも。警告のみ）
-  9. 出来事の正本（events/0*.md）の書き方（conventions.md の 11.・events/README.md）。ID の形と重複、
+  9. 出来事の正本（events/ 以下）の書き方（conventions.md の 11.・events/README.md）。ID の形と重複、
      ファイルとグループ（##）の ID の頭の対応、略号が略号の表にあるか、欄の名前・順番・必須の欄、
      区分・時期の値、「出来事」のラベル（知識・関係・伏線・描写・生死）と、その下の項目の書き方。
      ほかのファイルから参照している出来事の ID（E-…）が実在するかは 2. で見る
@@ -49,13 +49,13 @@ STATUS_VALUES = {"回収済", "部分回収", "未回収", "ミスリード判�
 # 物語の前提そのものなので、タイトルに含まれていても答えではない表現
 TITLE_ALLOWED = ["コナン＝新一"]
 
-# 出来事の正本：ファイルごとの区分タグと、グループ（##）の ID の頭（E- から連番の前まで）の形
-EVENT_FILES = {
-    "01-manga.md": ({"[原作]"}, r"\d+"),
-    "02-movies.md": ({"[劇場版]"}, r"M(?:\d+|[A-Z]+)"),
-    "03-anime-original.md": ({"[アニオリ]", "[TVSP]"}, r"A(?:\d+|[A-Z]+\d*)"),
-    "04-magic-kaito.md": ({"[まじっく快斗]"}, r"XMK\d+"),
-    "05-other.md": ({"[スピンオフ]"}, r"X(?!MK\d)[A-Z]+\d*"),
+# 出来事の正本：ファイルの種類ごとの区分タグと、グループ（##）の ID の頭（E- から連番の前まで）の形
+EVENT_KINDS = {
+    "manga": ({"[原作]"}, r"\d+"),
+    "movies": ({"[劇場版]"}, r"M(?:\d+|[A-Z]+)"),
+    "anime": ({"[アニオリ]", "[TVSP]"}, r"A(?:\d+|[A-Z]+\d*)"),
+    "magic-kaito": ({"[まじっく快斗]"}, r"XMK\d+"),
+    "other": ({"[スピンオフ]"}, r"X(?!MK\d)[A-Z]+\d*"),
 }
 # 1 件の欄（この順に書く）と、必須の欄
 EVENT_FIELDS = ["区分", "出典", "時期", "場面にいた人物", "出来事", "関わる ID", "要確認", "写し元"]
@@ -132,7 +132,7 @@ def collect_definitions(data, rep):
         # グループ・家族の見出しは「### 名前 `G-…`」。「### 工藤家 × 阿笠博士 `G-…` × `C-…`」のような組の見出しは定義ではない
         text = strip_code(p.read_text(encoding="utf-8"))
         defs["G"] += re.findall(rf"^### [^`×\n]+ `({G_ID})`$", text, flags=re.M)
-    for p in sorted((data / "events").glob("0*.md")):
+    for p in event_paths(data):
         text = strip_code(p.read_text(encoding="utf-8"))
         defs["E"] += re.findall(rf"^### ({E_ID}) ", text, flags=re.M)
     for kind, ids in defs.items():
@@ -411,7 +411,7 @@ def check_ellipsis(data, rep):
 
 
 def load_event_abbrevs(path):
-    """events/README.md の略号の表から [(略号の正規表現, ファイル名)] を作る。`<…>` は数字として読む。"""
+    """events/README.md の略号の表から [(略号の正規表現, events/ からのパス)] を作る。`<…>` は数字として読む。"""
     abbrevs = []
     if not path.exists():
         return abbrevs
@@ -425,35 +425,74 @@ def load_event_abbrevs(path):
     return abbrevs
 
 
-def check_event_group(rel, line, title, prefix, name, abbrevs, rep):
-    """グループ（##）の見出しと ID の頭が合っているかを見て、原作なら File の範囲を返す。"""
+def event_paths(data):
+    """出来事の正本のファイル（events/ 以下の README.md 以外）。"""
+    return sorted(p for p in (data / "events").rglob("*.md") if p.name != "README.md")
+
+
+def event_kind(ev_rel):
+    """events/ からのパスから (種類, そのファイルに置くもの) を返す。決められた名前でなければ (None, None)。
+
+    原作の巻のファイルなら巻の番号、database に無い話（単行本未収録）のファイルなら "unpublished"、
+    劇場版なら、そのファイルのグループの ID の頭（"M26"、番外編なら "MLV" など）。
+    """
+    if m := re.fullmatch(r"01-manga/(\d{3})\.md", ev_rel):
+        return "manga", int(m.group(1))
+    if ev_rel == "01-manga/unpublished.md":
+        return "manga", "unpublished"
+    if m := re.fullmatch(r"02-movies/(\d{2})\.md", ev_rel):
+        return "movies", f"M{int(m.group(1))}"
+    if m := re.fullmatch(r"02-movies/(M[A-Z]+)\.md", ev_rel):
+        return "movies", m.group(1)
+    return {
+        "03-anime-original.md": ("anime", None),
+        "04-magic-kaito.md": ("magic-kaito", None),
+        "05-other.md": ("other", None),
+    }.get(ev_rel, (None, None))
+
+
+def check_event_group(rel, line, title, prefix, kind, span, ev_rel, abbrevs, rep):
+    """グループ（##）の見出しと ID の頭とファイルが合っているかを見て、原作なら File の範囲を返す。"""
     if re.fullmatch(r"[MAX][A-Z]+\d*", prefix):
-        if not any(re.fullmatch(pat, prefix) and f == name for pat, f in abbrevs):
-            rep.error(rel, f"{line} 行目: 略号 {prefix} が README の略号の表に無い（ファイル {name}）")
+        if not any(re.fullmatch(pat, prefix) and f == ev_rel for pat, f in abbrevs):
+            rep.error(rel, f"{line} 行目: 略号 {prefix} が README の略号の表に無い（ファイル {ev_rel}）")
+    # 原作は、見出しの最初の巻でファイルが決まる。database に無い話（単行本未収録）は unpublished.md
+    if kind == "manga":
+        vol = re.search(r"（(\d+)(?:・\d+)*巻「", title)
+        if span == "unpublished":
+            if "単行本未収録" not in title:
+                rep.error(rel, f"{line} 行目: unpublished.md には、database に無い話（単行本未収録）のグループだけを書く")
+        elif not vol:
+            rep.error(rel, f"{line} 行目: グループの見出しに巻が無い（database に無い話は 01-manga/unpublished.md に書く）")
+        elif int(vol.group(1)) != span:
+            rep.error(rel, f"{line} 行目: {vol.group(1)}巻の事件は 01-manga/{int(vol.group(1)):03d}.md に書く")
+    # 劇場版は 1 作 1 ファイル。ファイル名は作品の番号（2 桁）か、番外編の略号
+    if kind == "movies" and prefix != span:
+        rep.error(rel, f"{line} 行目: E-{prefix} は、このファイル（E-{span}）のグループではない")
     # 番号で振るグループは、ID の頭の番号と見出しの番号をそろえる（略号だけのグループは見ない）
     numbered = {
-        "01-manga.md": (r"(\d+)", r"File (\d+)(?:–(\d+))?"),
-        "02-movies.md": (r"M(\d+)", r"劇場版第 (\d+) 作"),
-        "03-anime-original.md": (r"A(\d+)", r"アニメ第 (\d+)(?:–(\d+))? 話"),
-        "04-magic-kaito.md": (r"XMK(\d+)", r"(\d+)巻"),
+        "manga": (r"(\d+)", r"File (\d+)(?:–(\d+))?"),
+        "movies": (r"M(\d+)", r"劇場版第 (\d+) 作"),
+        "anime": (r"A(\d+)", r"アニメ第 (\d+)(?:–(\d+))? 話"),
+        "magic-kaito": (r"XMK(\d+)", r"(\d+)巻"),
     }
-    if name not in numbered or not (pm := re.fullmatch(numbered[name][0], prefix)):
+    if kind not in numbered or not (pm := re.fullmatch(numbered[kind][0], prefix)):
         return None
-    m = re.search(numbered[name][1], title)
+    m = re.search(numbered[kind][1], title)
     if not m:
-        rep.error(rel, f"{line} 行目: グループの見出しに番号が無い（{numbered[name][1]} の形）")
+        rep.error(rel, f"{line} 行目: グループの見出しに番号が無い（{numbered[kind][1]} の形）")
         return None
     if m.group(1) != pm.group(1):
         rep.error(rel, f"{line} 行目: グループの見出しの番号 {m.group(1)} と ID の頭 E-{prefix} が合わない")
-    if name == "01-manga.md":
+    if kind == "manga":
         return int(m.group(1)), int(m.group(2) or m.group(1))
     return None
 
 
-def check_event_entry(rel, entry, name, group, defs, rep):
+def check_event_entry(rel, entry, kind, group, defs, rep):
     """1 件（### から次の見出しまで）の欄と「出来事」の書き方を見る。"""
     eid, line = entry["id"], entry["line"]
-    tags = EVENT_FILES[name][0]
+    tags = EVENT_KINDS[kind][0]
     names = [f[0] for f in entry["fields"]]
     for n, c in Counter(names).items():
         if c > 1:
@@ -467,7 +506,7 @@ def check_event_entry(rel, entry, name, group, defs, rep):
     fields = {f[0]: f for f in entry["fields"]}
     if "区分" in fields and fields["区分"][2] not in tags:
         rep.error(rel, f"{fields['区分'][3]} 行目: {eid} の区分「{fields['区分'][2]}」は、このファイルの区分（{'・'.join(sorted(tags))}）ではない")
-    if "出典" in fields and name == "01-manga.md" and group:
+    if "出典" in fields and kind == "manga" and group:
         nums = [int(x) for m in FILE_REF.finditer(fields["出典"][2]) for x in m.group().replace("File ", "").split("–")]
         if not nums:
             rep.error(rel, f"{fields['出典'][3]} 行目: {eid} の出典に File が無い")
@@ -537,23 +576,24 @@ def check_event_entry(rel, entry, name, group, defs, rep):
 
 
 def check_events(data, defs, rep):
-    """出来事の正本（events/0*.md）の書き方を見る（conventions.md の 11.・events/README.md）。"""
+    """出来事の正本（events/ 以下）の書き方を見る（conventions.md の 11.・events/README.md）。"""
     ev_dir = data / "events"
     abbrevs = load_event_abbrevs(ev_dir / "README.md")
-    for p in sorted(ev_dir.glob("0*.md")):
+    for p in event_paths(data):
         rel = p.relative_to(data)
-        name = p.name
-        if name not in EVENT_FILES:
+        ev_rel = p.relative_to(ev_dir).as_posix()
+        kind, span = event_kind(ev_rel)
+        if not kind:
             rep.error(rel, "events/ のファイル名が決められたものではない（events/README.md の「ファイル」の表）")
             continue
-        prefix_re = EVENT_FILES[name][1]
+        prefix_re = EVENT_KINDS[kind][1]
         group = entry = None  # group: (ID の頭, 原作の File の範囲)
         firsts = []
         in_code = False
 
         def finish():
             if entry:
-                check_event_entry(rel, entry, name, group[1] if group else None, defs, rep)
+                check_event_entry(rel, entry, kind, group[1] if group else None, defs, rep)
 
         for i, line in enumerate(p.read_text(encoding="utf-8").splitlines(), 1):
             if line.strip().startswith("```"):
@@ -569,7 +609,7 @@ def check_events(data, defs, rep):
                     rep.error(rel, f"{i} 行目: グループの見出しの最後に、このファイルの形の ID の頭（`E-…`）が無い")
                     group = None
                     continue
-                rng = check_event_group(rel, i, m.group(1), m.group(2), name, abbrevs, rep)
+                rng = check_event_group(rel, i, m.group(1), m.group(2), kind, span, ev_rel, abbrevs, rep)
                 group = (m.group(2), rng)
                 if rng:
                     if firsts and rng[0] < firsts[-1]:

@@ -28,7 +28,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
    ```
 
    `anomalies` で新しい欠け・重複が出たら、報告に含める。submodule に差分が出たら、コミットと push が必要なことをユーザーに伝える（勝手に push しない）。
-   database を更新したら、`単行本未収録` の形で書いていた File（`grep -rn 単行本未収録 data/`）のうち、`conan_db.py file` で引けるようになったものを、`conventions.md` の 3.1「database に入っている話」の形に直す。
+   database を更新したら、`単行本未収録` の形で書いていた File（`grep -rn 単行本未収録 data/`）のうち、`conan_db.py file` で引けるようになったものを、`conventions.md` の 3.1「database に入っている話」の形に直す。出来事の正本の `data/events/01-manga/unpublished.md` のグループは、事件の形の見出しに直して、巻のファイルへ移す（件の ID は変えない）。
    database の更新で、事件名や話タイトルが変わることがある（単行本の収録時に改題されるなど）。更新の前後で `database/dataset_csv/Volume-Index-Case-Title.csv` を見比べ（submodule の中で `git diff` する）、名前が変わった事件・話があったら、`data/` 以下で古い名前を使っている箇所（`grep -rn "古い名前" data/`）をすべて新しい名前に直す。直した事件名は Step 9 の報告に含める。`lint_data.py` は File 表記の形しか見ず、名前が database と合っているかは見ないので、この確認は省かない。
 3. `data/sources.md` の信頼度の順に情報を集める。単行本未収録の話は、D の速報系 2 サイト以上で一致したものだけを使う。WebFetch の要約は細部を取り違えることがあるので、話数と人物名は原文か database で確かめる。
 
@@ -54,7 +54,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 
 ### 手順
 
-1. 件を置く場所を決める。ファイルは区分で決まる（原作は `data/events/01-manga.md`）。原作のグループは database の事件で、`python scripts/conan_db.py file <番号>` と `python scripts/conan_db.py case <事件名>` で事件と File の範囲を引く。グループが無ければ、File の順の位置に作る。
+1. 件を置く場所を決める。ファイルは区分で決まる（`data/events/README.md` の「ファイル」）。原作のグループは database の事件で、`python scripts/conan_db.py file <番号>` と `python scripts/conan_db.py case <事件名>` で事件と File の範囲・巻を引き、事件の最初の巻のファイル（例：104巻なら `data/events/01-manga/104.md`）に書く。database に無い話は `data/events/01-manga/unpublished.md` に書く。ファイルやグループが無ければ、話の順の位置に作る。
 2. 写し元の文を写して件を書く。ID は、グループの中で次の番号（2 桁）にする。
    - 写し元の欄には、写したときのコミット（`git rev-parse --short HEAD`）と、脚注 ID・見出しを書く。`check_event_copy.py` はコミットの時点の中身を読むので、写し元のファイルに未コミットの変更があるときは、先にコミットしてから写す。
    - ラベル（知識・関係・伏線・描写・生死）の下には、写し元がその出来事を根拠にしていると書いているものだけを書く。
@@ -126,7 +126,7 @@ fix:md は data/ のファイルも書き換えるので、lint_data.py はそ�
 |---|---|---|---|
 | foreshadowing/02-rum.md | F-RUM-009 | 経過を追加 | 原作 File 1168 [原作] |
 | knowledge-matrix/03-akai-family.md | 世良真純 K3-2 | △ → ◎ | 原作 File 1168 |
-| events/01-manga.md | E-1168-01 | 追加（写し元：D の速報系 2 サイト） | 原作 File 1168 [原作] |
+| events/01-manga/unpublished.md | E-1168-01 | 追加（写し元：D の速報系 2 サイト） | 原作 File 1168 [原作] |
 
 - lint：lint_data.py エラー 0 件・警告 0 件／markdownlint エラー 0 件
 - 要確認のまま残したもの：…
