@@ -68,7 +68,7 @@ EVENT_REPEATABLE = {"写し元"}
 EVENT_LABELS = ["知識", "関係", "伏線", "描写", "生死"]
 KNOW_HOW = ["見た", "聞いた", "推理した", "疑った", "既知"]
 FS_ROLES = ["初出", "経過", "回収"]
-LIFE_VALUES = ["死ぬ", "死んだように見せかける"]
+LIFE_VALUES = ["死亡", "死んだように見せかける"]
 # 参照チェックで、出来事の ID が実在しなくてよいファイル（ID の形の例を書いている）
 E_REF_EXAMPLES = {"conventions.md", "events/README.md"}
 
