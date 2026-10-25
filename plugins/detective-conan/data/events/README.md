@@ -156,7 +156,7 @@
 - 置き換えるファイルの PR では、そのファイルの脚注が根拠にしている場面の件を作り（ほかのファイルの文も写してよい）、ID に置き換えるのはそのファイルだけにする。記号の誤りや写し元の誤りに気づいても、置き換えの PR では直さず、一覧にしてユーザーに伝える。
 - 置き換えたら、消した文が件に写されているか（または脚注に残っているか）を `python scripts/check_event_copy.py --removed <ブランチを作った main のコミット> <data からのパス>` で確かめる（下の「写しを確かめるスクリプト」）。
 
-置き換えが済んだファイル：`knowledge-matrix/04-haneda-case.md`（PR #33）、`knowledge-matrix/03-akai-family.md`（PR #34）。
+置き換えが済んだファイル：`knowledge-matrix/04-haneda-case.md`（PR #33）、`knowledge-matrix/03-akai-family.md`（PR #34）、`knowledge-matrix/08-hondo-family.md`（PR #35。どの話かわからず件にしていない 3 場面は、今の書き方のまま）。
 
 ## 書くときの確かめ方
 
