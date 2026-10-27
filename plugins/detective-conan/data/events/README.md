@@ -33,6 +33,7 @@
 | `MLV` | 劇場版『ルパン三世VS名探偵コナン THE MOVIE』（番外編） | 02-movies/MLV.md |
 | `AOVA<作の番号>` | OVA（番号は確かめてから使う） | 03-anime-original.md |
 | `AEPONE` | TVSP『エピソード"ONE" 小さくなった名探偵』 | 03-anime-original.md |
+| `ANOR<放送日>` | 話数の無いアニメ（TVSP など。放送日を 8 桁の数字で書く。例：`ANOR20260925` は TVSP「30号殺人事件」） | 03-anime-original.md |
 | `XMK<巻>` | まじっく快斗（単行本の巻） | 04-magic-kaito.md |
 | `XWPS` | 『警察学校編 Wild Police Story』 | 05-other.md |
 | `XZERO<巻>` | 『ゼロの日常』（単行本の巻） | 05-other.md |
