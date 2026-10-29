@@ -22,13 +22,23 @@
 1 段目・要確認）にそのままあるか（一致）、近い文があるか（違いあり）、どちらでもないか（見つからない）を出す。
 脚注の行は、今の同じ脚注とも比べる。
 
+--cited は脚注 → 件の向きを調べる（git は使わず、今のファイルを読む）。知識表・人物の掘り下げの表で、脚注の文のうち
+その表の列 ID で始まるもの（「K1-4・K1-5 は E-429-03 による」。範囲「K1-1〜K1-3」と列挙を読む）に出てくる件に、
+その脚注の行の人物（脚注を共有する行・1 行に何人もいる行は全員）の知識（人物の掘り下げでは描写）があるかを見る。
+見るのは、知識表では `◎`・`〇`、人物の掘り下げでは `◎`・`〇`・`△` のセル（`†` 付きを含む）だけ。「コナンの把握」の
+列と、「直した」を含む括弧（直した履歴）の中の件は見ない。2 列以上・2 件以上を 1 文で書いたものは、どの件にも
+どれかの列があるか、どの列もどれかの件にあるかだけを見る。「コナンの把握」の理由の文（「K1-3 は A：…」）から
+出たものは、参考の段に出す。知識表では、件の「場面にいた人物」にいない人に、そのことを添える。
+
 使い方:
     python check_event_copy.py E-1106-01 [E-… …]
     python check_event_copy.py --all
     python check_event_copy.py --removed <コミット> knowledge-matrix/04-haneda-case.md [<data からのパス> …]
+    python check_event_copy.py --cited [knowledge-matrix/01-conan-shinichi.md …]
 
-写しにすべて一致すれば（--removed では、消えた文がすべて件にそのままあれば）終了コード 0、
-違いのある文（--removed では、違いあり・見つからない文）があれば 1、件や写し元が読めなければ 2 を返す。
+写しにすべて一致すれば（--removed では、消えた文がすべて件にそのままあれば。--cited では、脚注が根拠に挙げた件に
+知識・描写がすべてあれば。参考の段は数えない）終了コード 0、違いのある文（--removed では、違いあり・見つからない文。
+--cited では、無いところ）があれば 1、件や写し元（--cited では表）が読めなければ 2 を返す。
 """
 import argparse
 import csv
@@ -44,10 +54,11 @@ DATA = PLUGIN / "data"
 E_ID = r"E-(?:\d+|M\d+|A\d+|[MAX][A-Z]+\d*)-\d{2,3}"
 SOURCE_ITEM = re.compile(r"((?:database/)?[A-Za-z0-9_./-]+\.(?:md|csv))\s*(?:`\[\^([^\]`]+)\]`|「([^」]+)」)?")
 ID_IN_SUB = {"知識": r"K\d-\d+", "描写": r"P\d-\d+", "伏線": r"F-[A-Z]+-\d{3}"}
+COL_RANGE = re.compile(r"([KP]\d)-(\d+)(?:〜\1-(\d+))?")
 
 
 def load_entries():
-    """events/0*.md から {ID: 件} を作る。件は見出し・出典・1 段目の文・ラベルの項目・要確認・写し元を持つ。
+    """events/0*.md から {ID: 件} を作る。件は見出し・出典・場面にいた人物・1 段目の文・ラベルの項目・要確認・写し元を持つ。
 
     写し元は、行ごとに (コミット, 場所の並び) にする（写し元の行は、コミットごとに 2 行以上書ける）。
     """
@@ -59,7 +70,7 @@ def load_entries():
                 m = re.fullmatch(rf"### ({E_ID}) (.+)", line)
                 label = item = None
                 entry = {"file": p.relative_to(DATA / "events").as_posix(), "title": m.group(2) if m else "", "origin": "",
-                         "events": [], "subs": [], "note": "", "sources": []} if m else None
+                         "present": "", "events": [], "subs": [], "note": "", "sources": []} if m else None
                 if m:
                     entries[m.group(1)] = entry
             elif entry is None:
@@ -77,6 +88,8 @@ def load_entries():
                 entry["subs"].append((label, f"{m.group(1)} {item}"))
             elif m := re.fullmatch(r"- 出典: (.+)", line):
                 entry["origin"] = m.group(1)
+            elif m := re.fullmatch(r"- 場面にいた人物: (.+)", line):
+                entry["present"] = m.group(1)
             elif m := re.fullmatch(r"- 要確認: (.+)", line):
                 entry["note"] = m.group(1)
             elif m := re.fullmatch(r"- 写し元(?:（([^）]*)）)?: (.+)", line):
@@ -327,6 +340,157 @@ def check_removed(commit, paths):
     return status
 
 
+def load_table(path):
+    """知識表・人物の掘り下げの表（data/<path>）を読み、(列 ID の並び, コナンの把握の列 ID, 行, 脚注) を返す。
+
+    行は {脚注 ID: [(人物 ID, {列 ID: 記号})]}、脚注は {脚注 ID: 本文}。1 本の脚注を何行かで共有しているときも、
+    1 行に何人もいるとき（少年探偵団など）も、全員を並べる。コナンの把握の列は、列の定義の表で「コナンが把握」を
+    含む行から読む（表ごとに番号が違う。人物の掘り下げには無いので None）。
+    """
+    cols, conan, rows, notes = [], None, {}, {}
+    for line in (DATA / path).read_text(encoding="utf-8").splitlines():
+        if m := re.match(r"\[\^([^\]]+)\]: (.+)", line):
+            notes[m.group(1)] = m.group(2)
+        if not line.startswith("|"):
+            continue
+        cells = [c.strip() for c in line.strip()[1:-1].split("|")]
+        if len(cells) == 2 and re.fullmatch(r"K\d-\d+", cells[0]) and "コナンが把握" in cells[1]:
+            conan = cells[0]
+        elif cells[0] == "人物":
+            cols = [c.split()[0] for c in cells[1:-1]]
+        elif cols and (m := re.fullmatch(r"\[\^([^\]]+)\]", cells[-1])):
+            for cid in re.findall(r"`(C-[a-z-]+)`", cells[0]):
+                rows.setdefault(m.group(1), []).append((cid, dict(zip(cols, cells[1:-1]))))
+    return cols, conan, rows, notes
+
+
+def top_parens(text):
+    """いちばん外側の括弧（（…））の (始め, 終わり) を並べて返す。閉じていない括弧は数えない。"""
+    spans, depth, start = [], 0, 0
+    for i, ch in enumerate(text):
+        if ch == "（":
+            if depth == 0:
+                start = i
+            depth += 1
+        elif ch == "）" and depth:
+            depth -= 1
+            if depth == 0:
+                spans.append((start, i + 1))
+    return spans
+
+
+def split_sentences(text):
+    """「。」で区切る（区切りの「。」は落とす）。括弧（（…））の中の「。」では区切らない。空の文は除く。"""
+    spans = top_parens(text)
+    out, start = [], 0
+    for i, ch in enumerate(text):
+        if ch == "。" and not any(a < i < b for a, b in spans):
+            out.append(text[start:i])
+            start = i + 1
+    out.append(text[start:])
+    return [s.strip() for s in out if s.strip()]
+
+
+def expand_cols(spec):
+    """「K1-1〜K1-3・K1-6」のような列の書き方を、["K1-1", "K1-2", "K1-3", "K1-6"] にする。"""
+    return [f"{m.group(1)}-{n}" for m in COL_RANGE.finditer(spec)
+            for n in range(int(m.group(2)), int(m.group(3) or m.group(2)) + 1)]
+
+
+def check_cited(paths):
+    """脚注が根拠に挙げた件に、その脚注の行の人物の知識（人物の掘り下げでは描写）があるかを調べる。
+
+    脚注の文のうち、その表の列 ID で始まるもの（「K1-4・K1-5 は E-429-03 による」）だけを見る。見るのは、
+    知識表では `◎`・`〇`、人物の掘り下げでは `◎`・`〇`・`△` のセル（`†` 付きを含む）だけ。「コナンの把握」の列と、
+    「直した」を含む括弧（直した履歴）の中の件は見ない。2 列以上・2 件以上を 1 文で書いたものは、どの列がどの件かが
+    わからないので、どの件にもどれかの列があるか、どの列もどれかの件にあるかだけを見る。
+    「コナンの把握」の理由の文（「K1-3 は A：…」）から出たものは参考の段に出し、終了コードに数えない。
+    知識表では、件の「場面にいた人物」にいない人に、そのことを添える（人の話から推した根拠なら、知識が無くてよい）。
+    """
+    entries = load_entries()
+    have = {}  # 件 ID → {(人物 ID, 列 ID)}。知識は 4 段目の人、描写は 3 段目の人
+    for eid, e in entries.items():
+        for label, body in e["subs"]:
+            if label in ("知識", "描写") and (who := re.search(r"`(C-[a-z-]+)`", body)):
+                have.setdefault(eid, set()).update((who.group(1), i) for i in re.findall(ID_IN_SUB[label], body))
+    status = 0
+    for path in paths:
+        try:
+            cols, conan, rows, notes = load_table(path)
+        except OSError as e:
+            print(f"{path} を読めない — {e}")
+            status = 2
+            continue
+        if not cols:
+            print(f"{path}：人物の表（| 人物 | … | 根拠 |）が無い")
+            status = 2
+            continue
+        table = cols[0].rsplit("-", 1)[0]  # K1・P1 など
+        label = "知識" if table.startswith("K") else "描写"
+        marks = ("◎", "〇") if label == "知識" else ("◎", "〇", "△")
+
+        def absent(cid, eid):
+            """知識表で、件の「場面にいた人物」にその人がいなければ、そのことを添える（描写は、その場にいなくても書く）。"""
+            present = entries[eid]["present"]
+            return "（場面にいた人物にもいない）" if label == "知識" and present and f"`{cid}`" not in present else ""
+
+        found = {"本文": [], "参考": []}
+        n_sent = n_ref = 0
+        for fid, body in notes.items():
+            for s in split_sentences(body):
+                m = re.match(rf"({table}-\d+(?:[・〜]{table}-\d+)*) は(.*)", s)
+                if not m or fid not in rows:
+                    continue
+                ks = [k for k in expand_cols(m.group(1)) if k in cols and k != conan]
+                rest = m.group(2)
+                for a, b in reversed(top_parens(rest)):
+                    if "直した" in rest[a:b]:
+                        rest = rest[:a] + rest[b:]
+                eids = list(dict.fromkeys(re.findall(E_ID, rest)))
+                if not ks or not eids:
+                    continue
+                ref = bool(conan) and bool(re.match(r"\s*(?:[A-D]|未確認)(?:（[^）]*）)?：", m.group(2)))
+                cited = [e for e in eids if e in entries]
+                strict = len(ks) == 1 or len(eids) == 1
+                msgs, checked = [], False
+                for cid, cells in rows[fid]:
+                    use = [k for k in ks if cells.get(k, "").rstrip("†") in marks]
+                    if not use:
+                        continue
+                    checked = True
+                    who = cid[2:]
+                    if strict:
+                        msgs += [f"{who} の {k}（{cells[k]}）：{e} の「{label}」に無い{absent(cid, e)}"
+                                 for k in use for e in cited if (cid, k) not in have.get(e, ())]
+                    else:
+                        msgs += [f"{who} の {'・'.join(use)}：{e} の「{label}」にどれも無い{absent(cid, e)}"
+                                 for e in cited if not any((cid, k) in have.get(e, ()) for k in use)]
+                        msgs += [f"{who} の {k}（{cells[k]}）：{'・'.join(cited)} のどの「{label}」にも無い"
+                                 for k in use if cited and not any((cid, k) in have.get(e, ()) for e in cited)]
+                if not checked:
+                    continue
+                n_sent += 1
+                n_ref += ref
+                msgs += [f"{e}：events/ に無い" for e in eids if e not in entries]
+                if msgs:
+                    found["参考" if ref else "本文"].append((fid, s, msgs))
+        print(f"{path}（脚注が根拠に挙げた件に、その行の人物の{label}があるか）")
+        print(f"  見た文：{n_sent}" + (f"（うち「コナンの把握」の理由の文 {n_ref}）" if conan else ""))
+        parts = [("本文", "無い")]
+        if conan:
+            parts.append(("参考", "参考（「コナンの把握」の理由の文から出たもの。コナンが気づく・思い出すだけの場面なら、知識が無くてよい）"))
+        for part, title in parts:
+            print(f"  {title}：{sum(len(msgs) for _, _, msgs in found[part])}")
+            for fid, s, msgs in found[part]:
+                print(f"    [^{fid}]「{s}」")
+                for msg in msgs:
+                    print(f"      {msg}")
+        print()
+        if found["本文"]:
+            status = max(status, 1)
+    return status
+
+
 def main():
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")  # argparse のエラー
@@ -335,12 +499,18 @@ def main():
     parser.add_argument("--all", action="store_true", help="すべての件を確かめる")
     parser.add_argument("--removed", nargs="+", metavar=("COMMIT", "PATH"),
                         help="COMMIT の時点から今までに PATH（data/ からのパス）で消えた文が、件か今のファイルにあるかを調べる")
+    parser.add_argument("--cited", nargs="*", metavar="PATH",
+                        help="PATH（data/ からのパス。書かなければ knowledge-matrix/0*.md と profiles/0*.md のすべて）の"
+                             "脚注が根拠に挙げた件に、その行の人物の知識（描写）があるかを調べる")
     args = parser.parse_args()
 
     if args.removed:
         if len(args.removed) < 2:
             parser.error("--removed にはコミットと、data/ からのパスを 1 つ以上書く")
         return check_removed(args.removed[0], args.removed[1:])
+    if args.cited is not None:
+        return check_cited(args.cited or [p.relative_to(DATA).as_posix() for d in ("knowledge-matrix", "profiles")
+                                          for p in sorted((DATA / d).glob("0*.md"))])
     entries = load_entries()
     ids = list(entries) if args.all else args.ids
     if not ids:
