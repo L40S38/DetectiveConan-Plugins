@@ -33,6 +33,7 @@
 | `MLV` | 劇場版『ルパン三世VS名探偵コナン THE MOVIE』（番外編） | 02-movies/MLV.md |
 | `AOVA<作の番号>` | OVA（番号は確かめてから使う） | 03-anime-original.md |
 | `AEPONE` | TVSP『エピソード"ONE" 小さくなった名探偵』 | 03-anime-original.md |
+| `ANOR<放送日>` | 話数の無いアニメ（TVSP など。放送日を 8 桁の数字で書く。例：`ANOR20260925` は TVSP「30号殺人事件」） | 03-anime-original.md |
 | `XMK<巻>` | まじっく快斗（単行本の巻） | 04-magic-kaito.md |
 | `XWPS` | 『警察学校編 Wild Police Story』 | 05-other.md |
 | `XZERO<巻>` | 『ゼロの日常』（単行本の巻） | 05-other.md |
@@ -156,7 +157,7 @@
 - 置き換えるファイルの PR では、そのファイルの脚注が根拠にしている場面の件を作り（ほかのファイルの文も写してよい）、ID に置き換えるのはそのファイルだけにする。記号の誤りや写し元の誤りに気づいても、置き換えの PR では直さず、一覧にしてユーザーに伝える。
 - 置き換えたら、消した文が件に写されているか（または脚注に残っているか）を `python scripts/check_event_copy.py --removed <ブランチを作った main のコミット> <data からのパス>` で確かめる（下の「写しを確かめるスクリプト」）。
 
-置き換えが済んだファイル：`knowledge-matrix/04-haneda-case.md`（PR #33）、`knowledge-matrix/03-akai-family.md`（PR #34）、`knowledge-matrix/08-hondo-family.md`（PR #35。どの話かわからず件にしていない 3 場面は、今の書き方のまま）。
+置き換えが済んだファイル：`knowledge-matrix/04-haneda-case.md`（PR #33）、`knowledge-matrix/03-akai-family.md`（PR #34）、`knowledge-matrix/08-hondo-family.md`（PR #35。どの話かわからず件にしていない 3 場面は、今の書き方のまま）、`knowledge-matrix/01-conan-shinichi.md`（PR #36。話数がわからず件にしていない場面と、ユーザーが件にしないと決めたアニメの話は、今の書き方のまま）。
 
 ## 書くときの確かめ方
 
