@@ -2,7 +2,7 @@
   "name": "detective-conan-plugins",
   "private": true,
   "engines": {
-    "node": ">=20"
+    "node": ">=26"
   },
   "scripts": {
     "lint:md": "markdownlint-cli2",

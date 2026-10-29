@@ -38,7 +38,7 @@ submodule を取得し忘れたときは `git submodule update --init` を実行
 .claude-plugin/marketplace.json       マーケットプレイスの定義
 .github/workflows/lint.yml            CI（markdownlint と lint_data.py）
 .markdownlint-cli2.jsonc              Markdown の lint 設定
-package.json                          markdownlint-cli2（npm run lint:md / fix:md）。Node 20 以上
+package.json                          markdownlint-cli2（npm run lint:md / fix:md）。Node 26 以上
 .npmrc                                Node の版が足りないときに npm ci を止める
 plugins/detective-conan/
 ├── .claude-plugin/plugin.json
