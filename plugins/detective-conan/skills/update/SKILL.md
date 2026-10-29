@@ -65,7 +65,7 @@ description: 名探偵コナン調査プラグインのデータ（伏線リス�
 
 ほかのファイル（Step 3〜6）で場面を根拠に書くときは、その場面の件があれば ID で参照できる（例：「K4-2 は E-1106-01 による。」）。参照した ID が実在するかは `lint_data.py` が見る。
 
-今の File 表記の根拠を ID に置き換えるときは、`data/events/README.md` の「根拠を ID に置き換えるとき」に従う。置き換えたら、`python scripts/check_event_copy.py --removed <ブランチを作った main のコミット> <data からのパス>` で、消した文が件に写されているか（または脚注に残っているか）を確かめ、「違いあり」「見つからない」の文をユーザーに見せる。
+今の File 表記の根拠を ID に置き換えるときは、`data/events/README.md` の「根拠を ID に置き換えるとき」に従う。置き換えたら、`python scripts/check_event_copy.py --removed <ブランチを作った main のコミット> <data からのパス>` で、消した文が件に写されているか（または脚注に残っているか）を確かめ、「違いあり」「見つからない」の文をユーザーに見せる。また、`python scripts/check_event_copy.py --cited <data からのパス>` で、脚注が根拠に挙げた件に、その行の人物の知識（人物の掘り下げでは描写）があるかを確かめ、「無い」と参考の段に出たものをユーザーに見せる。
 
 ## Step 3: 伏線リスト（data/foreshadowing/）
 
