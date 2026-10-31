@@ -18,7 +18,7 @@
      欄の中身が空でないか、写し元の行ごとのコミット（写し元だけは、コミットごとに 2 行以上書ける）、
      区分・時期の値、「出来事」のラベル（知識・関係・伏線・描写・生死）と、その下の項目の書き方。
      ほかのファイルから参照している出来事の ID（E-…）と、件の中のグループの ID（G-…）が実在するかは 2. で見る
-  10. 知識表で、knowledge-matrix/README.md の「経路の一覧」の伝える人が `◎`・`〇`・`ー`・`?` の列なのに、
+  10. 知識表で、knowledge-matrix/README.md の「経路の一覧」の伝える人が `◎`・`〇`・`△`・`ー`・`?` の列なのに、
       受け取る人が `✕` になっていて、「経路の例外」にも書いていないセルがないか（警告のみ）
 
 使い方:
@@ -447,7 +447,7 @@ def check_paths(data, rep):
                 for dst in dsts:
                     for col in cols:
                         s, d = values[src][col].rstrip("†"), values.get(dst, {}).get(col, "").rstrip("†")
-                        if s in ("◎", "〇", "ー", "?") and d == "✕" and (dst, col, name) not in exceptions:
+                        if s in ("◎", "〇", "△", "ー", "?") and d == "✕" and (dst, col, name) not in exceptions:
                             rep.warn(rel, f"{col} {dst} が `✕` だが、経路「{name}」の {src} が `{values[src][col]}`（`?` にするか、README の「経路の例外」に書く）")
 
 
