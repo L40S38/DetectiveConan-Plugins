@@ -158,7 +158,7 @@
 - 置き換えたら、消した文が件に写されているか（または脚注に残っているか）を `python scripts/check_event_copy.py --removed <ブランチを作った main のコミット> <data からのパス>` で確かめる（下の「写しを確かめるスクリプト」）。
 - 脚注が根拠に挙げた件に、その行の人物の知識（人物の掘り下げでは描写）があるかも、`python scripts/check_event_copy.py --cited <data からのパス>` で確かめる（下の「写しを確かめるスクリプト」）。
 
-置き換えが済んだファイル：`knowledge-matrix/04-haneda-case.md`（PR #33）、`knowledge-matrix/03-akai-family.md`（PR #34）、`knowledge-matrix/08-hondo-family.md`（PR #35。どの話かわからず件にしていない 3 場面は、今の書き方のまま）、`knowledge-matrix/01-conan-shinichi.md`（PR #36。話数がわからず件にしていない場面と、ユーザーが件にしないと決めたアニメの話は、今の書き方のまま）。
+置き換えが済んだファイル：`knowledge-matrix/04-haneda-case.md`（PR #33）、`knowledge-matrix/03-akai-family.md`（PR #34）、`knowledge-matrix/08-hondo-family.md`（PR #35。どの話かわからず件にしていない 3 場面は、今の書き方のまま）、`knowledge-matrix/01-conan-shinichi.md`（PR #36。話数がわからず件にしていない場面と、ユーザーが件にしないと決めたアニメの話は、今の書き方のまま）、`knowledge-matrix/02-haibara-aptx.md`（PR #37。DCW の記述と、場面の書かれていない劇場版の文と、場面が無いとわかった文（写し元の誤りとして、見直しのブランチで直す）は、今の書き方のまま）。
 
 ## 書くときの確かめ方
 
