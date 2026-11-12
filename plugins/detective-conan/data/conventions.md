@@ -222,7 +222,7 @@ File を書くときは、必ず「どの話か」がわかる名前を付ける
 | `events/01-manga/<巻>.md`（単行本 1 巻 1 ファイル）・`events/01-manga/unpublished.md`（database に無い話） | `[原作]`（アニメが足した場面も 2. に従ってここ） | `E-<database の事件の先頭 File>-NN`。database に無い話は、その File の番号 | `E-1106-01` |
 | `events/02-movies/<作>.md`（1 作 1 ファイル）・`events/02-movies/<略号>.md`（番外編） | `[劇場版]` | `E-M<作品の番号>-NN`。番号の無い番外編は `E-M<略号>-NN` | `E-M26-01` |
 | `events/03-anime-original.md` | `[アニオリ]`・`[TVSP]` | `E-A<最初の話数>-NN`（前後編・連続回は最初の話数）。TVSP・OVA は `E-A<略号>-NN` | `E-A965-01` |
-| `events/04-magic-kaito.md` | `[まじっく快斗]` | `E-XMK<巻>-NN` | `E-XMK1-01` |
+| `events/04-magic-kaito.md` | `[まじっく快斗]` | `E-XMK<作品No.>-NN`（日本語版 Wikipedia「まじっく快斗」の作品No.。前後編は 1 つ。単行本未収録の話は No.26 の次から数える） | `E-XMK1-01` |
 | `events/05-other.md` | `[スピンオフ]` | `E-X<略号>-NN` | `E-XWPS-01` |
 
 - `E-` の次で、どのファイルの件かがわかる（数字は原作、`M` は劇場版、`A` はアニオリ、`XMK` はまじっく快斗、それ以外の `X` はその他）。原作は事件の最初の巻、劇場版は作品の番号で、どのファイルかが決まる（`events/README.md` の「ファイル」）。
