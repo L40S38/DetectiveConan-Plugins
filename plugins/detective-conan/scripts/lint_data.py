@@ -551,7 +551,7 @@ def check_event_group(rel, line, title, prefix, kind, span, ev_rel, abbrevs, rep
         "manga": (r"(\d+)", r"File (\d+)(?:–(\d+))?"),
         "movies": (r"M(\d+)", r"劇場版第 (\d+) 作"),
         "anime": (r"A(\d+)", r"アニメ第 (\d+)(?:–(\d+))? 話"),
-        "magic-kaito": (r"XMK(\d+)", r"(\d+)巻"),
+        "magic-kaito": (r"XMK(\d+)", r"No\.(\d+)"),
     }
     if kind not in numbered or not (pm := re.fullmatch(numbered[kind][0], prefix)):
         return None
