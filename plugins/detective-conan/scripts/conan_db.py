@@ -13,6 +13,9 @@ database の Volume-Index-Case-Title.csv の `number` 列は取得した行の�
     python conan_db.py latest             # database に入っている最新の話
     python conan_db.py anomalies          # 欠けている話・重複している話の一覧
 
+char は、名前が characters.md のカードの見出しか「(a) 別名 → 人物 ID の逆引き」に
+あれば、同じ人物のほかの名前（database 上の呼び名など）でも引く。
+
 オプション:
     --db PATH   dataset_csv ディレクトリ（既定: このスクリプトの ../database/dataset_csv）
 """
@@ -25,6 +28,7 @@ from collections import OrderedDict
 from pathlib import Path
 
 DEFAULT_DB = Path(__file__).resolve().parent.parent / "database" / "dataset_csv"
+CHARACTERS_MD = Path(__file__).resolve().parent.parent / "data" / "characters.md"
 
 
 def normalize_title(title):
@@ -106,6 +110,23 @@ def load_characters(db):
     return chars
 
 
+def load_aliases(path):
+    """characters.md のカードの見出しと (a) 別名表から、人物 ID ごとの名前の集合を作る。"""
+    names = {}
+    if not path.exists():
+        return names
+    for line in path.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"#### (C-[\w-]+) (.+)", line)
+        if m:
+            parts = [re.sub(r"（.*?）", "", p).strip() for p in m.group(2).split("／")]
+            names.setdefault(m.group(1), set()).update(p for p in parts if p)
+            continue
+        m = re.match(r"\| (.+?) \| .+? \| (C-[\w-]+) \|$", line)
+        if m:
+            names.setdefault(m.group(2), set()).update(p.strip() for p in m.group(1).split("／"))
+    return names
+
+
 def fmt_file(f):
     return f"File {f['file']}（{f['volume']}巻 {f['index']}話目）{f['case']} {f['title']}"
 
@@ -148,10 +169,18 @@ def main():
         print("\n".join(anomalies) if anomalies else "異常なし")
     elif args.command == "char":
         ranges = case_ranges(files)
+        # 同じ人物のほかの名前は、短い別名（「博士」など）がほかの人物に当たらないよう、完全一致だけで引く
+        others = set()
+        for ns in load_aliases(CHARACTERS_MD).values():
+            if args.query in ns:
+                others |= ns - {args.query}
         found = OrderedDict()
         for name, case, role in load_characters(args.db):
-            if args.query in name and case in ranges:
+            base = re.sub(r"（.*?）", "", name).strip()
+            if (args.query in name or base in others) and case in ranges:
                 found.setdefault(name, []).append((ranges[case]["first"], case, role))
+        if others:
+            print(f"（characters.md の同じ人物の名前でも引いた：{'・'.join(sorted(others))}）")
         if not found:
             print(f"「{args.query}」は database の登場人物に無い")
         for name, apps in found.items():
