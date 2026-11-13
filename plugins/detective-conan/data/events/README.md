@@ -161,7 +161,7 @@
 - 置き換えたら、消した文が件に写されているか（または脚注に残っているか）を `python scripts/check_event_copy.py --removed <ブランチを作った main のコミット> <data からのパス>` で確かめる（下の「写しを確かめるスクリプト」）。
 - 脚注が根拠に挙げた件に、その行の人物の知識（人物の掘り下げでは描写）があるかも、`python scripts/check_event_copy.py --cited <data からのパス>` で確かめる（下の「写しを確かめるスクリプト」）。
 
-置き換えが済んだファイル：`knowledge-matrix/04-haneda-case.md`（PR #33）、`knowledge-matrix/03-akai-family.md`（PR #34）、`knowledge-matrix/08-hondo-family.md`（PR #35。どの話かわからず件にしていない 3 場面は、今の書き方のまま）、`knowledge-matrix/01-conan-shinichi.md`（PR #36。話数がわからず件にしていない場面と、ユーザーが件にしないと決めたアニメの話は、今の書き方のまま）、`knowledge-matrix/02-haibara-aptx.md`（PR #37。DCW の記述と、場面の書かれていない劇場版の文と、場面が無いとわかった文（写し元の誤りとして、見直しのブランチで直す）は、今の書き方のまま）、`knowledge-matrix/05-black-org.md`（PR #38。場面や話数の書かれていない文（劇場版の作品全体について言う文など）と、事件の範囲で言う文は、今の書き方のまま）、`knowledge-matrix/07-kid.md`（PR #40。単行本未収録のまじっく快斗の話の文と、事件の範囲で言う文は、今の書き方のまま）、`knowledge-matrix/06-police.md`（PR #51。件は PR #39 で登録した。場面の書かれていない劇場版の文と、人物の説明の文と、事件の範囲で言う文は、今の書き方のまま）。
+置き換えが済んだファイル：`knowledge-matrix/04-haneda-case.md`（PR #33）、`knowledge-matrix/03-akai-family.md`（PR #34）、`knowledge-matrix/08-hondo-family.md`（PR #35。どの話かわからず件にしていない 3 場面は、今の書き方のまま）、`knowledge-matrix/01-conan-shinichi.md`（PR #36。話数がわからず件にしていない場面と、ユーザーが件にしないと決めたアニメの話は、今の書き方のまま）、`knowledge-matrix/02-haibara-aptx.md`（PR #37。DCW の記述と、場面の書かれていない劇場版の文と、場面が無いとわかった文（写し元の誤りとして、見直しのブランチで直す）は、今の書き方のまま）、`knowledge-matrix/05-black-org.md`（PR #38。場面や話数の書かれていない文（劇場版の作品全体について言う文など）と、事件の範囲で言う文は、今の書き方のまま）、`knowledge-matrix/07-kid.md`（PR #40。単行本未収録のまじっく快斗の話の文と、事件の範囲で言う文は、今の書き方のまま）、`knowledge-matrix/06-police.md`（PR #51。件は PR #39 で登録した。場面の書かれていない劇場版の文と、人物の説明の文と、事件の範囲で言う文は、今の書き方のまま）、`profiles/02-hidden.md`（PR #41。正本で「描写」のラベルを使った最初のファイル。英語の出典だけの文と、話や事件の範囲で言う文と、人物の説明・年齢の文は、今の書き方のまま）。
 
 ## 書くときの確かめ方
 
